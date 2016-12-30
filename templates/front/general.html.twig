@@ -32,12 +32,17 @@
 
 
 
-            <h3 class="name">Suleyman</h3>
+            <h3 class="name">
+                {% if session.toto !='' %}
+                    {{ session.toto.prenom }}
+                {% else %}
+                    Prénom non récupéré
+                {% endif %}</h3>
 
             <hr class="hr-menu">
 
             <ul class="onglets">
-                <li><a class="icon icon-data" href="index.php?page=actualites">ACTUALITÉS</a></li>
+                <li><a class="icon icon-data" href="index.php?page=actualites">{% if session.toto !='' %} {{ session.toto.avatar }} {% endif %}</a></li>
                 <li><a class="icon icon-location" href="index.php?page=404">FORUM</a></li>
                 <li><a class="icon icon-study" href="index.php?page=evenements">ÉVÉNEMENTS</a></li>
                 <li><a class="icon icon-photo" href="index.php?page=404">VIE SCOLAIRE</a></li>
@@ -74,7 +79,7 @@
                             <button data-effect="st-effect-12" class="fa fa-bars fa-2x" aria-hidden="true"></button>
                         </div>
 
-                        <a href="index.php">
+                        <a href="index.php?page=actualites">
                             <img src="media/interface/DOM_Logo_Final.png" id="logo-dom" alt="Logo-DOM">
                         </a>
 

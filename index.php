@@ -1,5 +1,4 @@
 <?php
-
 // Appel de la classe de chargement du moteur
 require_once('Twig/Autoloader.php');
 // registration de Twig
@@ -15,6 +14,9 @@ $twig = new Twig_Environment($loader, array('cache' => false));
 // routage des pages    
 // Par d�faut la page d'accueil
 $uriDemandee = "accueil";
+
+// Démarrage des sessions
+session_start();
 
 // Parsing du fichier des routes
 $routes = parse_ini_file("param/routes.ini", true);
@@ -35,8 +37,11 @@ if (!EMPTY($page)){
 // Chargement du template
 $template = $twig->loadTemplate($template);
 
+$param["session"] = $_SESSION;
+
 // Affichage de la page concern�e
 echo $template->render($param);
+
 
 
 

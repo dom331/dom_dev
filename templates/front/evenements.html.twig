@@ -9,13 +9,16 @@
         <div class="EventAVenir">
             <i class="fa fa-calendar-o fa-4x" aria-hidden="true"></i>
             <h2>Événements à venir</h2>
+            {% for evenement in liste %}
             <a href="index.php?page=article">
-                <div class="event_content">
-                    <h4 class="titre">12/01/17 | La journée des anciens</h4>
-                    <p><span>Retrouvez vos ancêtres durant une journée forte en émotions !</span></p>
-                </div>
-            </a>
 
+                <div class="event_content">
+                    <h4 class="titre">{{ evenement.date }} | {{ evenement.titre }}</h4>
+                    <p><span>{{ evenement.contenu }}</span></p>
+                </div>
+
+            </a>
+            {% endfor %}
             <a href="index.php?page=article">
                 <div class="event_content">
                     <h4 class="titre">15/01/17 | Le défi des profs : Alerte à Malibu</h4>

@@ -28,22 +28,23 @@
     <div class="interface_connexion">
 
         <div class="form">
-            <form class="zone_form" action="#">
+            <form class="zone_form" method="post">
                 <p>Identifiant :</p>
-                <input class="connexion_input" type="text" />
+                <input class="connexion_input" type="text" name="identifiant" />
 
                 <p>Mot de passe :</p>
-                <input class="connexion_input" type="password" />
+                <input class="connexion_input" type="password" name="psw"/>
 
-            </form>
-        </div>
+
+
         <br/>
         <hr class="hr-index">
     <div class="boutons">
-        <a href="index.php?page=actualites" class="button connexion">Connexion</a>
-        <a href="index.php?page=actualites" class="button connexion">Inscription</a>
+        <input type="submit" name="connexion" value="Connexion">
+        <a href="index.php?page=inscription" class="button connexion">Inscription</a>
     </div>
-
+        </form>
+        </div>
         <footer>
             <a href="http://mmimontbeliard.com">
                 <img src="media/interface/mmi.png" id="logo-mmi" alt="Logo-MMI">
