@@ -7,12 +7,12 @@
         <i class="fa fa-calendar-plus-o fa-4x" aria-hidden="true"></i>
         <h2>Proposer son événement</h2>
 
-        
+        <form method="post">
         <p>Nom de l'événement :</p>
-        <input class="nom-event" type="text" />
+        <input class="nom-event" type="text" name="titre"/>
 
         <p>Description de l'événement :</p>
-        <textarea rows="10" cols="20" class="description-event"></textarea>
+        <textarea rows="10" cols="20" class="description-event" name="contenu"></textarea>
 
         <p>Image(s) :</p>
             <div class="liste-img">
@@ -22,7 +22,7 @@
             </div>
 
         <p>Date de l'événement :
-            <SELECT size="1">
+            <SELECT size="1" name="date">
                 <OPTION>01/01/2017</OPTION>
                 <OPTION>25/01/2017</OPTION>
                 <OPTION>10/02/2017</OPTION>
@@ -31,8 +31,8 @@
             </SELECT>
         </p>
 
-    <button class="button submit">Soumettre</button>
-        
+    <input class="button submit" type="submit" name="soumettre" value="soumettre" />
+        </form>
 
     </div>
 	

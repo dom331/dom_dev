@@ -3,7 +3,7 @@
 {% block contenu %}
 
     <i class="fa fa-exclamation-circle fa-4x" aria-hidden="true"></i>
-    <h2 id="urgent">Communiqués urgents</h2>
+    <h2 id="urgent">Communiqué Urgent</h2>
     <a href="index.php?page=article">
         <div class="actu_content">
             <h4 class="titre">06/01/17 | Paiements pour le voyage à Barcelone</h4>
@@ -15,32 +15,18 @@
 
     <i class="fa fa-newspaper-o fa-4x" aria-hidden="true"></i>
     <h2 id="actu">Actualités</h2>
+    {% for actualite in liste %}
     <a href="index.php?page=article">
-        <div class="actu_content">
-            <h4 class="titre">06/01/17 | La journée des anciens approche</h4>
-            <p><span>Dans 5 jours se déroulera la journée des anciens, nous revenons sur ce sujet.</span></p>
-            <hr class="hr-auteur">
-            <p class="auteur">David Malsot</p>
-        </div>
-    </a>
 
-    <a href="index.php?page=article">
         <div class="actu_content">
-            <h4 class="titre">12/12/16 | Centre d'accueil pour élèves anxieux</h4>
-            <p><span>Jean-marie Fino inauguera demain ce centre / On vous y attend.</span></p>
+            <h4 class="titre">{{ actualite.date }} | {{ actualite.titre }}</h4>
+            <p><span>{{ actualite.contenu }}</span></p>
             <hr class="hr-auteur">
-            <p class="auteur">Élodie Chartogne</p>
+            <p class="auteur">{{ actualite.responsables }}</p>
         </div>
-    </a>
 
-    <a href="index.php?page=article">
-        <div class="actu_content">
-            <h4 class="titre">17/11/16 | Une victoire pour l'équipe de Handball !</h4>
-            <p><span>Nous l'attendions depuis tant de décenne, nous avons enfin pris forme.</span></p>
-            <hr class="hr-auteur">
-            <p class="auteur">Pascal Chatonnay</p>
-        </div>
     </a>
+    {% endfor %}
 
 {% endblock %}
 
