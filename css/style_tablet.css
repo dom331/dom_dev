@@ -1,0 +1,105 @@
+main{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------- HEADER ---------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+/* ~~~~ Logo DOM au dessus des pages ~~~~ */
+#logo-dom{
+    display: block;
+    width: 60%;
+    margin: 0 auto 20px auto;
+}
+
+/* ~~~~ Séparation sur l'index ~~~~ */
+.hr-index{
+    width: 80%;
+    height: 3px;
+    color: #1b2e52;
+    background-color: #1b2e52;
+    border: none;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* --------------------------------------- INDEX ---------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+/* ~~~~ Titres ~~~~ */
+#urgent{
+    padding-left: 80px;
+}
+
+#actu, #meteo{
+    padding-left: 90px;
+    padding-top: 15px;
+    margin-bottom: 40px;
+}
+
+/* ~~~~ Meteo ~~~~ */
+#meteo{
+    padding-left: 90px;
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+h4{
+    font-size: 14px;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* --------------------------------------- EVENEMENTS ---------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+
+/* ~~~~ Séparation evenements ~~~~ */
+.hr-event{
+    width: 100%;
+}
+
+/* ~~~~ Bouton proposer un evenement ~~~~ */
+.hr-event{
+    width: 50%;
+    height: 3px;
+    color: #b6dede;
+    background-color: #b6dede;
+    border: none;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- PAGE DE CONNEXION ---------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+
+.boutons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 500px;
+    margin: 0 auto;
+}
+
+/* champ de connexion */
+
+.form{
+    width:50%;
+}
+
+.zone_form{
+    padding-left: 10px;
+}
+
+.index footer{
+    padding-top: 50px;
+}
+
+
+.hr-index{
+    max-width: 420px;
+    width: 40%;
+    height: 3px;
+    color: #f2eee9;
+    background-color: #f2eee9;
+    border: none;
+}

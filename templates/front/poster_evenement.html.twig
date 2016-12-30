@@ -1,0 +1,62 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+
+    <div class="poster_evenement">
+
+        <i class="fa fa-calendar-plus-o fa-4x" aria-hidden="true"></i>
+        <h2>Proposer son événement</h2>
+
+        
+        <p>Nom de l'événement :</p>
+        <input class="nom-event" type="text" />
+
+        <p>Description de l'événement :</p>
+        <textarea rows="10" cols="20" class="description-event"></textarea>
+
+        <p>Image(s) :</p>
+            <div class="liste-img">
+                <i class="fa fa-plus-square-o fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-plus-square-o fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-plus-square-o fa-3x" aria-hidden="true"></i>
+            </div>
+
+        <p>Date de l'événement :
+            <SELECT size="1">
+                <OPTION>01/01/2017</OPTION>
+                <OPTION>25/01/2017</OPTION>
+                <OPTION>10/02/2017</OPTION>
+                <OPTION>23/03/2017</OPTION>
+                <OPTION>...</OPTION>
+            </SELECT>
+        </p>
+
+    <button class="button submit">Soumettre</button>
+        
+
+    </div>
+	
+{% endblock %}
+
+{% block meteo %}
+    <i class="fa fa-sun-o fa-4x" aria-hidden="true"></i>
+    <h2 id="meteo">Météo campus</h2>
+
+    <div class="jours">
+        <ul>
+            <li><h4 class="titre">Lundi 07 novembre</h4></li>
+            <li>Matin : 8°C</li>
+            <li>Après-midi : 11°C</li>
+            <li>Temps nuageux</li>
+        </ul>
+    </div>
+
+    <div class="jours">
+        <ul>
+            <li><h4 class="titre">Mardi 08 novembre</h4></li>
+            <li>Matin : 7°C</li>
+            <li>Après-midi : 9°C</li>
+            <li>Temps pluvieux</li>
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,502 @@
+/* -------------------------------------------------------------------------------------------- */
+/* ------------------------------------------ COULEURS ---------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+
+/*
+Bleu clair : #b6dede
+Rouge      : #e62651
+Blanc      : #f2eee9
+Violet     : #1b2e52
+*/
+
+
+/* ------------------------------------------------------------------------------------------- */
+/* -------------------------------------------- FONTS ---------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../media/font/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../media/font/Montserrat-Regular.otf);
+}
+@font-face {
+    font-family: FontAwesome;
+    src: url(../media/font/FontAwesome.woff);
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------- CLASSES PRATIQUES---------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+
+* { box-sizing: border-box; }
+.hide{display: none;}
+
+
+/* ------------------------------------------------------------------------------------------------- */
+/* -------------------------------------- BALISAGE STANDARD ---------------------------------------- */
+/* ------------------------------------------------------------------------------------------------- */
+
+
+html{
+    color: #1b2e52;
+    background : #f3efe0;
+    font-size: 19px;
+    font-family: OpenSans, sans-serif;
+}
+
+body{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: all ease-in 0.25s;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #961613;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    font-weight: initial;
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------- HEADER ---------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+/* ~~~~ Logo DOM au dessus des pages ~~~~ */
+#logo-dom{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+/* ~~~~ Séparation sur l'index ~~~~ */
+.hr-actu{
+    max-width: 420px;
+    width: 40%;
+    height: 3px;
+    color: #1b2e52;
+    background-color: #1b2e52;
+    border: none;
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------- FOOTER ---------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+footer{
+    text-align: center;
+    font-size: 15px;
+}
+
+.index footer{
+    padding-top: 20px;
+    height: 100px;
+}
+/* ------------------------------------------------------------------------------------- */
+/* --------------------------------------- Menu ---------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+
+/* ~~~~ Bouton Hamburger ~~~~ */
+.fa-bars{
+    position: fixed;
+    background-color: #e62651;
+    border: none;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    color: #f2eee9;
+}
+/* ~~~~ Navigation ~~~~ */
+nav{
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    padding: 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* ~~~~ Photo profil ~~~~ */
+.photo{
+    border-radius: 50%;
+    border: 2px solid #b81e41;
+
+    text-indent: -9999px;
+    display: block;
+    content: " ";
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-image: url("../media/interface/account.png");
+}
+
+
+/* ~~~~ UL --> icones au dessus de la photo ~~~~ */
+.icones-menu-profil{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 70px;
+}
+
+/* ~~~~ LI --> icones au dessus de la photo ~~~~ */
+.icones-menu-profil li{
+    position: relative;
+}
+
+/* ~~~~ Nom sous la photo ~~~~ */
+.name{
+    color: #f2eee9;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+/* ~~~~ Notification au dessus de la cloche ~~~~ */
+.icones-menu-profil li:first-child::after{
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    content: "3";
+    display: block;
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    background: #f2eee9;
+    color: #b81e41;
+    border-radius: 50px;
+}
+
+/* ~~~~ Séparation du menu~~~~ */
+.hr-menu{
+    width: 50%;
+    height: 3px;
+    color: #f2eee9;
+    background-color: #f2eee9;
+    border: none;
+}
+
+.onglets li:hover{
+    background-color: #b81e41;
+}
+
+/* ~~~~ UL --> icones reseaux sociaux ~~~~ */
+.rs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.rs i{
+    color: #f2eee9;
+}
+
+/* ~~~~ LI --> icones reseaux sociaux ~~~~ */
+li:hover i{
+    color: #b6dede;
+    transition: color 0.3s;
+}
+
+.rs li a{
+    justify-content: space-around;
+}
+
+/* ~~~~ Logo MMI ~~~~ */
+#logo-mmi {
+    display: block;
+    margin: 0 auto;
+    height: 70px;
+}
+
+/* ~~~~ Footer menu ~~~~ */
+.footer{
+    padding: 10px;
+    color: #f2eee9;
+    font-size: 10px;
+}
+
+.footer a{
+    color: #b6dede;
+}
+/* -------------------------------------------------------------------------------------- */
+/* --------------------------------------- INDEX ---------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+/* ~~~~ Icone point d'exclamation urgents ~~~~ */
+.fa-exclamation-circle{
+    color: #e62651;
+    float: left;
+}
+
+/* ~~~~ Icone actualité ~~~~ */
+.fa-newspaper-o, .fa-sun-o, .fa-file-text{
+    color: #b6dede;
+    float: left;
+}
+
+/* ~~~~ Titres ~~~~ */
+.titre{
+    font-weight: bolder;
+}
+
+#urgent{
+    padding-left: 80px;
+}
+
+#actu{
+    padding-left: 90px;
+    padding-top: 15px;
+    margin-bottom: 40px;
+}
+
+#meteo{
+    padding-left: 90px;
+}
+
+h4{
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+/* ~~~~ Effets sur les articles ~~~~ */
+.actu_content:hover, .event_content:hover{
+    color: #e62651;
+}
+
+/* ~~~~ Retrait de ligne sur les articles ~~~~ */
+.actu_content p:nth-child(2), .event_content p:nth-child(2), .article p{
+    text-indent: 40px;
+}
+
+/* ~~~~ Séparation auteur ~~~~ */
+.hr-auteur{
+    float: left;
+    width: 45%;
+    height: 3px;
+    color: #b6dede;
+    background-color: #b6dede;
+    border: none;
+}
+
+/* ~~~~ Auteurs ~~~~ */
+.auteur{
+    text-align: right;
+    font-weight: bold;
+    color: #b6dede;
+}
+
+/* ~~~~ Meteo ~~~~ */
+.aside ul{
+    padding-left: 40px;
+}
+
+.aside ul li:first-child{
+    border: none;
+}
+
+.aside li{
+    list-style: none;
+    padding-left: 20px;;
+    border-left: 2px solid #b6dede;
+}
+
+.aside h4{
+    margin-bottom: 0;
+}
+
+
+/* ------------------------------------------------------------------------------------------- */
+/* --------------------------------------- EVENEMENTS ---------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+
+/* ~~~~ Icones calendrier ~~~~ */
+.fa-calendar, .fa-calendar-o, .fa-calendar-plus-o{
+    color: #b6dede;
+    float: left;
+    margin: -5px;
+}
+
+/* ~~~~ Titre décalé ~~~~ */
+.evenements h2, .poster_evenement h2, .article h2{
+    padding-left: 80px;
+    padding-top: 20px;
+}
+
+.article h2{
+    height: 80px;
+}
+
+/* ~~~~ Séparation evenements ~~~~ */
+.hr-event{
+    width: 50%;
+    height: 3px;
+    color: #b6dede;
+    background-color: #b6dede;
+    border: none;
+}
+
+/* ~~~~ Bouton proposer un evenement ~~~~ */
+.button{
+    border: 2px solid #b81e41;
+    background-color: #e62651;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    display: block;
+    margin: 20px auto 40px auto;
+    width: 100%;
+    text-align: center;
+}
+
+/* ~~~~ Bouton event ~~~~ */
+.button:hover{
+    border: 2px solid #b81e41;
+    background-color: #f2eee9;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.button{
+    color: #f2eee9;
+}
+.button:hover{
+    color: #e62651;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+/* --------------------------------------- PROPOSER EVENT ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+form{
+    padding: 10px;
+}
+
+input, textarea{
+    border: 2px solid #b6dede;
+    border-radius: 7px;
+    width: 100%;
+    padding: 5px;
+    height: 50px;
+}
+
+.nom-event{
+    height: 40px;
+}
+
+.description-event{
+    height: 140px;
+}
+
+form p{
+    margin: 30px 0 10px 0;
+}
+
+.liste-img{
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-plus-square-o{
+    color: #b6dede;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- PAGE DE CONNEXION ---------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+.particles-js-canvas-el{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.index{
+	padding-top: 30px;
+}
+
+.index p{
+    color: #f2eee9;
+}
+
+.hr-index{
+    max-width: 420px;
+    width: 40%;
+    height: 3px;
+    color: #f2eee9;
+    background-color: #f2eee9;
+    border: none;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- PAGE DE CONNEXION ---------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+
+.form{
+    margin: auto;
+    max-width:70%;
+    color: #1b2e52;
+}
+
+.boutons{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+}
+
+/* boutton connexion */
+.connexion{
+    border: 2px solid #b81e41;
+    background-color: #e62651;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.connexion:hover{
+    border: 2px solid #b81e41;
+    background-color: #f2eee9;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------- ARTICLE  ------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+
+.auteur-article{
+    color: #f2eee9;
+    background-color: #e62651;
+    padding: 20px;
+    text-align: center;
+}
+
+.article img{
+    width: 100%;
+
+}
+
+.st-content{
+    overflow-x: hidden;
+}
+

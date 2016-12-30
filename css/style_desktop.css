@@ -1,0 +1,146 @@
+#logo-dom{
+    width: 300px;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* --------------------------------------- Menu ---------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+
+/* ~~~~ Navigation ~~~~ */
+nav{
+    overflow: hidden;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* --------------------------------------- INDEX ---------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+/* ~~~~ Icone actualité ~~~~ */
+.fa-newspaper-o{
+    color: #b6dede;
+    float: left;
+    margin: -5px;
+}
+
+/* ~~~~ Icone météo ~~~~ */
+.fa-sun-o{
+    color: #b6dede;
+    float: left;
+}
+
+/* ~~~~ Alignement horizontal des deux divs ~~~~ */
+main{
+    display: flex;
+    padding: 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* ~~~~ Taille des divs ~~~~ */
+.contenu{
+    padding: 0 80px 40px 80px;
+    width: 70%;
+}
+
+.aside{
+    width: 30%;
+}
+
+
+/* ~~~~ Titres ~~~~ */
+.titre{
+    font-size: 20px;
+}
+
+#urgent{
+    padding-left: 80px;
+}
+
+#actu{
+    padding-left: 100px;;
+    margin-bottom: 50px;
+}
+
+h4{
+    font-size: 14px;
+}
+
+h2{
+    font-size: 28px;
+}
+
+
+
+/* ~~~~ Séparation auteur ~~~~ */
+.hr-auteur{
+    width: 74%;
+}
+
+.aside h4{
+    margin-bottom: 20px;
+}
+
+
+/* ------------------------------------------------------------------------------------------- */
+/* --------------------------------------- EVENEMENTS ---------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+
+/* ~~~~ Icones calendrier ~~~~ */
+.fa-calendar, .fa-calendar-o, .fa-calendar-plus-o{
+    margin: 0;
+}
+
+.evenements{
+    padding-top: 0;
+}
+
+/* ~~~~ Titre décalé ~~~~ */
+.evenements h2, .poster_evenement h2{
+    padding-top: 30px;
+    padding-left: 80px;
+}
+
+/* ~~~~ Bouton proposer un evenement ~~~~ */
+.event{
+    padding: 30px 60px;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0 auto 40px auto;
+    position: static;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* --------------------------------------- PROPOSER EVENT ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+form{
+    padding: 10px 10px 10px 80px;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- PAGE DE CONNEXION ---------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+
+.boutons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 500px;
+    margin: 0 auto;
+}
+
+/* champ de connexion */
+
+.form{
+    width:30%;
+}
+
+.zone_form{
+    padding-left: 10px;
+}
+
+.index footer{
+    padding-top: 60px;
+}

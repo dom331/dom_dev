@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4e771e4e-0c52-4db2-b329-968ee2f55573" name="MMI" url="http://mmi-projet.pu-pm.univ-fcomte.fr">
+        <fileTransfer host="mmi-projet.pu-pm.univ-fcomte.fr" port="22" accessType="SFTP" username="">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="165fd160-9862-4048-b6ee-6ad03d3053d8" name="eldrim" url="http://eldrim.fr">
+        <fileTransfer host="eldrim.fr" port="21" rootFolder="/Suley/DOM" password="dfc1dfc3dfd8dfc3dfc1dfc5dfdfdf99df98df8f" username="w6o4rd_bros">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Le Dôm est l'intranet du département MMI à Montbéliard. Tout élève du département, même ancien, peut accéder au Dôm, mais pas les intrus !" />
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+
+    <title>DÔM | Intra-MMI Montbéliard</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/sidebar.css" media="all" />
+
+    <link rel="stylesheet" href="css/style_phone.css" media="all"/>
+    <link rel="stylesheet" href="css/style_tablet.css" media="all and (min-width: 480px) and (max-width: 1000px)"/>
+    <link rel="stylesheet" href="css/style_desktop.css" media="all and (min-width: 1000px)" />
+
+    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+
+ <body>
+    <div id="st-container" class="st-container">
+        <nav class="st-menu st-effect-12" id="menu-12">
+
+
+            <ul class="icones-menu-profil">
+                <li><a href="index.php?page=404"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
+                <li><a href="index.php"><i class="fa fa-power-off" aria-hidden="true"></i></a></li>
+            </ul>
+
+            <a href="index.php?page=404"><div class="photo"></div></a>
+
+
+
+            <h3 class="name">Suleyman</h3>
+
+            <hr class="hr-menu">
+
+            <ul class="onglets">
+                <li><a class="icon icon-data" href="index.php?page=actualites">ACTUALITÉS</a></li>
+                <li><a class="icon icon-location" href="index.php?page=404">FORUM</a></li>
+                <li><a class="icon icon-study" href="index.php?page=evenements">ÉVÉNEMENTS</a></li>
+                <li><a class="icon icon-photo" href="index.php?page=404">VIE SCOLAIRE</a></li>
+            </ul>
+
+            <hr class="hr-menu">
+
+            <ul class="rs">
+                <li><a href="https://www.facebook.com/mmimontbeliard/?fref=ts"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/mmimontbeliard"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a></li>
+                <li><a href="https://fr.linkedin.com/company/src-media"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+            </ul>
+
+            <a href="http://mmimontbeliard.com">
+                <img  src="media/interface/mmi.png" id="logo-mmi" alt="Logo-MMI">
+            </a>
+
+            <div class="footer">
+                <span>
+                    Site réalisé dans le cadre d’un projet au <a href="http://mmimontbeliard.com"><b>département MMI</b></a> de Montbéliard.
+                </span>
+            </div>
+        </nav>
+
+
+
+        <div class="st-pusher">
+            <div class="st-content">
+                <div class="st-content-inner">
+
+                    <header>
+
+                        <div id="st-trigger-effects" class="column">
+                            <button data-effect="st-effect-12" class="fa fa-bars fa-2x" aria-hidden="true"></button>
+                        </div>
+
+                        <a href="index.php">
+                            <img src="media/interface/DOM_Logo_Final.png" id="logo-dom" alt="Logo-DOM">
+                        </a>
+
+                    </header>
+
+                    <hr class="hr-actu">
+
+                    <main>
+
+                        <div class="contenu">
+                            {% block contenu %}
+
+
+                            {% endblock %}
+                        </div>
+
+                        <div class="aside">
+
+                            {% block meteo %}
+
+
+                            {% endblock %}
+
+                        </div>
+                    </main>
+
+                    <hr class="hr-actu">
+
+                    <footer>
+                        <p>Tous droits réservés - 2016/2017</p>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/classie.js"></script>
+    <script src="js/sidebarEffects.js"></script>
+	<script src='js/jquery-2.2.0.min.js'></script>
+
+</body>
+</html>
