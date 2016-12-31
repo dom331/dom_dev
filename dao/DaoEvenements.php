@@ -26,7 +26,7 @@ class DaoEvenements extends Dao{
 
     public function create(){
         $sql = "INSERT INTO evenements(TITRE_EVENEMENT, CONTENU_EVENEMENT, DATE_EVENEMENT, PRIX_EVENEMENT, A_PREVOIR_EVENEMENT, EVENEMENT_APPROUVE, ID_UTILISATEUR) 
-                VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+                VALUES(?, ?, ?, ?, ?, ?, ?)";
 
         $requete = $this->pdo->prepare($sql);
 
@@ -36,7 +36,7 @@ class DaoEvenements extends Dao{
         $requete->bindValue(4, $this->bean->getPrix());
         $requete->bindValue(5, $this->bean->getA_prevoir());
         $requete->bindValue(6, $this->bean->getApprouve());
-        $requete->bindValue(7, $this->bean->getLeAuteur()->getId());
+        $requete->bindValue(7, $this->bean->getLeAuteur());
 
         $requete->execute();
     }
@@ -51,7 +51,7 @@ class DaoEvenements extends Dao{
     public function getListe(){
         $sql = "SELECT * 
                 FROM evenements    
-                ORDER BY DATE_EVENEMENT";
+                ORDER BY DATE_EVENEMENT DESC";
         $requete = $this->pdo->prepare($sql);
         $liste = array();
         if($requete->execute()){

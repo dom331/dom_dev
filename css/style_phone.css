@@ -129,7 +129,8 @@ nav{
 }
 
 /* ~~~~ Photo profil ~~~~ */
-.photo{
+
+.photo img{
     border-radius: 50%;
     border: 2px solid #b81e41;
 
@@ -141,7 +142,6 @@ nav{
     margin: 0 auto;
     -webkit-background-size: contain;
     background-size: contain;
-    background-image: url("../media/interface/account.png");
 }
 
 

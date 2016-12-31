@@ -1,0 +1,35 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+    <div class="article">
+        <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
+        <h2>{% if session.toto !='' %}
+    {{ session.toto.prenom }} {{ session.toto.nom }}
+{% else %}
+    Erreur
+    {% endif %}</h2>
+    {% if session.toto !='' %}
+        <img src="media/interface/{{ session.avatar.nom }}" alt="barcelone">
+{% endif %}
+        <div class="article_content">
+            <hr>
+    {% if liste.toto !='' %}
+        {{ liste.toto.nom }}
+        {% endif %}
+            <br>
+        </div>
+        <hr>
+    </div>
+
+{% endblock %}
+
+{% block meteo %}
+    <div class="auteur-article">
+        <a href="index.php?page=404">
+            <div class="photo"></div>
+        </a>
+        <h2>Suleyman Dogan</h2>
+        <h4 class="titre">Date de publication :</h4>
+        <p>12/01/17</p>
+    </div>
+{% endblock %}

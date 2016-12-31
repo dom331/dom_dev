@@ -27,8 +27,10 @@
                 <li><a href="index.php?page=404"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
                 <li><a href="index.php"><i class="fa fa-power-off" aria-hidden="true"></i></a></li>
             </ul>
-
-            <a href="index.php?page=404"><div class="photo"></div></a>
+            {% if session.toto !='' %}
+            <a href="index.php?page=profil&?id={{ session.toto.id }}"><div class="photo">
+                        <img src="media/interface/{{ session.avatar.nom }}" alt="">
+                    </div></a>{% else %} Erreur {% endif %}
 
 
 
@@ -42,7 +44,7 @@
             <hr class="hr-menu">
 
             <ul class="onglets">
-                <li><a class="icon icon-data" href="index.php?page=actualites">{% if session.toto !='' %} {{ session.toto.avatar }} {% endif %}</a></li>
+                <li><a class="icon icon-data" href="index.php?page=actualites">ACTUALITES</a></li>
                 <li><a class="icon icon-location" href="index.php?page=404">FORUM</a></li>
                 <li><a class="icon icon-study" href="index.php?page=evenements">ÉVÉNEMENTS</a></li>
                 <li><a class="icon icon-photo" href="index.php?page=404">VIE SCOLAIRE</a></li>

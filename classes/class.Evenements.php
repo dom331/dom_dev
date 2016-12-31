@@ -17,7 +17,7 @@ class Evenements {
         $this->id=$id;
         $this->titre=$titre;
         $this->contenu=$contenu;
-        $this->date=$date;
+        $this->date=date("Y-m-d");
         $this->prix=$prix;
         $this->a_prevoir=$a_prevoir;
         $this->approuve=$approuve;

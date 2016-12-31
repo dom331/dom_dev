@@ -56,8 +56,8 @@ class DaoUtilisateur extends Dao
         $requete->bindValue(9, $this->bean->getEx_mmi());
         $requete->bindValue(10, $this->bean->getApprouve());
         $requete->bindValue(11, $this->bean->getDate_naiss());
-        $requete->bindValue(12, $this->bean->getLeAvatar()->getId());
-        $requete->bindValue(13, $this->bean->getLeGroupe()->getId());
+        $requete->bindValue(12, $this->bean->getLeAvatar());
+        $requete->bindValue(13, $this->bean->getLeGroupe());
 
         $requete->execute();
     }
@@ -202,8 +202,8 @@ class DaoUtilisateur extends Dao
     public function cnx($identifiant, $psw)
     {
         $sql = "SELECT * 
-                FROM utilisateur  
-                WHERE 
+                FROM utilisateur
+                WHERE
                 utilisateur.IDENTIFIANT_UTILISATEUR = '" . $identifiant . "' 
                 AND utilisateur.PSW_UTILISATEUR = '" . $psw . "'";
         $requete = $this->pdo->prepare($sql);
