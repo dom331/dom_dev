@@ -46,6 +46,15 @@ class DaoEvenements extends Dao{
     }
 
     public function delete(){
+        $sql ="DELETE 
+               FROM evenements
+               WHERE evenements.ID_EVENEMENT = ?";
+
+        $requete = $this->pdo->prepare($sql);
+
+        $requete->bindValue(1, $this->bean->getId());
+
+        $requete->execute();
     }
 
     public function getListe(){

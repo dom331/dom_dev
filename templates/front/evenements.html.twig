@@ -10,7 +10,7 @@
             <i class="fa fa-calendar-o fa-4x" aria-hidden="true"></i>
             <h2>Événements à venir</h2>
             {% for evenement in liste %}
-            <a href="index.php?page=article">
+            <a href="index.php?page=article_evenement&id={{ evenement.id }}">
 
                 <div class="event_content">
                     <h4 class="titre">{{ evenement.date }} | {{ evenement.titre }}</h4>

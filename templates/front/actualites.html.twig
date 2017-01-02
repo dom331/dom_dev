@@ -15,18 +15,25 @@
 
     <i class="fa fa-newspaper-o fa-4x" aria-hidden="true"></i>
     <h2 id="actu">Actualités</h2>
+
+    {% if session.toto.admin == 1 %}
+        <a href="index.php?page=add_actualite"><img src="media/interface/plus-sign.png" alt="plus"></a>
+        {% endif %}
+
+
     {% for actualite in liste %}
-    <a href="index.php?page=article">
+    <a href="index.php?page=article&id={{ actualite.id }}">
 
         <div class="actu_content">
             <h4 class="titre">{{ actualite.date }} | {{ actualite.titre }}</h4>
             <p><span>{{ actualite.contenu }}</span></p>
             <hr class="hr-auteur">
             <p class="auteur">{{ actualite.responsables }}</p>
-        </div>
 
+        </div>
     </a>
     {% endfor %}
+
 
 {% endblock %}
 

@@ -1,0 +1,48 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+    {% if liste !='' %}
+        <div class="article">
+            <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
+
+            <h2>{{ liste.oui.titre }}</h2>
+            image à enregistrer dans la bdd
+            {#<img src="media/interface/barcelone.jpg" alt="barcelone">#}
+
+            <div class="article_content">
+                <hr>
+                <p>
+                <h4 class="titre">Rappels !</h4>
+                {{ liste.oui.contenu }}
+                <h4 class="titre">Publié par</h4>
+                {{ liste.oui.responsables }}
+                </p>
+                <br>
+            </div>
+            <hr>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block meteo %}
+    <div class="auteur-article">
+        <a href="index.php?page=404">
+            <div class="photo"></div>
+        </a>
+        <h2>Suleyman Dogan</h2>
+        {% if session.toto.admin == 1 %}
+            <form method="post">
+                <input name="suppr" type="submit" value="supprimer l'article">
+            </form>
+            <div>
+                <p>Ëtes-vous sûr de vouloir supprimer cette entrée ?</p>
+                <form method="post">
+                    <input type="submit" name="oui" value="oui">
+                    <input type="submit" name="non" value="non">
+                </form>
+            </div>
+        {% endif %}
+        <h4 class="titre">Date de publication :</h4>
+        <p>12/01/17</p>
+    </div>
+{% endblock %}

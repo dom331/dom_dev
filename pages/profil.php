@@ -2,24 +2,24 @@
 
 require_once ("dao/DaoUtilisateur.php");
 
-if (array_key_exists("id", $_GET)){
-        $daoUtilisateur = new DaoUtilisateur();
-        $id = $_GET['id'];
 
+        $daoUtilisateur = new DaoUtilisateur();
+
+        $id = $_GET['id'];
         $daoUtilisateur->find($id);
 
-        $infos['toto']=array();
+        $infos['oui'] = array();
 
-        $infos['toto']['id']=$daoUtilisateur->bean->getId();
-        $infos['toto']['nom']=$daoUtilisateur->bean->getNom();
-        $infos['toto']['prenom']=$daoUtilisateur->bean->getPrenom();
-        $infos['toto']['mail']=$daoUtilisateur->bean->getEmail();
+        $infos['oui']['id']=$daoUtilisateur->bean->getId();
+        $infos['oui']['nom']=$daoUtilisateur->bean->getNom();
+        $infos['oui']['prenom']=$daoUtilisateur->bean->getPrenom();
+        $infos['oui']['email']=$daoUtilisateur->bean->getEmail();
+        $infos['oui']['description']=$daoUtilisateur->bean->getDescription();
+        $infos['oui']['date_inscription']=$daoUtilisateur->bean->getDate_inscription();
+        $daoUtilisateur->setLeAvatar();
+        $infos['oui']['avatar']=$daoUtilisateur->bean->getLeAvatar()->getNom();
 
+        $param=array("liste" =>$infos);
 
-}
-else{
-        echo "Erreur";
-
-}
-
+//var_dump($param) or die();
 ?>

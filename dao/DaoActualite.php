@@ -32,7 +32,7 @@ class DaoActualite extends Dao{
         $requete->bindValue(2, $this->bean->getContenu());
         $requete->bindValue(3, $this->bean->getDate());
         $requete->bindValue(4, $this->bean->getResponsables());
-        $requete->bindValue(5, $this->bean->getLeAuteur()->getId());
+        $requete->bindValue(5, $this->bean->getLeAuteur());
 
         $requete->execute();
     }
@@ -42,6 +42,17 @@ class DaoActualite extends Dao{
     }
 
     public function delete(){
+
+        $sql ="DELETE 
+               FROM actualite
+               WHERE actualite.ID_ACTUALITE = ?";
+
+        $requete = $this->pdo->prepare($sql);
+
+        $requete->bindValue(1, $this->bean->getId());
+
+        $requete->execute();
+
     }
 
     public function getListe(){
@@ -71,6 +82,15 @@ class DaoActualite extends Dao{
     }
 
     public function setLesImages(){
+
+            $sql = "SELECT * FROM actualite, mediatheque WHERE actualite.ID_ACTUALITE = mediatheque.ID_ACTUALITE AND actualite.ID_ACTUALITE = " . $this->bean->getId();
+            $requete = $this->pdo->prepare($sql);
+            if ($requete->execute()) {
+                if ($donnees = $requete->fetch()) {
+                    $images = new Mediatheque($donnees['ID_MEDIA'], $donnees['NOM_MEDIA'], $donnees['EXTENSION_MEDIA'], $donnees['CATEGORIE_MEDIA']);
+                    $this->bean->setLesImages($images);
+                }
+            }
 
     }
     
