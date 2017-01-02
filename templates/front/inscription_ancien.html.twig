@@ -26,12 +26,28 @@
 <hr class="hr-index">
 
 <div class="interface_connexion">
-<p>Vous êtes...</p>
-    <div class="form">
-            <a href="index.php?page=inscription_mmi" class="button connexion">Un étudiant actuel</a>
-            <a href="index.php?page=inscription_ancien" class="button connexion">Un ancien MMI</a>
-            <a href="index.php?page=inscription_pedagogique" class="button connexion">Un membre de l'équipe pédagogique</a>
-    </div>
+    <p>Vous êtes...</p>
+    <form method="post">
+
+        <p>Nom :</p>
+        <textarea rows="10" cols="20"  name="nom"></textarea>
+
+        <p>Prénom :</p>
+        <textarea rows="10" cols="20"  name="prenom"></textarea>
+
+        <p>identifiant LDAP :</p>
+        <textarea rows="10" cols="20"  name="identifiant"></textarea>
+
+
+        <p>Mot de passe LDAP :</p>
+        <textarea rows="10" cols="20"  name="mdp"></textarea>
+
+        <p>Email de contact :</p>
+        <textarea rows="10" cols="20"  name="email"></textarea>
+
+
+        <input class="button submit" type="submit" name="soumettre" value="soumettre" />
+    </form>
     <br/>
     <hr class="hr-index">
 

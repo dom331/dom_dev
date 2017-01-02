@@ -14,8 +14,12 @@ if(isset($_POST["soumettre"])) {
         $dao->bean->setTitre($_POST["titre"]);
         $dao->bean->setContenu($_POST["contenu"]);
         $dao->bean->setDate($_POST["date"]);
-        $dao->bean->setLeAuteur($_SESSION['toto']['id']);
+        $dao->bean->setPrix($_POST["prix"]);
+        $dao->bean->setA_prevoir($_POST['a_prevoir']);
+        $dao->bean->setLeAuteur((int)$_SESSION['toto']['id']);
+//        var_dump($dao) or die();
         $dao->create();
+        header('Location: index.php?page=evenements');
 }   else {
     echo  "erreur";
     }

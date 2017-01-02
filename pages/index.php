@@ -4,7 +4,6 @@ require_once ("dao/DaoUtilisateur.php");
 
 $daoUtilisateur = new DaoUtilisateur();
 
-
 if(isset($_POST["connexion"])){
 
     $daoUtilisateur->cnx($_POST['identifiant'],$_POST['psw']);
@@ -18,13 +17,14 @@ if(isset($_POST["connexion"])){
         $_SESSION['toto']['nom']=$daoUtilisateur->bean->getNom();
         $_SESSION['toto']['prenom']=$daoUtilisateur->bean->getPrenom();
         $_SESSION['toto']['mail']=$daoUtilisateur->bean->getEmail();
-        $_SESSION['toto']['avatar']=$daoUtilisateur->bean->getLeAvatar();
 
+    $daoUtilisateur->setLeAvatar();
+
+        $_SESSION['toto']['avatar']=array();
+        $_SESSION['avatar']['nom']=$daoUtilisateur->bean->getLeAvatar()->getNom();
+//var_dump($_SESSION) or die();
 
         header('Location: index.php?page=actualites');
-    }
-    else{
-        $_SESSION['toto']="null";
     }
 }
 
