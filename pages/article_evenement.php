@@ -13,6 +13,7 @@ $daoEvenement = new DaoEvenements();
         $infos['oui']['id']=$daoEvenement->bean->getId();
         $infos['oui']['titre']=$daoEvenement->bean->getTitre();
         $infos['oui']['contenu']=$daoEvenement->bean->getContenu();
+        $infos['oui']['image']=$daoEvenement->bean->getImage();
         $infos['oui']['date']=$daoEvenement->bean->getDate();
         $infos['oui']['prix']=$daoEvenement->bean->getPrix();
         $infos['oui']['a_prevoir']=$daoEvenement->bean->getA_prevoir();

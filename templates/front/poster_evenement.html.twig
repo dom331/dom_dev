@@ -7,19 +7,19 @@
         <i class="fa fa-calendar-plus-o fa-4x" aria-hidden="true"></i>
         <h2>Proposer son événement</h2>
 
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
         <p>Nom de l'événement :</p>
-        <input class="nom-event" type="text" name="titre"/>
+        <input class="nom-event" type="text" name="titre" required/>
 
         <p>Description de l'événement :</p>
-        <textarea rows="10" cols="20" class="description-event" name="contenu"></textarea>
+        <textarea rows="10" cols="20" class="description-event" name="contenu" required></textarea>
 
         <p>Image(s) :</p>
             <div class="liste-img">
                 <i class="fa fa-plus-square-o fa-3x" aria-hidden="true"></i>
-                <i class="fa fa-plus-square-o fa-3x" aria-hidden="true"></i>
-                <i class="fa fa-plus-square-o fa-3x" aria-hidden="true"></i>
             </div>
+            <input type="file" name="oui"  title="Rechercher" required/>
+
 
 
 
@@ -29,7 +29,6 @@
                 <OPTION>2017-09-10</OPTION>
                 <OPTION>2016-03-12</OPTION>
                 <OPTION>2014-12-25</OPTION>
-                <OPTION>...</OPTION>
             </SELECT>
         </p>
 

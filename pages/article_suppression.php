@@ -13,10 +13,9 @@ $infos['oui'] = array();
 $infos['oui']['id']=$daoActualite->bean->getId();
 $infos['oui']['titre']=$daoActualite->bean->getTitre();
 $infos['oui']['contenu']=$daoActualite->bean->getContenu();
+$infos['oui']['image']=$daoActualite->bean->getImage();
 $infos['oui']['date']=$daoActualite->bean->getDate();
 $infos['oui']['responsables']=$daoActualite->bean->getResponsables();
-//            $daoActualite->setLesImages(); // Il n'y a pas d'images appartenant aux articles : A FAIRE --> Si on set les images, modifier la méthode delete()
-//            $infos['oui']['avatar']=$daoActualite->bean->getLesImages();
 
 $param=array("liste" =>$infos);
 

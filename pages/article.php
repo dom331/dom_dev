@@ -13,10 +13,9 @@ $daoActualite = new DaoActualite();
             $infos['oui']['id']=$daoActualite->bean->getId();
             $infos['oui']['titre']=$daoActualite->bean->getTitre();
             $infos['oui']['contenu']=$daoActualite->bean->getContenu();
+            $infos['oui']['image']=$daoActualite->bean->getImage();
             $infos['oui']['date']=$daoActualite->bean->getDate();
             $infos['oui']['responsables']=$daoActualite->bean->getResponsables();
-//            $daoActualite->setLesImages(); // Il n'y a pas d'images appartenant aux articles : A FAIRE
-//            $infos['oui']['avatar']=$daoActualite->bean->getLesImages();
 
     $param=array("liste" =>$infos);
 

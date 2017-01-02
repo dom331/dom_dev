@@ -100,6 +100,11 @@ h2{
     padding-left: 80px;
 }
 
+.article_imgs{
+    width:250px;
+
+}
+
 /* ~~~~ Bouton proposer un evenement ~~~~ */
 .event{
     padding: 30px 60px;

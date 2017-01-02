@@ -17,22 +17,24 @@ class DaoActualite extends Dao{
         $this->bean->setId($donnees['ID_ACTUALITE']);
         $this->bean->setTitre($donnees['TITRE_ACTUALITE']);
         $this->bean->setContenu($donnees['CONTENU_ACTUALITE']);
+        $this->bean->setImage($donnees['IMAGE']);
         $this->bean->setDate($donnees['DATE_ACTUALITE']);
         $this->bean->setResponsables($donnees['RESPONSABLES_ACTUALITE']);
 
     }
 
     public function create(){
-        $sql = "INSERT INTO actualite(TITRE_ACTUALITE, CONTENU_ACTUALITE, DATE_ACTUALITE, RESPONSABLES_ACTUALITE, ID_UTILISATEUR) 
-                VALUES(?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO actualite(TITRE_ACTUALITE, CONTENU_ACTUALITE, IMAGE, DATE_ACTUALITE, RESPONSABLES_ACTUALITE, ID_UTILISATEUR) 
+                VALUES(?, ?, ?, ?, ?, ?)";
 
         $requete = $this->pdo->prepare($sql);
 
         $requete->bindValue(1, $this->bean->getTitre());
         $requete->bindValue(2, $this->bean->getContenu());
-        $requete->bindValue(3, $this->bean->getDate());
-        $requete->bindValue(4, $this->bean->getResponsables());
-        $requete->bindValue(5, $this->bean->getLeAuteur());
+        $requete->bindValue(3, $this->bean->getImage());
+        $requete->bindValue(4, $this->bean->getDate());
+        $requete->bindValue(5, $this->bean->getResponsables());
+        $requete->bindValue(6, $this->bean->getLeAuteur());
 
         $requete->execute();
     }
@@ -67,6 +69,7 @@ class DaoActualite extends Dao{
                     $donnees['ID_ACTUALITE'],
                     $donnees['TITRE_ACTUALITE'],
                     $donnees['CONTENU_ACTUALITE'],
+                    $donnees['IMAGE'],
                     $donnees['DATE_ACTUALITE'],
                     $donnees['RESPONSABLES_ACTUALITE']
                 

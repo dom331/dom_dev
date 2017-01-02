@@ -14,39 +14,17 @@
 
                 <div class="event_content">
                     <h4 class="titre">{{ evenement.date }} | {{ evenement.titre }}</h4>
+
+                    <img class="article_imgs" src="media/interface/{{ evenement.image }}" alt="image">
                     <p><span>{{ evenement.contenu }}</span></p>
                 </div>
 
             </a>
             {% endfor %}
-            <a href="index.php?page=article">
-                <div class="event_content">
-                    <h4 class="titre">15/01/17 | Le défi des profs : Alerte à Malibu</h4>
-                    <p><span>Retrouvez l'équipe pédagogique dans leurs plus beaux ensembles.</span></p>
-                </div>
-            </a>
-        </div>
 
         <hr class="hr-event">
 
-        <div class="EventFuturs">
-            <i class="fa fa-calendar fa-4x" aria-hidden="true"></i>
-            <h2>Événements futurs</h2>
-             <a href="index.php?page=article">
-            <div class="event_content">
-                <h4 class="titre">01/04/17 | Journée des bad buzz</h4>
-                <p><span>De poissons, tromperies et hontes sera comblée votre journée.</span></p>
-            </div>
-            </a>
-
-            <a href="index.php?page=article">
-            <div class="event_content">
-                <h4 class="titre">28/05/17 | Enigme au département</h4>
-                <p><span>Une énigme autour d'un événement de communication international.</span></p>
-            </div>
-            </a>
-
-        </div>
+</div>
     </div>
 {% endblock %}
 
