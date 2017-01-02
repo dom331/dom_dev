@@ -3,18 +3,18 @@
 {% block contenu %}
     <div class="article">
         <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
-        <h2>{% if session.toto !='' %}
-    {{ session.toto.prenom }} {{ session.toto.nom }}
-{% else %}
-    Erreur
+        <h2>{% if liste !='' %}
+                {{ liste.oui.nom }}  {{ liste.oui.prenom }}
     {% endif %}</h2>
-    {% if session.toto !='' %}
-        <img src="media/interface/{{ session.avatar.nom }}" alt="barcelone">
+    {% if liste !='' %}
+        <img src="media/interface/{{ liste.oui.avatar }}" alt="barcelone">
 {% endif %}
         <div class="article_content">
             <hr>
-    {% if liste.toto !='' %}
-        {{ liste.toto.nom }}
+    {% if liste !='' %}
+        {{ liste.oui.description }}<br>
+        {{ liste.oui.email }}<br>
+        {{ liste.oui.date_inscription }}
         {% endif %}
             <br>
         </div>

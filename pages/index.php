@@ -17,6 +17,7 @@ if(isset($_POST["connexion"])){
         $_SESSION['toto']['nom']=$daoUtilisateur->bean->getNom();
         $_SESSION['toto']['prenom']=$daoUtilisateur->bean->getPrenom();
         $_SESSION['toto']['mail']=$daoUtilisateur->bean->getEmail();
+        $_SESSION['toto']['admin']=$daoUtilisateur->bean->getAdmin();
 
     $daoUtilisateur->setLeAvatar();
 
