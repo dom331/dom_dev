@@ -16,6 +16,12 @@ if(isset($_POST["soumettre"])) {
         $dao->bean->setDate(date("Y-m-d"));
         $dao->bean->setResponsables($_POST["responsables"]);
         $dao->bean->setLeAuteur((int)$_SESSION['toto']['id']);
+        
+        $image = $_FILES['oui']['name'];
+//var_dump($image) or die();
+        if(move_uploaded_file($_FILES['oui']['tmp_name'], "media/interface/".$image)){
+            $dao->bean->setImage($image);
+        }
 //        var_dump($dao) or die();
         $dao->create();
         header('Location: index.php?page=actualites');
