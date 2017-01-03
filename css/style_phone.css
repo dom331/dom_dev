@@ -422,6 +422,10 @@ input[type='text'], input[type='password'], input[type='email'], textarea{
     height: 140px;
 }
 
+.auteur-article{
+    background-color: #b6dede;
+}
+
 form p{
     margin: 30px 0 10px 0;
 }
@@ -537,14 +541,13 @@ input[type="email"]:nth-child(10){
 
 .auteur-article{
     color: #f2eee9;
-    background-color: #e62651;
+    background-color: #1b2e52;
     padding: 20px;
     text-align: center;
 }
 
 .article img{
     width: 100%;
-
 }
 
 .st-content{
