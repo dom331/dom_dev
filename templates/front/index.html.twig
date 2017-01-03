@@ -8,7 +8,7 @@
     <title>DÔM | Intra-MMI Montbéliard</title>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/style_phone.css" media="all" />
-    <link rel="stylesheet" href="css/style_tablet.css" media="all and (min-width: 480px) and (max-width: 1000px)"/>
+    <link rel="stylesheet" href="css/style_tablet.css" media="all and (min-width: 600px) and (max-width: 1000px)"/>
     <link rel="stylesheet" href="css/style_desktop.css" media="all and (min-width: 1000px)" />
     <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/particles.css">
@@ -23,24 +23,25 @@
         <a href="index.php"><img src="media/interface/Logo_DOM_accueil.png" id="logo-dom"  alt="Logo-DOM"></a>
      </header>
 
-    <hr class="hr-index">
+    <hr class="hr-index un">
 
     <div class="interface_connexion">
 
         <div class="form">
             <form class="zone_form" method="post">
                 <p>Identifiant :</p>
-                <input class="connexion_input" type="text" name="identifiant" />
+
+                <input class="connexion_input boutons" type="text" name="identifiant" />
 
                 <p>Mot de passe :</p>
-                <input class="connexion_input" type="password" name="psw"/>
+                <input class="connexion_input boutons" type="password" name="psw"/>
 
 
 
         <br/>
-        <hr class="hr-index">
+        <hr class="hr-index deux">
     <div class="boutons">
-        <input type="submit" name="connexion" value="Connexion">
+        <input type="submit" name="connexion" class="connexion" value="Connexion">
         <a href="index.php?page=inscription" class="button connexion">Inscription</a>
     </div>
         </form>
