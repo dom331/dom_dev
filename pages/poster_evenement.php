@@ -4,6 +4,7 @@ require_once 'dao/DaoEvenements.php';
 
 if(isset($_POST["soumettre"])) {
 
+
     if (
         array_key_exists("titre", $_POST)
         && array_key_exists("contenu", $_POST)
@@ -14,7 +15,9 @@ if(isset($_POST["soumettre"])) {
         $dao->bean->setTitre($_POST["titre"]);
         $dao->bean->setContenu($_POST["contenu"]);
 
-        $dao->bean->setDate($_POST["date"]);
+        $date = explode("/", $_POST["date"]); //Explode les / afin de mettre format y-m-j
+        $dao->bean->setDate($date[2]."-".$date[1]."-".$date[0]);
+
         $dao->bean->setPrix($_POST["prix"]);
         $dao->bean->setA_prevoir($_POST['a_prevoir']);
         $dao->bean->setLeAuteur((int)$_SESSION['toto']['id']);
