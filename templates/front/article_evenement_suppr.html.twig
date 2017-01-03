@@ -44,6 +44,6 @@
             </div>
         {% endif %}
         <h4 class="titre">Date de publication :</h4>
-        <p>12/01/17</p>
+        <p>{{ liste.oui.date | date("d/m/Y") }}</p>
     </div>
 {% endblock %}
