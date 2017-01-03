@@ -76,10 +76,11 @@ h1,h2,h3,h4,h5,h6{
 
 /* ~~~~ Logo DOM au dessus des pages ~~~~ */
 #logo-dom{
+    position: absolute;
     display: block;
-    width: 60%;
-    margin: 0 auto;
-    max-width: 300px;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* ~~~~ Séparation sur l'index ~~~~ */
@@ -217,9 +218,10 @@ li:hover i{
 
 /* ~~~~ Logo MMI ~~~~ */
 #logo-mmi {
-    display: block;
-    margin: 0 auto;
+    position: absolute;
     height: 70px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* ~~~~ Footer menu ~~~~ */
@@ -392,7 +394,7 @@ form{
     padding: 10px;
 }
 
-input, textarea{
+input[type='text'], input[type='password'], input[type='email'], textarea{
     border: 2px solid #b6dede;
     border-radius: 7px;
     width: 100%;
@@ -424,6 +426,7 @@ form p{
 /* -------------------------------------------------------------------------------------------------- */
 /* --------------------------------------- PAGE DE CONNEXION ---------------------------------------- */
 /* -------------------------------------------------------------------------------------------------- */
+/* ~~~~ Effet background ~~~~ */
 .particles-js-canvas-el{
     position: absolute;
     top: 0;
@@ -436,8 +439,10 @@ form p{
 
 .index p{
     color: #f2eee9;
+    margin: 10px 0 5px 0;
 }
 
+/* ~~~~ Barres index ~~~~ */
 .hr-index{
     max-width: 420px;
     width: 40%;
@@ -447,35 +452,42 @@ form p{
     border: none;
 }
 
-/* -------------------------------------------------------------------------------------------------- */
-/* --------------------------------------- PAGE DE CONNEXION ---------------------------------------- */
-/* -------------------------------------------------------------------------------------------------- */
+.un{
+   margin-top: 190px;
+}
 
+/* ~~~~ Formulaire ~~~~ */
 .form{
     margin: auto;
     max-width:70%;
     color: #1b2e52;
 }
 
+input[type="email"]:nth-child(10){
+    margin-bottom: 30px;
+}
+
+/* ~~~~ Boutons ~~~~ */
 .boutons{
     display: flex;
     flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
     padding-top: 15px;
-    text-align: center;
 }
 
-/* boutton connexion */
 .connexion{
+    height: auto;
+    min-height: 57px;
+    color: #f2eee9;
     border: 2px solid #b81e41;
     background-color: #e62651;
     font-size: 20px;
     text-transform: uppercase;
-    margin: 5px;
+    margin: 5px auto;
+    width: 75%;
 }
 
 .connexion:hover{
+    color: #e62651;
     border: 2px solid #b81e41;
     background-color: #f2eee9;
     -webkit-transition: 0.3s;
@@ -483,6 +495,28 @@ form p{
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- PAGE D'INSCRIPTION --------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+/* ~~~~ Vous êtes ~~~~ */
+.interface_connexion h2{
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 0 10px 0;
+    font-size: 35px;
+    color: #e62651;
+}
+
+.interface_connexion p{
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+    padding: 2px 0 2px 0;
+    font-size: 20px;
+    color: #f2eee9;
+    margin: 15px auto 5px auto;
+    width: 60%;
 }
 
 /* -------------------------------------------------------------------------------------------------- */
