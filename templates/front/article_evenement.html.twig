@@ -9,18 +9,12 @@
             <img src="media/interface/{{ liste.oui.image }}" alt="img">
 
             <div class="article_content">
-                <hr>
-                <p>
-                <h4 class="titre">Rappels !</h4>
-                {{ liste.oui.contenu }}
-                <h4 class="titre">Coûts</h4>
-                {{ liste.oui.prix }}
-                <h4 class="titre">A prévoir</h4>
-                {{ liste.oui.a_prevoir }}
-                </p>
-                <br>
+                <h3 class="titre">Description :</h3>
+                <p>{{ liste.oui.contenu }}</p>
+                <p><span class="titre">Coûts de participation :</span> {{ liste.oui.prix }}</p>
+                <p><span class="titre">Objets à prévoir :</span> {{ liste.oui.a_prevoir }}</p>
             </div>
-            <hr>
+
         </div>
     {% endif %}
 {% endblock %}
@@ -32,9 +26,11 @@
         </a>
         <h2>Suleyman Dogan</h2>
         {% if session.toto.admin == 1 %}
+            <hr class="hr-menu">
             <form method="post" action="index.php?page=article_evenement_suppr&id={{ liste.oui.id }}">
-                <input name="suppr" type="submit" value="supprimer l'article">
+                <input name="suppr" class="button connexion" type="submit" value="supprimer l'article">
             </form>
+            <hr class="hr-menu">
         {% endif %}
         <h4 class="titre">Date de publication :</h4>
         <p>{{ liste.oui.date | date("d/m/Y") }}</p>

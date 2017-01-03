@@ -10,7 +10,6 @@
             {#<img src="media/interface/barcelone.jpg" alt="barcelone">#}
 
             <div class="article_content">
-                <hr>
                 <p>
                 <h4 class="titre">Rappels !</h4>
                 {{ liste.oui.contenu }}
@@ -19,7 +18,6 @@
                 </p>
                 <br>
             </div>
-            <hr>
         </div>
     {% endif %}
 {% endblock %}
@@ -32,13 +30,13 @@
         <h2>Suleyman Dogan</h2>
         {% if session.toto.admin == 1 %}
             <form method="post">
-                <input name="suppr" type="submit" value="supprimer l'article">
+                <input name="suppr" class="button connexion" type="submit" value="supprimer l'article">
             </form>
             <div>
                 <p>Ëtes-vous sûr de vouloir supprimer cette entrée ?</p>
                 <form method="post">
-                    <input type="submit" name="oui" value="oui">
-                    <input type="submit" name="non" value="non">
+                    <input type="submit" class="button connexion" name="oui" value="oui">
+                    <input type="submit" class="button connexion" name="non" value="non">
                 </form>
             </div>
         {% endif %}
