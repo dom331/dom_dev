@@ -28,6 +28,7 @@ class DaoUtilisateur extends Dao
         $this->bean->setPsw($donnees['PSW_UTILISATEUR']);
         $this->bean->setEmail($donnees['EMAIL_UTILISATEUR']);
         $this->bean->setDescription($donnees['DESCRIPTION_UTILISATEUR']);
+        $this->bean->setImage($donnees['IMAGE']);
         $this->bean->setDate_inscription($donnees['DATE_INSCRIPTION']);
         $this->bean->setAdmin($donnees['ADMIN']);
         $this->bean->setEx_mmi($donnees['EX_MMI']);
@@ -39,7 +40,7 @@ class DaoUtilisateur extends Dao
     public function create()
     {
         $sql = "INSERT INTO utilisateur(NOM_UTILISATEUR, PRENOM_UTILISATEUR, IDENTIFIANT_UTILISATEUR,
-                            PSW_UTILISATEUR, EMAIL_UTILISATEUR, DESCRIPTION_UTILISATEUR, DATE_INSCRIPTION,
+                            PSW_UTILISATEUR, EMAIL_UTILISATEUR, DESCRIPTION_UTILISATEUR, IMAGE, DATE_INSCRIPTION,
                             ADMIN, EX_MMI, UTILISATEUR_APPROUVE, DATE_NAISS, ID_MEDIA, ID_GROUPE) 
                 VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -51,6 +52,7 @@ class DaoUtilisateur extends Dao
         $requete->bindValue(4, $this->bean->getPsw());
         $requete->bindValue(5, $this->bean->getEmail());
         $requete->bindValue(6, $this->bean->getDescription());
+        $requete->bindValue(7, $this->bean->getImage());
         $requete->bindValue(7, $this->bean->getDate_inscription());
         $requete->bindValue(8, $this->bean->getAdmin());
         $requete->bindValue(9, $this->bean->getEx_mmi());
@@ -88,6 +90,7 @@ class DaoUtilisateur extends Dao
                     $donnees['PSW_UTILISATEUR'],
                     $donnees['EMAIL_UTILISATEUR'],
                     $donnees['DESCRIPTION_UTILISATEUR'],
+                    $donnees['IMAGE'],
                     $donnees['DATE_INSCRIPTION'],
                     $donnees['ADMIN'],
                     $donnees['EX_MMI'],
@@ -216,6 +219,7 @@ class DaoUtilisateur extends Dao
                 $this->bean->setPsw($donnees['PSW_UTILISATEUR']);
                 $this->bean->setEmail($donnees['EMAIL_UTILISATEUR']);
                 $this->bean->setDescription($donnees['DESCRIPTION_UTILISATEUR']);
+                $this->bean->setImage($donnees['IMAGE']);
                 $this->bean->setDate_inscription($donnees['DATE_INSCRIPTION']);
                 $this->bean->setAdmin($donnees['ADMIN']);
                 $this->bean->setEx_mmi($donnees['EX_MMI']);
