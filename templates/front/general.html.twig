@@ -14,6 +14,7 @@
      <link rel="stylesheet" href="css/normalize.css"/>
      <link rel="stylesheet" href="css/sidebar.css" media="all" />
 
+
      <link rel="stylesheet" href="css/style_phone.css" media="all"/>
      <link rel="stylesheet" href="css/style_tablet.css" media="all and (min-width: 600px) and (max-width: 1000px)"/>
      <link rel="stylesheet" href="css/style_desktop.css" media="all and (min-width: 1000px)" />
@@ -47,7 +48,9 @@
             <form method="post">
             <ul class="icones-menu-profil">
                 <li><a href="index.php?page=404"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
+
                 <li><button type="submit" class="logout" name="logout"><i class="fa fa-power-off" aria-hidden="true"></i></button></li>
+
             </ul>
             </form>
             {% if session.toto !='' %}
@@ -143,6 +146,7 @@
     <script src="js/classie.js"></script>
     <script src="js/sidebarEffects.js"></script>
  </body>
+
 
 {%  else %}
     <body>
