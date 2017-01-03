@@ -73,6 +73,9 @@ h1,h2,h3,h4,h5,h6{
 /* --------------------------------------------------------------------------------------- */
 /* --------------------------------------- HEADER ---------------------------------------- */
 /* --------------------------------------------------------------------------------------- */
+header{
+    height: 1px;
+}
 
 /* ~~~~ Logo DOM au dessus des pages ~~~~ */
 #logo-dom{
@@ -183,7 +186,15 @@ nav{
     border-radius: 50px;
 }
 
-/* ~~~~ Séparation du menu~~~~ */
+/* ~~~~ Power off ~~~~ */
+.logout{
+    margin-top: 20px;
+    color: #f2eee9;
+    border-style: none;
+    background-color: #e62651;
+}
+
+/* ~~~~ Séparation du menu ~~~~ */
 .hr-menu{
     width: 50%;
     height: 3px;
@@ -220,6 +231,7 @@ li:hover i{
 #logo-mmi {
     position: absolute;
     height: 70px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
 }
