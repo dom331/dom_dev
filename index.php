@@ -31,19 +31,18 @@ $routes = parse_ini_file("param/routes.ini", true);
 
 if(!empty($_GET["page"])){
     $uriDemandee = $_GET["page"];
-
     $template = $routes[$uriDemandee]["template"];
-    
-    if(isset($routes[$uriDemandee]["page"])) {
-        $page = $routes[$uriDemandee]["page"];
+    if(!empty($routes[$uriDemandee]["page"])){
+        echo "<span style='display: none;'>";
+            $page = $routes[$uriDemandee]["page"];
+            require_once($page);
+        echo "</span>";
     }
 }
 
 
 
-if (!EMPTY($page)){
-    require_once($page);
-}
+
 
 // Chargement du template
 $template = $twig->loadTemplate($template);
