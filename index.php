@@ -27,21 +27,22 @@ if(isset($_POST["logout"])){
 
 // Parsing du fichier des routes
 $routes = parse_ini_file("param/routes.ini", true);
-// Si une URI est demandée
-
+// Si une URI est demand�e
 if(!empty($_GET["page"])){
     $uriDemandee = $_GET["page"];
-    $template = $routes[$uriDemandee]["template"];
-    if(!empty($routes[$uriDemandee]["page"])){
-        echo "<span style='display: none;'>";
-            $page = $routes[$uriDemandee]["page"];
-            require_once($page);
-        echo "</span>";
-    }
 }
+$page = $routes[$uriDemandee]["page"];
+$template = $routes[$uriDemandee]["template"];
 
+// Tableau de paramètres
+$param = array();
 
-
+if (!EMPTY($page = $routes[$uriDemandee]["page"])){
+    echo "<span style='display: none;'>";
+    $page = $routes[$uriDemandee]["page"];
+    require_once($page);
+    echo "</span>";
+}
 
 
 // Chargement du template
