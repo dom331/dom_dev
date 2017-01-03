@@ -9,11 +9,11 @@ Twig_Autoloader::register();
 // Définition du répertoire des templates
 $loader = new Twig_Loader_Filesystem('templates');
 // Utilisation du répertoire des templates avec cache
-	
+
 //$twig = new Twig_Environment($loader, array('cache' => 'templates_c'));
 $twig = new Twig_Environment($loader, array('cache' => false));
-		
-// routage des pages    
+
+// routage des pages
 // Par defaut la page d'accueil
 $uriDemandee = "accueil";
 
@@ -28,17 +28,21 @@ if(isset($_POST["logout"])){
 // Parsing du fichier des routes
 $routes = parse_ini_file("param/routes.ini", true);
 // Si une URI est demandée
-if(!empty($_GET["page"])){
-	$uriDemandee = $_GET["page"];
-}
-$page = $routes[$uriDemandee]["page"];
-$template = $routes[$uriDemandee]["template"];
 
-// Tableau de paramètres
-$param = array();
+if(!empty($_GET["page"])){
+    $uriDemandee = $_GET["page"];
+
+    $template = $routes[$uriDemandee]["template"];
+    
+    if(isset($routes[$uriDemandee]["page"])) {
+        $page = $routes[$uriDemandee]["page"];
+    }
+}
+
+
 
 if (!EMPTY($page)){
-	require_once($page);
+    require_once($page);
 }
 
 // Chargement du template
@@ -53,4 +57,4 @@ echo $template->render($param);
 
 
 
-?>	
+?>
