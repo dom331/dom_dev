@@ -1,32 +1,55 @@
 <!DOCTYPE html>
+
+
+
+
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Le Dôm est l'intranet du département MMI à Montbéliard. Tout élève du département, même ancien, peut accéder au Dôm, mais pas les intrus !" />
-    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+     <meta name="description" content="Le Dôm est l'intranet du département MMI à Montbéliard. Tout élève du département, même ancien, peut accéder au Dôm, mais pas les intrus !" />
+     <meta name="viewport" content="width=device-width ,initial-scale=1.0">
 
-    <title>DÔM | Intra-MMI Montbéliard</title>
-    <link rel="stylesheet" href="css/normalize.css"/>
-    <link rel="stylesheet" href="css/sidebar.css" media="all" />
+     <title>DÔM | Intra-MMI Montbéliard</title>
+     <link rel="stylesheet" href="css/normalize.css"/>
+     <link rel="stylesheet" href="css/sidebar.css" media="all" />
 
-    <link rel="stylesheet" href="css/style_phone.css" media="all"/>
-    <link rel="stylesheet" href="css/style_tablet.css" media="all and (min-width: 480px) and (max-width: 1000px)"/>
-    <link rel="stylesheet" href="css/style_desktop.css" media="all and (min-width: 1000px)" />
+     <link rel="stylesheet" href="css/style_phone.css" media="all"/>
+     <link rel="stylesheet" href="css/style_tablet.css" media="all and (min-width: 480px) and (max-width: 1000px)"/>
+     <link rel="stylesheet" href="css/style_desktop.css" media="all and (min-width: 1000px)" />
 
-    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
-    <script src="js/modernizr.custom.js"></script>
+     <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+
+     <script src="js/modernizr.custom.js"></script>
+
+    <!-- CALENDAR INPUT -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#datepicker" ).datepicker();
+        } );
+    </script>
+
+    <!-- // CALENDAR INPUT -->
+
+
 </head>
 
+{% if session.toto !='' %}
 
  <body>
     <div id="st-container" class="st-container">
         <nav class="st-menu st-effect-12" id="menu-12">
 
-
+            <form method="post">
             <ul class="icones-menu-profil">
                 <li><a href="index.php?page=404"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
-                <li><a href="index.php"><i class="fa fa-power-off" aria-hidden="true"></i></a></li>
+                <li><button type="submit" name="logout"><i class="fa fa-power-off" aria-hidden="true"></i></button></li>
             </ul>
+            </form>
             {% if session.toto !='' %}
             <a href="index.php?page=profil&id={{ session.toto.id }}"><div class="photo">
                         <img src="media/interface/{{ session.avatar.nom }}" alt="">
@@ -119,12 +142,29 @@
         </div>
     </div>
 
-
-
-
     <script src="js/classie.js"></script>
     <script src="js/sidebarEffects.js"></script>
-	<script src='js/jquery-2.2.0.min.js'></script>
+ </body>
 
-</body>
+{%  else %}
+    <body>
+        <header>
+
+            <a href="index.php?page=actualites">
+                <img src="media/interface/DOM_Logo_Final.png" id="logo-dom" alt="Logo-DOM">
+            </a>
+
+        </header>
+
+        <hr class="hr-actu">
+        <main>
+            <div class="contenu">
+                <h3>Vous devez être connecté pour accéder à cette page.</h3>
+                <a href="index.php">Connexion</a> | <a href="index.php?page=inscription">Inscription</a>
+            </div>
+        </main>
+
+    </body>
+{%  endif %}
+
 </html>

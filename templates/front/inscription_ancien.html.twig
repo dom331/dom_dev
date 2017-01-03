@@ -8,7 +8,7 @@
     <title>DÔM | Intra-MMI Montbéliard</title>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/style_phone.css" media="all" />
-    <link rel="stylesheet" href="css/style_tablet.css" media="all and (min-width: 480px) and (max-width: 1000px)"/>
+    <link rel="stylesheet" href="css/style_tablet.css" media="all and (min-width: 600px) and (max-width: 1000px)"/>
     <link rel="stylesheet" href="css/style_desktop.css" media="all and (min-width: 1000px)" />
     <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/particles.css">
@@ -20,43 +20,43 @@
 
 <body class="index">
 <header>
-    <img src="media/interface/Logo_DOM_accueil.png" id="logo-dom"  alt="Logo-DOM">
+    <a href="index.php"><img src="media/interface/Logo_DOM_accueil.png" id="logo-dom"  alt="Logo-DOM"></a>
 </header>
 
-<hr class="hr-index">
+<hr class="hr-index un">
 
 <div class="interface_connexion">
     <p>Vous êtes...</p>
+    <div class="form">
     <form method="post">
 
         <p>Nom :</p>
-        <textarea rows="10" cols="20"  name="nom"></textarea>
+        <input type='text' name="nom" />
 
         <p>Prénom :</p>
-        <textarea rows="10" cols="20"  name="prenom"></textarea>
+        <input type='text' name="prenom" />
 
-        <p>identifiant LDAP :</p>
-        <textarea rows="10" cols="20"  name="identifiant"></textarea>
-
+        <p>Identifiant LDAP :</p>
+        <input type='text' name="identifiant" />
 
         <p>Mot de passe LDAP :</p>
-        <textarea rows="10" cols="20"  name="mdp"></textarea>
+        <input type='password' name="mdp" />
 
         <p>Email de contact :</p>
-        <textarea rows="10" cols="20"  name="email"></textarea>
+        <input type="email" name="email" />
 
 
-        <input class="button submit" type="submit" name="soumettre" value="soumettre" />
+        <input class="button submit connexion" type="submit" name="soumettre" value="soumettre" />
     </form>
     <br/>
-    <hr class="hr-index">
+    <hr class="hr-index deux">
 
     <footer>
         <a href="http://mmimontbeliard.com">
             <img src="media/interface/mmi.png" id="logo-mmi" alt="Logo-MMI">
         </a>
     </footer>
-
+</div>
 </div>
 <script src="js/classie.js"></script>
 <script src="js/sidebarEffects.js"></script>
