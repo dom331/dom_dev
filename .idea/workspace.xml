@@ -52,21 +52,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription_mmi.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="inscription_mmi.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/front/inscription_mmi.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33484676" vertical-offset="266" max-vertical-offset="1275">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.23076923" vertical-offset="368" max-vertical-offset="1275">
+              <caret line="22" column="88" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="inscription.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/front/inscription.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.692307" vertical-offset="96" max-vertical-offset="1003">
-              <caret line="22" column="106" selection-start-line="22" selection-start-column="106" selection-end-line="22" selection-end-column="106" />
+            <state vertical-scroll-proportion="0.50851303" vertical-offset="96" max-vertical-offset="1003">
+              <caret line="32" column="87" selection-start-line="32" selection-start-column="87" selection-end-line="32" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style_phone.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style_phone.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="6494" max-vertical-offset="8721">
+              <caret line="401" column="0" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,7 +130,6 @@
         <option value="$PROJECT_DIR$/pages/article_evenement_suppr.php" />
         <option value="$PROJECT_DIR$/templates/front/article_evenement.html.twig" />
         <option value="$PROJECT_DIR$/css/style_tablet.css" />
-        <option value="$PROJECT_DIR$/css/style_phone.css" />
         <option value="$PROJECT_DIR$/css/style_desktop.css" />
         <option value="$PROJECT_DIR$/templates/front/evenements.html.twig" />
         <option value="$PROJECT_DIR$/templates/front/poster_evenement.html.twig" />
@@ -133,8 +142,9 @@
         <option value="$PROJECT_DIR$/templates/front/actualites.html.twig" />
         <option value="$PROJECT_DIR$/templates/front/inscription_ancien.html.twig" />
         <option value="$PROJECT_DIR$/templates/front/index.html.twig" />
-        <option value="$PROJECT_DIR$/templates/front/inscription.html.twig" />
         <option value="$PROJECT_DIR$/templates/front/inscription_mmi.html.twig" />
+        <option value="$PROJECT_DIR$/templates/front/inscription.html.twig" />
+        <option value="$PROJECT_DIR$/css/style_phone.css" />
       </list>
     </option>
   </component>
@@ -223,6 +233,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="param" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="s3_dom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dom_dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -541,13 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style_phone.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="383" column="0" selection-start-line="383" selection-start-column="0" selection-end-line="383" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/article_evenement.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -721,18 +738,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/inscription.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/front/inscription_mmi.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.692307" vertical-offset="96" max-vertical-offset="1003">
-          <caret line="22" column="106" selection-start-line="22" selection-start-column="106" selection-end-line="22" selection-end-column="106" />
+        <state vertical-scroll-proportion="-0.23076923" vertical-offset="368" max-vertical-offset="1275">
+          <caret line="22" column="88" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/inscription_mmi.html.twig">
+    <entry file="file://$PROJECT_DIR$/css/style_phone.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33484676" vertical-offset="266" max-vertical-offset="1275">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="6494" max-vertical-offset="8721">
+          <caret line="401" column="0" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/front/inscription.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50851303" vertical-offset="96" max-vertical-offset="1003">
+          <caret line="32" column="87" selection-start-line="32" selection-start-column="87" selection-end-line="32" selection-end-column="87" />
           <folding />
         </state>
       </provider>
