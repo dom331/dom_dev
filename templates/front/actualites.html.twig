@@ -17,7 +17,7 @@
     <h2 id="actu">Actualités</h2>
 
     {% if session.toto.admin == 1 %}
-        <a href="index.php?page=add_actualite"><img src="media/interface/plus-sign.png" alt="plus"></a>
+        <a class="add_actu_button" href="index.php?page=add_actualite"><img src="media/interface/plus-sign.png" alt="plus"></a>
         {% endif %}
 
 
@@ -25,7 +25,7 @@
     <a href="index.php?page=article&id={{ actualite.id }}">
 
         <div class="actu_content">
-            <h4 class="titre">{{ actualite.date }} | {{ actualite.titre }}</h4>
+            <h4 class="titre">{{ actualite.date | date("d/m/Y") }} | {{ actualite.titre }}</h4>
             <img class="article_imgs" src="media/interface/{{ actualite.image }}" alt="image">
             <p><span>{{ actualite.contenu }}</span></p>
             <hr class="hr-auteur">

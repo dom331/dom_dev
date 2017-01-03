@@ -13,6 +13,7 @@ for($i=0;$i<count($liste); $i++){
     $dao->find($liste[$i]->getId());
 
     $liste[$i] = $dao->bean;
+
 }
 
 $param = array("liste" => $liste);

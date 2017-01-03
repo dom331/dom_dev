@@ -14,8 +14,9 @@
      <link rel="stylesheet" href="css/normalize.css"/>
      <link rel="stylesheet" href="css/sidebar.css" media="all" />
 
+
      <link rel="stylesheet" href="css/style_phone.css" media="all"/>
-     <link rel="stylesheet" href="css/style_tablet.css" media="all and (min-width: 480px) and (max-width: 1000px)"/>
+     <link rel="stylesheet" href="css/style_tablet.css" media="all and (min-width: 600px) and (max-width: 1000px)"/>
      <link rel="stylesheet" href="css/style_desktop.css" media="all and (min-width: 1000px)" />
 
      <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
@@ -47,7 +48,9 @@
             <form method="post">
             <ul class="icones-menu-profil">
                 <li><a href="index.php?page=404"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
-                <li><button type="submit" name="logout"><i class="fa fa-power-off" aria-hidden="true"></i></button></li>
+
+                <li><button type="submit" class="logout" name="logout"><i class="fa fa-power-off" aria-hidden="true"></i></button></li>
+
             </ul>
             </form>
             {% if session.toto !='' %}
@@ -92,8 +95,6 @@
             </div>
         </nav>
 
-
-
         <div class="st-pusher">
             <div class="st-content">
                 <div class="st-content-inner">
@@ -110,7 +111,7 @@
 
                     </header>
 
-                    <hr class="hr-actu">
+                    <hr class="hr-actu un">
 
                     <main>
 
@@ -131,7 +132,7 @@
                         </div>
                     </main>
 
-                    <hr class="hr-actu">
+                    <hr class="hr-actu deux">
 
                     <footer>
                         <p>Tous droits réservés - 2016/2017</p>
@@ -145,6 +146,7 @@
     <script src="js/classie.js"></script>
     <script src="js/sidebarEffects.js"></script>
  </body>
+
 
 {%  else %}
     <body>
