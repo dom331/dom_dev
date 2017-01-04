@@ -236,7 +236,11 @@ li:hover i{
 
 /* ~~~~ Logo MMI ~~~~ */
 #logo-mmi {
+    position: absolute;
     height: 70px;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* ~~~~ Footer menu ~~~~ */
@@ -406,7 +410,7 @@ h4{
 /* ----------------------------------------------------------------------------------------------- */
 
 form{
-    margin-bottom: 0;
+    padding: 10px;
 }
 
 input[type='text'], input[type='password'], input[type='email'], textarea{
@@ -464,7 +468,7 @@ form p{
 /* ~~~~ Barres index ~~~~ */
 .hr-index{
     max-width: 420px;
-    width: 50%;
+    width: 40%;
     height: 3px;
     color: #f2eee9;
     background-color: #f2eee9;
@@ -490,10 +494,10 @@ input[type="email"]:nth-child(10){
 .boutons{
     display: flex;
     flex-direction: column;
-    padding: 15px 0;
+    padding-top: 15px;
 }
 
-.connexion, .inscription{
+.connexion{
     height: auto;
     min-height: 57px;
     color: #f2eee9;
@@ -505,7 +509,7 @@ input[type="email"]:nth-child(10){
     width: 75%;
 }
 
-.connexion:hover, .inscription:hover{
+.connexion:hover{
     color: #e62651;
     border: 2px solid #b81e41;
     background-color: #f2eee9;

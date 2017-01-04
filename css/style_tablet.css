@@ -7,6 +7,21 @@ main{
 /* --------------------------------------- HEADER ---------------------------------------- */
 /* --------------------------------------------------------------------------------------- */
 
+/* ~~~~ Logo DOM au dessus des pages ~~~~ */
+#logo-dom{
+    display: block;
+    width: 60%;
+    margin: 0 auto 20px auto;
+}
+
+/* ~~~~ Séparation sur l'index ~~~~ */
+.hr-index{
+    width: 80%;
+    height: 3px;
+    color: #1b2e52;
+    background-color: #1b2e52;
+    border: none;
+}
 
 /* -------------------------------------------------------------------------------------- */
 /* --------------------------------------- INDEX ---------------------------------------- */
@@ -65,17 +80,16 @@ h4{
 .boutons{
     display: flex;
     flex-direction: row;
-    min-width: 400px;
-    max-width: 500px;
+    justify-content: space-around;
+    width: 500px;
     margin: 0 auto;
 }
 
-.connexion{
-    margin: 5px 5px;
-}
-
-
 /* champ de connexion */
+
+.form{
+    width:50%;
+}
 
 .zone_form{
     padding-left: 10px;
@@ -83,4 +97,14 @@ h4{
 
 .index footer{
     padding-top: 50px;
+}
+
+
+.hr-index{
+    max-width: 420px;
+    width: 40%;
+    height: 3px;
+    color: #f2eee9;
+    background-color: #f2eee9;
+    border: none;
 }
