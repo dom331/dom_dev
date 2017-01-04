@@ -23,4 +23,43 @@ $infos['oui']['avatar']=$daoUtilisateur->bean->getImage();
 $param=array("liste" =>$infos);
 
 //var_dump($param) or die();
+
+if(isset($_POST['soumettre'])) {
+
+    if (!empty($_FILES['fichier'])) {
+
+    $image = $_FILES['fichier']['name'];
+
+    if (move_uploaded_file($_FILES['fichier']['tmp_name'], "media/interface/" . $image)) {
+        $daoUtilisateur->bean->setImage($image);
+        $daoUtilisateur->updateImage();
+        header('Location: index.php?page=actualites');
+    }
+}
+
+    if (!empty($_POST['description'])){
+        $daoUtilisateur->bean->setDescription($_POST['description']);
+        $daoUtilisateur->updateDescription();
+        header('Location: index.php?page=actualites');
+    }
+
+
+    if (!empty($_POST['email'])){
+        $daoUtilisateur->bean->setEmail($_POST['email']);
+        $daoUtilisateur->updateEmail();
+        header('Location: index.php?page=actualites');
+    }
+
+    if (!empty($_POST['naiss'])){
+        $daoUtilisateur->bean->setDate_Naiss($_POST['naiss']);
+        $daoUtilisateur->updateDate_Naiss();
+        header('Location: index.php?page=actualites');
+    }
+
+
+
+}
+
+
+
 ?>

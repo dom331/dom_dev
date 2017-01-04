@@ -64,9 +64,48 @@ class DaoUtilisateur extends Dao
         $requete->execute();
     }
 
-    public function update()
+    public function updateImage()
     {
+        $sql ="UPDATE utilisateur
+               SET IMAGE = ?
+               WHERE ID_UTILISATEUR = ?";
+        $requete = $this->pdo->prepare($sql);
+        $requete->bindValue(1, $this->bean->getImage());
+        $requete->bindValue(2, $this->bean->getId());
+        $requete->execute();
+    }
 
+    public function updateDescription()
+    {
+        $sql ="UPDATE utilisateur
+               SET DESCRIPTION_UTILISATEUR = ?
+               WHERE ID_UTILISATEUR = ?";
+        $requete = $this->pdo->prepare($sql);
+        $requete->bindValue(1, $this->bean->getDescription());
+        $requete->bindValue(2, $this->bean->getId());
+        $requete->execute();
+    }
+
+    public function updateDate_Naiss()
+    {
+        $sql ="UPDATE utilisateur
+               SET DATE_NAISS = ?
+               WHERE ID_UTILISATEUR = ?";
+        $requete = $this->pdo->prepare($sql);
+        $requete->bindValue(1, $this->bean->getDate_naiss());
+        $requete->bindValue(2, $this->bean->getId());
+        $requete->execute();
+    }
+
+    public function updateEmail()
+    {
+        $sql ="UPDATE utilisateur
+               SET EMAIL_UTILISATEUR = ?
+               WHERE ID_UTILISATEUR = ?";
+        $requete = $this->pdo->prepare($sql);
+        $requete->bindValue(1, $this->bean->getEmail());
+        $requete->bindValue(2, $this->bean->getId());
+        $requete->execute();
     }
 
     public function delete()
