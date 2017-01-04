@@ -16,8 +16,9 @@ require_once ("dao/DaoUtilisateur.php");
         $infos['oui']['email']=$daoUtilisateur->bean->getEmail();
         $infos['oui']['description']=$daoUtilisateur->bean->getDescription();
         $infos['oui']['date_inscription']=$daoUtilisateur->bean->getDate_inscription();
-        $daoUtilisateur->setLeAvatar();
-        $infos['oui']['avatar']=$daoUtilisateur->bean->getLeAvatar()->getNom();
+        $infos['oui']['avatar']=$daoUtilisateur->bean->getImage();
+//        $daoUtilisateur->setLeAvatar();
+//        $infos['oui']['avatar']=$daoUtilisateur->bean->getLeAvatar()->getNom();
 
         $param=array("liste" =>$infos);
 

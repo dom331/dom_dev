@@ -9,6 +9,7 @@ class Utilisateur {
     private $psw=null;
     private $email=null;
     private $description=null;
+    private $image=null;
     private $date_inscription=null;
     private $admin=null;
     private $ex_mmi=null;
@@ -23,7 +24,7 @@ class Utilisateur {
     private $leAvatar =  null;
 
     public function Utilisateur($id=0, $nom=null, $prenom=null, $identifiant=null, $psw=null, $email=null,
-                                $description=null, $date_inscription=null, $admin=null, $ex_mmi=null,
+                                $description=null, $image=null, $date_inscription=null, $admin=null, $ex_mmi=null,
                                 $approuve=null, $date_naiss=null) {
         $this->id=$id;
         $this->nom=$nom;
@@ -32,6 +33,7 @@ class Utilisateur {
         $this->psw=$psw;
         $this->email=$email;
         $this->description=$description;
+        $this->image=$image;
         $this->date_inscription=$date_inscription;
         $this->admin=$admin;
         $this->ex_mmi=$ex_mmi;
@@ -46,6 +48,7 @@ class Utilisateur {
     public function getPsw() {return $this->psw;}
     public function getEmail() {return $this->email;}
     public function getDescription() {return $this->description;}
+    public function getImage() {return $this->image;}
     public function getDate_inscription() {return $this->date_inscription;}
     public function getAdmin() {return $this->admin;}
     public function getEx_mmi() {return $this->ex_mmi;}
@@ -66,6 +69,7 @@ class Utilisateur {
     public function setPsw($psw) {$this->psw = $psw;}
     public function setEmail($email) {$this->email = $email;}
     public function setDescription($description){$this->description = $description;}
+    public function setImage($image){$this->image = $image;}
     public function setDate_inscription($date_inscription) {$this->date_inscription = $date_inscription;}
     public function setAdmin($admin) {$this->admin = $admin;}
     public function setEx_mmi($ex_mmi) {$this->ex_mmi = $ex_mmi;}

@@ -55,7 +55,7 @@
             </form>
             {% if session.toto !='' %}
             <a href="index.php?page=profil&id={{ session.toto.id }}"><div class="photo">
-                        <img src="media/interface/{{ session.avatar.nom }}" alt="">
+                        <img src="media/interface/{{ session.toto.avatar }}" alt="">
                     </div></a>{% else %} Erreur {% endif %}
 
 

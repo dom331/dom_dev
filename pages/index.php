@@ -19,11 +19,13 @@ if(isset($_POST["connexion"])){
         $_SESSION['toto']['prenom']=$daoUtilisateur->bean->getPrenom();
         $_SESSION['toto']['mail']=$daoUtilisateur->bean->getEmail();
         $_SESSION['toto']['admin']=$daoUtilisateur->bean->getAdmin();
+        $_SESSION['toto']['avatar']=$daoUtilisateur->bean->getImage();
+        $_SESSION['toto']['description']=$daoUtilisateur->bean->getDescription();
 
-    $daoUtilisateur->setLeAvatar();
-
-        $_SESSION['toto']['avatar']=array();
-        $_SESSION['avatar']['nom']=$daoUtilisateur->bean->getLeAvatar()->getNom();
+//    $daoUtilisateur->setLeAvatar();
+//
+//        $_SESSION['toto']['avatar']=array();
+//        $_SESSION['avatar']['nom']=$daoUtilisateur->bean->getLeAvatar()->getNom();
 //var_dump($_SESSION) or die();
 
         header('Location: index.php?page=actualites');

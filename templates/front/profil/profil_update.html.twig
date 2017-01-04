@@ -1,0 +1,40 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+    <div class="article">
+        <form method="post" enctype="multipart/form-data">
+        <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
+        <h2>{% if liste !='' %}
+                {{ liste.oui.nom }}  {{ liste.oui.prenom }}
+            {% endif %}</h2>
+        {% if liste !='' %}
+            <img id="avatar" src="media/interface/{{ liste.oui.avatar }}" alt="avatar">
+            <input type="file" name="fichier"  title="Rechercher"/>
+        {% endif %}
+
+        <div class="auteur-article">
+
+            {% if liste !='' %}
+                {{ liste.oui.nom }} {{ liste.oui.prenom }}<br>
+                {{ liste.oui.description }} <input type="text" name="description"/> <br>
+                {{ liste.oui.email }} <input type="text" name="email"/> <br>
+                {{ liste.oui.date_inscription }}
+            {% endif %}
+            <br>
+        </div>
+            <input class="button submit" type="submit" name="soumettre" value="Modifications terminées" />
+        <hr class="hr-actu">
+            </form>
+    </div>
+    <div class="auteur-article">
+        <ul class="rs">
+            <li><a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+
+
+{% endblock %}
+
+
