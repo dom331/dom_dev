@@ -2,7 +2,7 @@
 
 {% block contenu %}
     <div class="article">
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" >
         <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
         <h2>{% if liste !='' %}
                 {{ liste.oui.nom }}  {{ liste.oui.prenom }}
@@ -16,10 +16,11 @@
 
             {% if liste !='' %}
                 {{ liste.oui.nom }} {{ liste.oui.prenom }}<br>
-                {{ liste.oui.description }} <input type="text" name="description"/> <br>
-                {{ liste.oui.email }} <input type="text" name="email"/> <br>
-                {{ liste.oui.date_inscription }}
+                <p>Description :</p>{{ liste.oui.description }} <input type="text" name="description"/> <br>
+                <p>Email :</p>{{ liste.oui.email }} <input type="text" name="email"/> <br>
+               <p>Inscris le :</p> {{ liste.oui.date_inscription }} <br>
             {% endif %}
+            Date de naissance : <input type="text" name="naiss"/>
             <br>
         </div>
             <input class="button submit" type="submit" name="soumettre" value="Modifications terminées" />
