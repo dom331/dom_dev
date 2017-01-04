@@ -7,30 +7,30 @@
                 {{ liste.oui.nom }}  {{ liste.oui.prenom }}
     {% endif %}</h2>
     {% if liste !='' %}
-        <img src="media/interface/{{ liste.oui.avatar }}" alt="barcelone">
+        <img id="avatar" src="media/interface/{{ liste.oui.avatar }}" alt="avatar">
 {% endif %}
-        <div class="article_content">
-            <hr>
+
+        <div class="auteur-article">
+
     {% if liste !='' %}
+        {{ liste.oui.nom }} {{ liste.oui.prenom }}<br>
         {{ liste.oui.description }}<br>
         {{ liste.oui.email }}<br>
         {{ liste.oui.date_inscription }}
         {% endif %}
             <br>
         </div>
-        <hr>
+        <hr class="hr-actu">
     </div>
-
-
-{% endblock %}
-
-{% block meteo %}
     <div class="auteur-article">
-        <a href="index.php?page=404">
-            <div class="photo"></div>
-        </a>
-        <h2>Suleyman Dogan</h2>
-        <h4 class="titre">Date de publication :</h4>
-        <p>12/01/17</p>
+        <ul class="rs">
+            <li><a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></li>
+        </ul>
     </div>
+
+
 {% endblock %}
+
+
