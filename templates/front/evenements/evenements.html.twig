@@ -16,7 +16,7 @@
                     <h4 class="titre">{{ evenement.date | date("d/m/Y") }} | {{ evenement.titre }}</h4>
 
                     <img class="article_imgs" src="media/interface/{{ evenement.image }}" alt="image">
-                    <p><span>{{ evenement.contenu }}</span></p>
+                    <p><span>{{ evenement.contenu | slice(0, 200)  }}...</span></p>
                 </div>
 
             </a>

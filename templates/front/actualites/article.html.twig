@@ -13,8 +13,7 @@
             <p>
             <h4 class="titre">Rappels !</h4>
             {{ liste.oui.contenu }}
-            <h4 class="titre">Publié par</h4>
-            {{ liste.oui.responsables }}
+            <p><span class="titre">Publié par :</span> {{ liste.oui.responsables }}</p>
             </p>
             <br>
         </div>
@@ -28,7 +27,7 @@
         <a href="index.php?page=404">
             <div class="photo"></div>
         </a>
-        <h2>Suleyman Dogan</h2>
+        <h2>{{ liste.oui.responsables }}</h2>
         {% if session.toto.admin == 1 %}
             <hr class="hr-menu">
             <form method="post" action="index.php?page=article_suppression&id={{ liste.oui.id }}">
