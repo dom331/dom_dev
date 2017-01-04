@@ -9,7 +9,9 @@
         <div class="EventAVenir">
             <i class="fa fa-calendar-o fa-4x" aria-hidden="true"></i>
             <h2>Événements à venir</h2>
+
             {% for evenement in liste %}
+            {% if evenement.approuve == 1 %}
             <a href="index.php?page=article_evenement&id={{ evenement.id }}">
 
                 <div class="event_content">
@@ -20,6 +22,7 @@
                 </div>
 
             </a>
+            {% endif %}
             {% endfor %}
 
         <hr class="hr-event">

@@ -4,21 +4,16 @@
 
     <i class="fa fa-newspaper-o fa-4x" aria-hidden="true"></i>
     <h2 id="actu">Evénements à approuver</h2>
+    {% if liste != null %}
+
     {% for evenement in liste %}
         <a href="?page=previsualisation&id={{ evenement.id }} ">{{ evenement.id }} | {{ evenement.titre }} </a> X V<br><br>
 
-
-
         {% endfor %}
 
-
-
-
-    {% if session.toto.admin == 1 %}
-        <a class="add_actu_button" href="index.php?page=add_actualite"><img src="media/interface/plus-sign.png" alt="plus"></a>
-    {% endif %}
-
-
+     {% else %}
+         IL N'Y A AUCUN EVENEMENT PROPOSÉ
+     {% endif %}
 
 
 {% endblock %}

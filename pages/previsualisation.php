@@ -26,8 +26,13 @@ $param=array("liste" =>$infos);
 //var_dump($param) or die();
 
 if(isset($_POST['valider'])){
+    $daoEvenement->bean->setApprouve("1");
     $daoEvenement->update();
-    $daoEvenement->bean->setApprouve(1);
+    header('Location: index.php?page=administration');
+}
+
+if(isset($_POST['suppr'])){
+    $daoEvenement->delete();
     header('Location: index.php?page=administration');
 }
 

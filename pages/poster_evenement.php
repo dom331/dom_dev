@@ -20,6 +20,7 @@ if(isset($_POST["soumettre"])) {
 
         $dao->bean->setPrix($_POST["prix"]);
         $dao->bean->setA_prevoir($_POST['a_prevoir']);
+        $dao->bean->setApprouve("0");
         $dao->bean->setLeAuteur((int)$_SESSION['toto']['id']);
 
         $image = $_FILES['oui']['name'];
