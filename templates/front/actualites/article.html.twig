@@ -9,7 +9,7 @@
         <img src="media/interface/{{ liste.oui.image }}" alt="barcelone">
 
         <div class="article_content">
-            <hr>
+
             <p>
             <h4 class="titre">Rappels !</h4>
             {{ liste.oui.contenu }}
@@ -18,7 +18,7 @@
             </p>
             <br>
         </div>
-           <hr>
+ 
     </div>
 {% endif %}
 {% endblock %}
@@ -30,11 +30,13 @@
         </a>
         <h2>Suleyman Dogan</h2>
         {% if session.toto.admin == 1 %}
+            <hr class="hr-menu">
             <form method="post" action="index.php?page=article_suppression&id={{ liste.oui.id }}">
-            <input name="suppr" type="submit" value="supprimer l'article">
+            <input name="suppr" class="button connexion" type="submit" value="supprimer l'article">
             </form>
+            <hr class="hr-menu">
         {% endif %}
         <h4 class="titre">Date de publication :</h4>
-        <p>12/01/17</p>
+        <p>{{ liste.oui.date | date("d/m/Y") }}</p>
     </div>
 {% endblock %}

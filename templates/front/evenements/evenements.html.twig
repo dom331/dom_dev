@@ -13,7 +13,7 @@
             <a href="index.php?page=article_evenement&id={{ evenement.id }}">
 
                 <div class="event_content">
-                    <h4 class="titre">{{ evenement.date }} | {{ evenement.titre }}</h4>
+                    <h4 class="titre">{{ evenement.date | date("d/m/Y") }} | {{ evenement.titre }}</h4>
 
                     <img class="article_imgs" src="media/interface/{{ evenement.image }}" alt="image">
                     <p><span>{{ evenement.contenu }}</span></p>

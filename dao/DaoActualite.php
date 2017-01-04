@@ -65,6 +65,8 @@ class DaoActualite extends Dao{
         $liste = array();
         if($requete->execute()){
             while($donnees = $requete->fetch()){
+
+
                 $actualite = new Actualite(
                     $donnees['ID_ACTUALITE'],
                     $donnees['TITRE_ACTUALITE'],

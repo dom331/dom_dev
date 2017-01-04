@@ -8,19 +8,13 @@
             <h2>{{ liste.oui.titre }}</h2>
             <img src="media/interface/{{ liste.oui.image }}" alt="img">
 
+
             <div class="article_content">
-                <hr>
-                <p>
-                <h4 class="titre">Rappels !</h4>
-                {{ liste.oui.contenu }}
-                <h4 class="titre">Coûts</h4>
-                {{ liste.oui.prix }}
-                <h4 class="titre">A prévoir</h4>
-                {{ liste.oui.a_prevoir }}
-                </p>
-                <br>
+                <h3 class="titre">Description :</h3>
+                <p>{{ liste.oui.contenu }}</p>
+                <p><span class="titre">Coûts de participation :</span> {{ liste.oui.prix }}</p>
+                <p><span class="titre">Objets à prévoir :</span> {{ liste.oui.a_prevoir }}</p>
             </div>
-            <hr>
         </div>
     {% endif %}
 {% endblock %}
@@ -33,17 +27,17 @@
         <h2>Suleyman Dogan</h2>
         {% if session.toto.admin == 1 %}
             <form method="post">
-                <input name="suppr" type="submit" value="supprimer l'article">
+                <input name="suppr" class="button connexion" type="submit" value="supprimer l'article">
             </form>
             <div>
                 <p>Ëtes-vous sûr de vouloir supprimer cette entrée ?</p>
                 <form method="post">
-                    <input type="submit" name="oui" value="oui">
-                    <input type="submit" name="non" value="non">
+                    <input type="submit" class="button connexion" name="oui" value="oui">
+                    <input type="submit" class="button connexion" name="non" value="non">
                 </form>
             </div>
         {% endif %}
         <h4 class="titre">Date de publication :</h4>
-        <p>12/01/17</p>
+        <p>{{ liste.oui.date | date("d/m/Y") }}</p>
     </div>
 {% endblock %}
