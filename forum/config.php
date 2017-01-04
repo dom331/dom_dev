@@ -7,7 +7,7 @@ $dbport = '';
 $dbname = 'dom_bdd';
 $dbuser = 'root';
 $dbpasswd = '';
-$table_prefix = 'zphpbb_';
+$table_prefix = 'zhpbb_';
 $phpbb_adm_relative_path = 'adm/';
 $acm_type = 'phpbb\\cache\\driver\\file';
 
