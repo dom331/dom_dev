@@ -75,6 +75,12 @@
                 <li><a class="icon icon-study" href="index.php?page=evenements">ÉVÉNEMENTS</a></li>
                 <li><a class="icon icon-photo" href="index.php?page=404">VIE SCOLAIRE</a></li>
             </ul>
+                                            {% if session.toto.admin %}
+            <hr class="hr-menu">
+            <ul class="onglets">
+                <li><a class="icon icon-data" href="index.php?page=administration">Administration</a></li>
+            </ul>
+                                            {% endif %}
 
             <hr class="hr-menu">
 
