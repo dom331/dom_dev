@@ -44,7 +44,13 @@ class DaoEvenements extends Dao{
     }
 
     public function update(){
-
+        $sql ="UPDATE evenements
+               SET EVENEMENT_APPROUVE = ?
+               WHERE ID_EVENEMENT = ?";
+        $requete = $this->pdo->prepare($sql);
+        $requete->bindValue(1, $this->bean->getApprouve());
+        $requete->bindValue(2, $this->bean->getId());
+        $requete->execute();
     }
 
     public function delete(){
@@ -134,6 +140,30 @@ class DaoEvenements extends Dao{
     public function deleteAuteur(){
         
     }
-    
+
+    public function listeAprob(){
+        $sql = "SELECT *
+                FROM evenements
+                WHERE evenements.EVENEMENT_APPROUVE = 0 or null
+                ORDER BY DATE_EVENEMENT DESC";
+        $requete = $this->pdo->prepare($sql);
+        $liste = array();
+        if($requete->execute()){
+            while($donnees = $requete->fetch()){
+                $evenements = new Evenements(
+                    $donnees['ID_EVENEMENT'],
+                    $donnees['TITRE_EVENEMENT'],
+                    $donnees['CONTENU_EVENEMENT'],
+                    $donnees['IMAGE'],
+                    $donnees['DATE_EVENEMENT'],
+                    $donnees['PRIX_EVENEMENT'],
+                    $donnees['A_PREVOIR_EVENEMENT'],
+                    $donnees['EVENEMENT_APPROUVE']
+                );
+                $liste[] = $evenements;
+            }
+        }
+        return $liste;
+    }
 
 }

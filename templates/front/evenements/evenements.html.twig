@@ -9,17 +9,20 @@
         <div class="EventAVenir">
             <i class="fa fa-calendar-o fa-4x" aria-hidden="true"></i>
             <h2>Événements à venir</h2>
+
             {% for evenement in liste %}
+            {% if evenement.approuve == 1 %}
             <a href="index.php?page=article_evenement&id={{ evenement.id }}">
 
                 <div class="event_content">
                     <h4 class="titre">{{ evenement.date | date("d/m/Y") }} | {{ evenement.titre }}</h4>
 
                     <img class="article_imgs" src="media/interface/{{ evenement.image }}" alt="image">
-                    <p><span>{{ evenement.contenu }}</span></p>
+                    <p><span>{{ evenement.contenu | slice(0, 200)  }}...</span></p>
                 </div>
 
             </a>
+            {% endif %}
             {% endfor %}
 
         <hr class="hr-event">

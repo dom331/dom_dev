@@ -1,0 +1,37 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+    <div class="article">
+        <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
+        <h2>{% if liste !='' %}
+                {{ liste.oui.nom }}  {{ liste.oui.prenom }}
+    {% endif %}</h2>
+    {% if liste !='' %}
+        <img id="avatar" src="media/interface/{{ liste.oui.avatar }}" alt="avatar">
+{% endif %}
+
+        <div class="auteur-article">
+
+    {% if liste !='' %}
+        {{ liste.oui.nom }} {{ liste.oui.prenom }}<br>
+        {{ liste.oui.description }}<br>
+        {{ liste.oui.email }}<br>
+        {{ liste.oui.date_inscription }}
+        {% endif %}
+            <br>
+        </div>
+        <hr class="hr-actu">
+    </div>
+    <div class="auteur-article">
+        <ul class="rs">
+            <a class="button connexion" href="index.php?page=profil_update&id={{ liste.oui.id }}">Modifier mon profil</a>
+            <li><a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+
+
+{% endblock %}
+
+
