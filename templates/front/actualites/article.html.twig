@@ -11,31 +11,21 @@
         <div class="article_content">
 
             <p>
-            <h4 class="titre">Rappels !</h4>
             {{ liste.oui.contenu }}
             <p><span class="titre">Publié par :</span> {{ liste.oui.responsables }}</p>
-            </p>
-            <br>
-        </div>
+            <p><span class="titre">Le : </span> {{ liste.oui.date | date("d/m/Y") }}</p>
 
+            {% if session.toto.admin == 1 %}
+                <form method="post" action="index.php?page=article_suppression&id={{ liste.oui.id }}">
+                    <input name="suppr" class="button connexion" type="submit" value="supprimer l'article">
+                </form>
+            {% endif %}
+
+        </div>
     </div>
 {% endif %}
 {% endblock %}
 
 {% block meteo %}
-    <div class="auteur-article">
-        <a href="index.php?page=404">
-            <div class="photo"></div>
-        </a>
-        <h2>{{ liste.oui.responsables }}</h2>
-        {% if session.toto.admin == 1 %}
-            <hr class="hr-menu">
-            <form method="post" action="index.php?page=article_suppression&id={{ liste.oui.id }}">
-            <input name="suppr" class="button connexion" type="submit" value="supprimer l'article">
-            </form>
-            <hr class="hr-menu">
-        {% endif %}
-        <h4 class="titre">Date de publication :</h4>
-        <p>{{ liste.oui.date | date("d/m/Y") }}</p>
-    </div>
+
 {% endblock %}

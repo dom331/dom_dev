@@ -3,34 +3,33 @@
 {% block contenu %}
 
     <i class="fa fa-exclamation-circle fa-4x" aria-hidden="true"></i>
-    <h2 id="urgent">Communiqué Urgent</h2>
-    <a href="index.php?page=article">
-        <div class="actu_content">
+    <h2 id="urgent">Urgent</h2>
+        <div class="">
             <h4 class="titre">06/01/17 | Paiements pour le voyage à Barcelone</h4>
             <p><span>Vous devez payer votre voyage avant Samedi, dépassé cette date nous ne pourrons plus vous accepter. Plus de renseignements auprès de l'administration.</span></p>
-            <hr class="hr-auteur">
             <p class="auteur">David Malsot</p>
+            <hr class="hr-auteur">
         </div>
-    </a>
 
     <i class="fa fa-newspaper-o fa-4x" aria-hidden="true"></i>
-    <h2 id="actu">Actualités</h2>
 
-    {% if session.toto.admin == 1 %}
-        <a class="add_actu_button" href="index.php?page=add_actualite"><img src="media/interface/plus-sign.png" alt="plus"></a>
+    <h2 id="actu">Actualités
+        {% if session.toto.admin == 1 %}
+            <a class="fa fa-plus-circle fa-lg" href="index.php?page=add_actualite"></a>
         {% endif %}
+    </h2>
 
 
     {% for actualite in liste %}
     <a href="index.php?page=article&id={{ actualite.id }}">
 
         <div class="actu_content">
+
             <h4 class="titre">{{ actualite.date | date("d/m/Y") }} | {{ actualite.titre }}</h4>
             <img class="article_imgs" src="media/interface/{{ actualite.image }}" alt="image">
             <p><span>{{ actualite.contenu | slice(0, 200)  }}...</span></p>
-            <hr class="hr-auteur">
             <p class="auteur">{{ actualite.responsables }}</p>
-
+            <hr class="hr-auteur">
         </div>
     </a>
     {% endfor %}
@@ -41,7 +40,7 @@
 {% block meteo %}
     <i class="fa fa-sun-o fa-4x" aria-hidden="true"></i>
     <h2 id="meteo">Météo campus</h2>
-
+    <div id="jours">
         <div class="jours">
             <ul>
                 <li><h4 class="titre">Lundi 07 Nov.</h4></li>
@@ -59,4 +58,5 @@
                 <li>Temps pluvieux</li>
             </ul>
         </div>
+    </div>
 {% endblock %}
