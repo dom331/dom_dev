@@ -17,12 +17,17 @@
 
     <hr>
 
+    <i class="fa fa-newspaper-o fa-4x" aria-hidden="true"></i>
+    <h2 id="actu">Utilisateur à approuver</h2>
+
     {% if utilisateurs != null %}
 
         {% for user in utilisateurs %}
-            <p>{{ user.id }} | {{ user.nom }} | {{ user.prenom }} </p><br><br>
 
+            <a href="?page=previsualisation_user&id={{ user.id }} ">{{ user.id }} | {{ user.nom }}  {{ user.prenom }}</a><br><br>
         {% endfor %}
+
+
 
     {% else %}
         IL N'Y A AUCUN UTILISATEUR A APPROUVER

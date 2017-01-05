@@ -144,7 +144,7 @@ class DaoEvenements extends Dao{
     public function listeAprob(){
         $sql = "SELECT *
                 FROM evenements
-                WHERE evenements.EVENEMENT_APPROUVE = 0 or null
+                WHERE evenements.EVENEMENT_APPROUVE = 0 or NULL
                 ORDER BY DATE_EVENEMENT DESC";
         $requete = $this->pdo->prepare($sql);
         $liste = array();

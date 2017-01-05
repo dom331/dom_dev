@@ -19,8 +19,6 @@ for($i=0;$i<count($liste); $i++){
 
 }
 
-$param = array("liste" => $liste);
-
 /////////////////////////////////////////////////////// LISTE DES UTILISATEURS NON APPROUVE ////////////////////////////
 
 $daoUtilisateur = new DaoUtilisateur();
@@ -37,4 +35,9 @@ for($i=0;$i<count($utilisateurs); $i++){
 
 }
 
-$param = array("utilisateurs" => $utilisateurs);
+$param = array("utilisateurs" => $utilisateurs,
+                "liste" => $liste);
+
+
+
+

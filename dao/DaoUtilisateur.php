@@ -109,6 +109,15 @@ class DaoUtilisateur extends Dao
 
     public function delete()
     {
+        $sql ="DELETE 
+               FROM utilisateur
+               WHERE utilisateur.ID_UTILISATEUR = ?";
+
+        $requete = $this->pdo->prepare($sql);
+
+        $requete->bindValue(1, $this->bean->getId());
+
+        $requete->execute();
     }
 
     public function getListe()
@@ -300,4 +309,15 @@ class DaoUtilisateur extends Dao
         return $liste;
     }
 
+    public function updateApprouve(){
+        {
+            $sql ="UPDATE utilisateur
+               SET UTILISATEUR_APPROUVE = ?
+               WHERE ID_UTILISATEUR = ?";
+            $requete = $this->pdo->prepare($sql);
+            $requete->bindValue(1, $this->bean->getApprouve());
+            $requete->bindValue(2, $this->bean->getId());
+            $requete->execute();
+        }
+    }
 }
