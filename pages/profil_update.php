@@ -33,27 +33,27 @@ if(isset($_POST['soumettre'])) {
     if (move_uploaded_file($_FILES['fichier']['tmp_name'], "media/interface/" . $image)) {
         $daoUtilisateur->bean->setImage($image);
         $daoUtilisateur->updateImage();
-        header('Location: index.php?page=actualites');
+        header('Location: index.php?page=profil&id='.$daoUtilisateur->bean->getId());
     }
 }
 
     if (!empty($_POST['description'])){
         $daoUtilisateur->bean->setDescription($_POST['description']);
         $daoUtilisateur->updateDescription();
-        header('Location: index.php?page=actualites');
+        header('Location: index.php?page=profil&id='.$daoUtilisateur->bean->getId());
     }
 
 
     if (!empty($_POST['email'])){
         $daoUtilisateur->bean->setEmail($_POST['email']);
         $daoUtilisateur->updateEmail();
-        header('Location: index.php?page=actualites');
+        header('Location: index.php?page=profil&id='.$daoUtilisateur->bean->getId());
     }
 
     if (!empty($_POST['naiss'])){
         $daoUtilisateur->bean->setDate_Naiss($_POST['naiss']);
         $daoUtilisateur->updateDate_Naiss();
-        header('Location: index.php?page=actualites');
+        header('Location: index.php?page=profil&id='.$daoUtilisateur->bean->getId());
     }
 
 
