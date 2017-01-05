@@ -41,7 +41,7 @@ class DaoUtilisateur extends Dao
     {
         $sql = "INSERT INTO utilisateur(NOM_UTILISATEUR, PRENOM_UTILISATEUR, IDENTIFIANT_UTILISATEUR,
                             PSW_UTILISATEUR, EMAIL_UTILISATEUR, DESCRIPTION_UTILISATEUR, IMAGE, DATE_INSCRIPTION,
-                            ADMIN, EX_MMI, UTILISATEUR_APPROUVE, DATE_NAISS, ID_MEDIA, ID_GROUPE) 
+                            ADMIN, EX_MMI, UTILISATEUR_APPROUVE, DATE_NAISS, ID_GROUPE) 
                 VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         $requete = $this->pdo->prepare($sql);
@@ -53,12 +53,11 @@ class DaoUtilisateur extends Dao
         $requete->bindValue(5, $this->bean->getEmail());
         $requete->bindValue(6, $this->bean->getDescription());
         $requete->bindValue(7, $this->bean->getImage());
-        $requete->bindValue(7, $this->bean->getDate_inscription());
-        $requete->bindValue(8, $this->bean->getAdmin());
-        $requete->bindValue(9, $this->bean->getEx_mmi());
-        $requete->bindValue(10, $this->bean->getApprouve());
-        $requete->bindValue(11, $this->bean->getDate_naiss());
-        $requete->bindValue(12, $this->bean->getLeAvatar());
+        $requete->bindValue(8, $this->bean->getDate_inscription());
+        $requete->bindValue(9, $this->bean->getAdmin());
+        $requete->bindValue(10, $this->bean->getEx_mmi());
+        $requete->bindValue(11, $this->bean->getApprouve());
+        $requete->bindValue(12, $this->bean->getDate_naiss());
         $requete->bindValue(13, $this->bean->getLeGroupe());
 
         $requete->execute();
@@ -269,4 +268,36 @@ class DaoUtilisateur extends Dao
             }
         }
     }
+
+    public function getNonApprouve()
+    {
+        $sql = "SELECT * 
+                FROM utilisateur
+                WHERE UTILISATEUR_APPROUVE = 0 or null
+                ORDER BY NOM_UTILISATEUR";
+        $requete = $this->pdo->prepare($sql);
+        $liste = array();
+        if ($requete->execute()) {
+            while ($donnees = $requete->fetch()) {
+                $utilisateur = new Utilisateur(
+                    $donnees['ID_UTILISATEUR'],
+                    $donnees['NOM_UTILISATEUR'],
+                    $donnees['PRENOM_UTILISATEUR'],
+                    $donnees['IDENTIFIANT_UTILISATEUR'],
+                    $donnees['PSW_UTILISATEUR'],
+                    $donnees['EMAIL_UTILISATEUR'],
+                    $donnees['DESCRIPTION_UTILISATEUR'],
+                    $donnees['IMAGE'],
+                    $donnees['DATE_INSCRIPTION'],
+                    $donnees['ADMIN'],
+                    $donnees['EX_MMI'],
+                    $donnees['UTILISATEUR_APPROUVE'],
+                    $donnees['DATE_NAISS']
+                );
+                $liste[] = $utilisateur;
+            }
+        }
+        return $liste;
+    }
+
 }

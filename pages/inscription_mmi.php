@@ -15,8 +15,10 @@ if (isset($_POST['soumettre'])){
             $dao->bean->setEmail($_POST['email']);
             $dao->bean->setDate_inscription(date("Y-m-d"));
             $dao->bean->setImage("default.png");
+            $dao->bean->setEx_mmi(0);
             $dao->bean->setAdmin(0);
-            $dao->bean->setLeAvatar(null);
+            $dao->bean->setApprouve(0);
+//            $dao->bean->setLeAvatar(null);
             $dao->bean->setLeGroupe(1);
 //        var_dump($dao) or die();
         $dao->create();
