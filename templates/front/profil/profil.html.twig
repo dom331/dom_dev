@@ -13,18 +13,21 @@
         <div class="auteur-article">
 
     {% if liste !='' %}
-        {{ liste.oui.nom }} {{ liste.oui.prenom }}<br>
-        {{ liste.oui.description }}<br>
-        {{ liste.oui.email }}<br>
-        {{ liste.oui.date_inscription }}
-        {% endif %}
-            <br>
+        <div class="infos">
+        <p class="nom">{{ liste.oui.nom }} {{ liste.oui.prenom }}</p>
+        <p>Description : {{ liste.oui.description }}</p>
+        <p>Mail : {{ liste.oui.email }}</p>
+        <p>Date d'inscription : {{ liste.oui.date_inscription }}</p>
         </div>
-        <hr class="hr-actu">
+        {% endif %}
+        </div>
+        <p/>
     </div>
     <div class="auteur-article">
+        <hr class="hr-menu">
+        <a class="button connexion" href="index.php?page=profil_update&id={{ liste.oui.id }}">Modifier mon profil</a>
+        <hr class="hr-menu">
         <ul class="rs">
-            <a class="button connexion" href="index.php?page=profil_update&id={{ liste.oui.id }}">Modifier mon profil</a>
             <li><a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></li>

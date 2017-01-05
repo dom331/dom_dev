@@ -86,7 +86,6 @@ header{
 /* ~~~~ Logo DOM au dessus des pages ~~~~ */
 #logo-dom{
     position: absolute;
-    display: block;
     width: 300px;
     left: 50%;
     transform: translateX(-50%);
@@ -139,11 +138,9 @@ nav{
 }
 
 /* ~~~~ Photo profil ~~~~ */
-
 .photo img{
     border-radius: 50%;
     border: 2px solid #b81e41;
-
     text-indent: -9999px;
     display: block;
     content: " ";
@@ -162,12 +159,17 @@ nav{
     width: 150px;
     position: absolute;
     top: 0;
-    left: 70px;
+    left: 58px;
 }
 
 /* ~~~~ LI --> icones au dessus de la photo ~~~~ */
-.icones-menu-profil li{
-    position: relative;
+.icones-menu-profil .fa-bell{
+    margin-top: 8px;
+}
+
+.icones-menu-profil .fa-power-off{
+    position: absolute;
+    right: 0;
 }
 
 /* ~~~~ Nom sous la photo ~~~~ */
@@ -179,7 +181,7 @@ nav{
 
 /* ~~~~ Notification au dessus de la cloche ~~~~ */
 .icones-menu-profil li:first-child::after{
-    right: 10px;
+    left: 33px;
     top: 10px;
     position: absolute;
     content: "3";
@@ -194,7 +196,7 @@ nav{
 
 /* ~~~~ Power off ~~~~ */
 .logout{
-    margin-top: 20px;
+    margin-top: 23px;
     color: #f2eee9;
     border-style: none;
     background-color: #e62651;
@@ -253,6 +255,7 @@ li:hover i{
 /* --------------------------------------- INDEX ---------------------------------------- */
 /* -------------------------------------------------------------------------------------- */
 
+
 /* ~~~~ Icone point d'exclamation urgents ~~~~ */
 .fa-exclamation-circle{
     color: #e62651;
@@ -260,33 +263,59 @@ li:hover i{
 }
 
 /* ~~~~ Icone actualité ~~~~ */
-.fa-newspaper-o, .fa-sun-o, .fa-file-text{
+.fa-newspaper-o, .fa-sun-o, .fa-file-text, .fa-user-plus{
     color: #b6dede;
     float: left;
 }
 
+/* ~~~~ Icone ajout actualité ~~~~ */
+.contenu{
+
+}
+
+.fa-plus-circle{
+    color: #e62651;
+    position: absolute;
+    right: 0;
+    top: 17px;
+}
+
 /* ~~~~ Titres ~~~~ */
 .titre{
+    margin-top: 0;
+    padding-top: 0;
     font-weight: bolder;
 }
 
 #urgent{
+    color: #e62651;
+    padding-top: 20px;
     padding-left: 80px;
 }
 
 #actu{
-    padding-left: 90px;
+    padding-left: 100px;
     padding-top: 15px;
-    margin-bottom: 40px;
+    position: relative;
 }
 
 #meteo{
     padding-left: 90px;
+    padding-top: 40px;
+}
+
+#jours{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 h4{
     font-size: 14px;
     padding-top: 20px;
+}
+
+.actu_content{
+    text-align: center;
 }
 
 /* ~~~~ Effets sur les articles ~~~~ */
@@ -295,14 +324,14 @@ h4{
 }
 
 /* ~~~~ Retrait de ligne sur les articles ~~~~ */
-.actu_content p:nth-child(2), .event_content p:nth-child(2), .article p{
+.actu_content p:nth-child(2), .event_content p:nth-child(2){
     text-indent: 40px;
 }
 
 /* ~~~~ Séparation auteur ~~~~ */
 .hr-auteur{
     float: left;
-    width: 45%;
+    width: 100%;
     height: 3px;
     color: #b6dede;
     background-color: #b6dede;
@@ -314,9 +343,13 @@ h4{
     text-align: right;
     font-weight: bold;
     color: #b6dede;
+    margin: 0;
 }
 
 /* ~~~~ Meteo ~~~~ */
+
+.aside h2{
+}
 .aside ul{
     padding-left: 40px;
 }
@@ -347,6 +380,13 @@ h4{
     margin: -5px;
 }
 
+
+/* ~~~~ Events a venir ~~~~ */
+.eventavenir{
+    text-align: center;
+}
+
+
 /* ~~~~ Titre décalé ~~~~ */
 .evenements h2, .poster_evenement h2, .article h2{
     padding-left: 80px;
@@ -373,9 +413,10 @@ h4{
     text-transform: uppercase;
     padding: 15px 30px;
     display: block;
-    margin: 20px auto 40px auto;
+    margin: 20px auto;
     width: 100%;
     text-align: center;
+    max-width: 500px;
 }
 
 /* ~~~~ Bouton event ~~~~ */
@@ -398,7 +439,13 @@ h4{
 
 .article_imgs{
     width:250px;
+}
 
+.article_content{
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #1b2e52;
+    color: #f2eee9;
 }
 
 /* ----------------------------------------------------------------------------------------------- */
@@ -409,12 +456,25 @@ form{
     margin-bottom: 0;
 }
 
-input[type='text'], input[type='password'], input[type='email'], textarea{
+input[type='text'], input[type='password'], input[type='email'], input[type='number'],textarea{
     border: 2px solid #b6dede;
     border-radius: 7px;
     width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
     padding: 5px;
     height: 50px;
+    color: #1b2e52;
+}
+
+input[type='file']{
+    text-indent: -9999px;
+    background: url(../media/interface/plus-sign.png) no-repeat;
+    background-size: contain;
+    height: 80px;
+
+    width: 80px;
 }
 
 .nom-event{
@@ -431,11 +491,11 @@ input[type='text'], input[type='password'], input[type='email'], textarea{
 
 form p{
     margin: 30px 0 10px 0;
+    max-width: 300px;
 }
 
 .liste-img{
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
 }
 
 .fa-plus-square-o{
@@ -502,7 +562,7 @@ input[type="email"]:nth-child(10){
     font-size: 20px;
     text-transform: uppercase;
     margin: 5px auto;
-    width: 75%;
+    width: 100%;
 }
 
 .connexion:hover, .inscription:hover{
@@ -545,8 +605,7 @@ input[type="email"]:nth-child(10){
 .auteur-article{
     color: #f2eee9;
     background-color: #1b2e52;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 20px 20px 20px;
 }
 
 .article img{
@@ -562,7 +621,29 @@ input[type="email"]:nth-child(10){
 /* -------------------------------------------------------------------------------------------------- */
 #avatar{
     border-radius: 50%;
+    border: 2px solid #1b2e52;
     width: 50%;
     display: block;
-    margin: 0 auto;
+    margin: 30px auto;
+}
+
+.infos{
+    border-left: solid 1px #f2eee9;
+}
+
+.infos p{
+    margin: 0;
+    text-indent: 5px;
+}
+
+.nom{
+    text-transform: uppercase;
+}
+
+
+
+
+#admin{
+    padding-left: 100px;
+    position: relative;
 }

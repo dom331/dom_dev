@@ -9,25 +9,28 @@
             {% endif %}</h2>
         {% if liste !='' %}
             <img id="avatar" src="media/interface/{{ liste.oui.avatar }}" alt="avatar">
-            <input type="file" name="fichier"  title="Rechercher"/>
+            <div class="liste-img">
+                <input type="file" name="fichier" title="Rechercher" required/>
+            </div>
         {% endif %}
 
         <div class="auteur-article">
 
             {% if liste !='' %}
-                {{ liste.oui.nom }} {{ liste.oui.prenom }}<br>
-                <p>Description :</p>{{ liste.oui.description }} <input type="text" name="description"/> <br>
-                <p>Email :</p>{{ liste.oui.email }} <input type="text" name="email"/> <br>
-               <p>Inscris le :</p> {{ liste.oui.date_inscription }} <br>
+                <p class="nom">{{ liste.oui.nom }} {{ liste.oui.prenom }}</p>
+                <p>Description : <input type="text" name="description" placeholder="{{ liste.oui.description }}" /></p>
+                <p>Mail :<input type="text" name="email" placeholder="{{ liste.oui.email }}" /></p>
             {% endif %}
-            Date de naissance : <input type="text" name="naiss"/>
-            <br>
+                <p>Date de naissance : <input type="text" name="naiss" id="datepicker"/></p>
         </div>
-            <input class="button submit" type="submit" name="soumettre" value="Modifications terminées" />
-        <hr class="hr-actu">
-            </form>
+ <p/>
+        </form>
+
     </div>
     <div class="auteur-article">
+        <hr class="hr-menu">
+            <input class="button submit" type="submit" name="soumettre" value="Modifications terminées" />
+        <hr class="hr-menu">
         <ul class="rs">
             <li><a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a></li>
