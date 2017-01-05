@@ -1,0 +1,39 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+    {% if liste !='' %}
+        <div class="article">
+            <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
+
+            <h2>{{ liste.oui.nom }} {{ liste.oui.prenom }}</h2>
+            <img src="media/interface/{{ liste.oui.image }}" alt="img">
+
+            <div class="article_content">
+                <h3 class="titre">Informations :</h3>
+                <p>{{ liste.oui.contenu }}</p>
+                <p><span class="titre">Date Inscription :</span> {{ liste.oui.date_inscription | date("d/m/Y") }}</p>
+                <p><span class="titre">Email :</span> {{ liste.oui.email }}</p>
+            </div>
+
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block meteo %}
+    <div class="auteur-article">
+        <a href="index.php?page=404">
+            <div class="photo"></div>
+        </a>
+        <h2>{{ liste.oui.nom }} {{ liste.oui.prenom }}</h2>
+        {% if session.toto.admin == 1 %}
+            <hr class="hr-menu">
+            <form method="post">
+                <input name="valider" class="button connexion" type="submit" value="Approuvé l'utilisateur">
+                <input name="supprimer" class="button connexion" type="submit" value="Supprimer l'utilisateur">
+            </form>
+            <hr class="hr-menu">
+        {% endif %}
+        <h4 class="titre">Date d'inscription :</h4>
+        <p>{{ liste.oui.date_inscription | date("d/m/Y") }}</p>
+    </div>
+{% endblock %}
