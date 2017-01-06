@@ -1,8 +1,9 @@
 {% extends 'front/general.html.twig' %}
 
 {% block contenu %}
+    <form method="post" enctype="multipart/form-data" >
     <div class="article">
-        <form method="post" enctype="multipart/form-data" >
+
         <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
         <h2>{% if liste !='' %}
                 {{ liste.oui.nom }}  {{ liste.oui.prenom }}
@@ -10,7 +11,7 @@
         {% if liste !='' %}
             <img id="avatar" src="media/interface/{{ liste.oui.avatar }}" alt="avatar">
             <div class="liste-img">
-                <input type="file" name="fichier" title="Rechercher" required/>
+                <input type="file" name="fichier" title="Rechercher"/>
             </div>
         {% endif %}
 
@@ -23,13 +24,14 @@
             {% endif %}
                 <p>Date de naissance : <input type="text" name="naiss" id="datepicker"/></p>
         </div>
- <p/>
-        </form>
+
+
 
     </div>
     <div class="auteur-article">
         <hr class="hr-menu">
-            <input class="button submit" type="submit" name="soumettre" value="Modifications terminées" />
+        <input class="button submit" type="submit" name="soumettre" value="Modifications terminées" />
+
         <hr class="hr-menu">
         <ul class="rs">
             <li><a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
@@ -37,7 +39,7 @@
             <li><a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></li>
         </ul>
     </div>
-
+    </form>
 
 {% endblock %}
 
