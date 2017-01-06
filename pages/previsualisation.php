@@ -18,8 +18,9 @@ $infos['oui']['date']=$daoEvenement->bean->getDate();
 $infos['oui']['prix']=$daoEvenement->bean->getPrix();
 $infos['oui']['approuve']=$daoEvenement->bean->getApprouve();
 $infos['oui']['a_prevoir']=$daoEvenement->bean->getA_prevoir();
-//            $daoEvenement->setLesImages(); // Il n'y a pas d'images appartenant aux articles : A FAIRE
-//            $infos['oui']['avatar']=$daoEvenement->bean->getLesImages();
+$daoEvenement->setLeAuteur();
+$infos['oui']['auteurNom']=$daoEvenement->bean->getLeAuteur()->getNom();
+$infos['oui']['auteurPrenom']=$daoEvenement->bean->getLeAuteur()->getPrenom();
 
 $param=array("liste" =>$infos);
 
