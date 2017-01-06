@@ -17,7 +17,8 @@
         <p class="nom">{{ liste.oui.nom }} {{ liste.oui.prenom }}</p>
         <p>Description : {{ liste.oui.description }}</p>
         <p>Mail : {{ liste.oui.email }}</p>
-        <p>Date d'inscription : {{ liste.oui.date_inscription }}</p>
+        <p>Date de naissance : {{ liste.oui.naiss | date("d/m/Y") }}</p>
+        <p>Date d'inscription : {{ liste.oui.date_inscription | date("d/m/Y") }}</p>
         </div>
         {% endif %}
         </div>

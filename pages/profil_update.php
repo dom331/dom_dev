@@ -51,7 +51,8 @@ if(isset($_POST['soumettre'])) {
     }
 
     if (!empty($_POST['naiss'])){
-        $daoUtilisateur->bean->setDate_Naiss($_POST['naiss']);
+        $date = explode("/", $_POST["naiss"]);
+        $daoUtilisateur->bean->setDate_naiss($date[2]."-".$date[0]."-".$date[1]);
         $daoUtilisateur->updateDate_Naiss();
         header('Location: index.php?page=profil&id='.$daoUtilisateur->bean->getId());
     }
