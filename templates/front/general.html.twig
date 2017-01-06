@@ -12,8 +12,8 @@
 
      <title>DÔM | Intra-MMI Montbéliard</title>
      <link rel="stylesheet" href="css/normalize.css"/>
-     <link rel="stylesheet" href="css/sidebar.css" media="all" />
-
+     <link rel="stylesheet" href="css/sidebar.css" media="all and (max-width: 1000px"/>
+     <link rel="stylesheet" href="css/menu_desktop.css" media="all" />
 
      <link rel="stylesheet" href="css/style_phone.css" media="all"/>
      <link rel="stylesheet" href="css/style_tablet.css" media="all and (min-width: 600px) and (max-width: 1000px)"/>
@@ -48,9 +48,7 @@
             <form method="post">
             <ul class="icones-menu-profil">
                 <li><a href="index.php?page=404"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
-
                 <li><button type="submit" class="logout" name="logout"><i class="fa fa-power-off" aria-hidden="true"></i></button></li>
-
             </ul>
             </form>
             {% if session.toto !='' %}
@@ -105,6 +103,7 @@
             <div class="st-content">
                 <div class="st-content-inner">
 
+                    <main>
                     <header>
 
                         <div id="st-trigger-effects" class="column">
@@ -119,7 +118,7 @@
 
                     <hr class="hr-actu un">
 
-                    <main>
+
 
                         <div class="contenu">
                             {% block contenu %}
@@ -136,14 +135,15 @@
                             {% endblock %}
 
                         </div>
-                    </main>
+
+
 
                     <hr class="hr-actu deux">
 
                     <footer>
                         <p>Tous droits réservés - 2016/2017</p>
                     </footer>
-
+                    </main>
                 </div>
             </div>
         </div>
