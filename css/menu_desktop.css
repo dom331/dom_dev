@@ -12,7 +12,7 @@
 }
 
 .st-content {
-    overflow-y: hidden;
+    overflow-y: scroll;
     background: #f2eee9;
     padding: 20px;
 }
