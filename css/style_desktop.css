@@ -22,6 +22,6 @@ header{
     position: relative;
 }
 
-.st-menu{
-
+.st-pusher{ /* Hauteur mini du menu */
+    min-height: 1200px;
 }
