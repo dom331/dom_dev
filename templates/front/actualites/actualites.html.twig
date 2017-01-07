@@ -2,24 +2,28 @@
 
 {% block contenu %}
 
-    <i class="fa fa-exclamation-circle fa-4x" aria-hidden="true"></i>
-    <h2 id="urgent">Urgent</h2>
 
-    {% for actualite in liste %}
+
+
+{% for actualite in liste %}
             {% if actualite.urgent == 1 %}
+                <i class="fa fa-exclamation-circle fa-4x" aria-hidden="true"></i>
+                <h2 id="urgent">Urgent</h2>
+
                 <a href="index.php?page=article&id={{ actualite.id }}">
 
                     <div class="actu_content">
 
                         <h4 class="titre">{{ actualite.date | date("d/m/Y") }} | {{ actualite.titre }}</h4>
                         <img class="article_imgs" src="media/interface/{{ actualite.image }}" alt="image">
-                        <p><span>{{ actualite.contenu | slice(0, 200)  }}...</span></p>
+                        <p><span>{{ actualite.contenu | slice(0, 70)  }}...</span></p>
                         <p class="auteur">{{ actualite.responsables }}</p>
                         <hr class="hr-auteur">
                     </div>
                 </a>
             {%  endif %}
-    {% endfor %}
+{% endfor %}
+
 
     <i class="fa fa-newspaper-o fa-4x" aria-hidden="true"></i>
 
@@ -31,7 +35,7 @@
 
 
     {% for actualite in liste %}
-        {% if actualite.urgent == 0 %}
+        {% if actualite.urgent == 0 and actualite.perdu == 0  %}
             <a href="index.php?page=article&id={{ actualite.id }}">
 
                 <div class="actu_content">
