@@ -44,11 +44,11 @@ if (!EMPTY($page = $routes[$uriDemandee]["page"])){
     echo "</span>";
 }
 
-
+$param["session"] = $_SESSION;
 // Chargement du template
 $template = $twig->loadTemplate($template);
 
-$param["session"] = $_SESSION;
+
 
 // Affichage de la page concern�e
 echo $template->render($param);

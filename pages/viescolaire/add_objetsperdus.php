@@ -18,7 +18,7 @@ if(isset($_POST["soumettre"])) {
         $dao->bean->setLeAuteur((int)$_SESSION['toto']['id']);
         $dao->bean->setPerdu($_POST['perdu']);
         $dao->bean->setUrgent($_POST['urgent']);
-        
+
         $image = $_FILES['oui']['name'];
 //var_dump($image) or die();
         if(move_uploaded_file($_FILES['oui']['tmp_name'], "media/interface/".$image)){
@@ -26,7 +26,7 @@ if(isset($_POST["soumettre"])) {
         }
 //        var_dump($dao) or die();
         $dao->create();
-        header('Location: index.php?page=actualites');
+        header('Location: index.php?page=objetsperdus');
     }   else {
         echo  "erreur";
     }
