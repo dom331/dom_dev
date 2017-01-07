@@ -1,0 +1,42 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+
+    <i class="fa fa-chain-broken fa-4x" aria-hidden="true"></i>
+    <h2 id="actu">Objets perdus
+        {% if session.toto.admin == 1 %}
+            <a class="fa fa-plus-circle fa-lg" href="index.php?page=add_objetsperdus"></a>
+        {% endif %}
+    </h2>
+
+    {% for actualite in liste %}
+        {% if actualite.perdu == 1 %}
+            <a href="index.php?page=article&id={{ actualite.id }}">
+
+                <div class="actu_content">
+
+                    <h4 class="titre">{{ actualite.date | date("d/m/Y") }} | {{ actualite.titre }}</h4>
+                    <img class="article_imgs" src="media/interface/{{ actualite.image }}" alt="image">
+                    <p><span>{{ actualite.contenu | slice(0, 200)  }}...</span></p>
+                    <p class="auteur">{{ actualite.responsables }}</p>
+                    <hr class="hr-auteur">
+                </div>
+            </a>
+        {%  endif %}
+    {% endfor %}
+
+
+
+
+{% endblock %}
+
+{% block aside %}
+    <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
+    <h2>Outils</h2>
+    <ul>
+        <a href="?page=viescolaire">Vie Scolaire</a>
+        <a href="?page=edt"><li>Emploi du temps</li></a>
+        <a href="?page=absences"><li>Absences</li></a>
+        <a href="?page=objetsperdus"><li>Objets perdus</li></a>
+    </ul>
+{% endblock %}

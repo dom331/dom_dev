@@ -29,6 +29,7 @@ class DaoUtilisateur extends Dao
         $this->bean->setEmail($donnees['EMAIL_UTILISATEUR']);
         $this->bean->setDescription($donnees['DESCRIPTION_UTILISATEUR']);
         $this->bean->setImage($donnees['IMAGE']);
+        $this->bean->setConvoque($donnees['CONVOQUE']);
         $this->bean->setDate_inscription($donnees['DATE_INSCRIPTION']);
         $this->bean->setAdmin($donnees['ADMIN']);
         $this->bean->setEx_mmi($donnees['EX_MMI']);
@@ -96,6 +97,19 @@ class DaoUtilisateur extends Dao
         $requete->execute();
     }
 
+    public function updateConvoque()
+    {
+        $sql ="UPDATE utilisateur
+               SET CONVOQUE = ?
+               WHERE ID_UTILISATEUR = ?";
+        $requete = $this->pdo->prepare($sql);
+        $requete->bindValue(1, $this->bean->getConvoque());
+        $requete->bindValue(2, $this->bean->getId());
+        $requete->execute();
+    }
+
+
+
     public function updateEmail()
     {
         $sql ="UPDATE utilisateur
@@ -138,6 +152,7 @@ class DaoUtilisateur extends Dao
                     $donnees['EMAIL_UTILISATEUR'],
                     $donnees['DESCRIPTION_UTILISATEUR'],
                     $donnees['IMAGE'],
+                    $donnees['CONVOQUE'],
                     $donnees['DATE_INSCRIPTION'],
                     $donnees['ADMIN'],
                     $donnees['EX_MMI'],
@@ -267,6 +282,7 @@ class DaoUtilisateur extends Dao
                 $this->bean->setEmail($donnees['EMAIL_UTILISATEUR']);
                 $this->bean->setDescription($donnees['DESCRIPTION_UTILISATEUR']);
                 $this->bean->setImage($donnees['IMAGE']);
+                $this->bean->setConvoque($donnees['CONVOQUE']);
                 $this->bean->setDate_inscription($donnees['DATE_INSCRIPTION']);
                 $this->bean->setAdmin($donnees['ADMIN']);
                 $this->bean->setEx_mmi($donnees['EX_MMI']);
@@ -297,6 +313,7 @@ class DaoUtilisateur extends Dao
                     $donnees['EMAIL_UTILISATEUR'],
                     $donnees['DESCRIPTION_UTILISATEUR'],
                     $donnees['IMAGE'],
+                    $donnees['CONVOQUE'],
                     $donnees['DATE_INSCRIPTION'],
                     $donnees['ADMIN'],
                     $donnees['EX_MMI'],
