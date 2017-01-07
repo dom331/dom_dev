@@ -404,12 +404,6 @@ aside h4{
 }
 
 
-/* ~~~~ Events a venir ~~~~ */
-.eventavenir{
-    text-align: center;
-}
-
-
 /* ~~~~ Titre décalé ~~~~ */
 .evenements h2, .poster_evenement h2, .article h2{
     padding-left: 80px;

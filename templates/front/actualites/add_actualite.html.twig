@@ -10,9 +10,12 @@
         <form method="post" enctype="multipart/form-data">
             <p>Nom de l'actualité :</p>
             <input class="nom-event" type="text" name="titre" required/>
-
             <p>Description de l'actualité :</p>
             <textarea rows="10" cols="20" class="description-event" name="contenu" required></textarea>
+
+            <p>Appliquer mention "Urgent" ?</p>
+            <input class="urgent" type="radio" name="urgent" value="0" required/><label for="urgent"> Non</label>
+            <input class="urgent" type="radio" name="urgent" value="1" required/><label for="urgent"> Oui</label>
 
             <div class="liste-img">
                 <p>Image</p>
