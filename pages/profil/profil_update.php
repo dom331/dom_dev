@@ -5,7 +5,7 @@ require_once ("dao/DaoUtilisateur.php");
 
 $daoUtilisateur = new DaoUtilisateur();
 
-$id = $_GET['id'];
+$id = $_SESSION['toto']['id'];
 $daoUtilisateur->find($id);
 
 $infos['oui'] = array();
