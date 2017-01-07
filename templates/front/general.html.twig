@@ -117,8 +117,8 @@
 
                     </header>
 
-                    <hr class="hr-actu un">
-
+                    <hr class="hr-actu un" />
+                    <div id="conteneur">
 
 
                         <div class="contenu">
@@ -128,16 +128,34 @@
                             {% endblock %}
                         </div>
 
-                        <div class="aside">
+                        <aside>
+                            {% block aside %}
+                                <i class="fa fa-sun-o fa-4x" aria-hidden="true"></i>
+                                <h2 id="meteo">Météo campus</h2>
+                                <div id="jours">
+                                    <div class="jours">
+                                        <ul>
+                                            <li><h4 class="titre">Lundi 07 Nov.</h4></li>
+                                            <li>Matin : 8°C</li>
+                                            <li>Après-midi : 11°C</li>
+                                            <li>Temps nuageux</li>
+                                        </ul>
+                                    </div>
 
-                            {% block meteo %}
-
+                                    <div class="jours">
+                                        <ul>
+                                            <li><h4 class="titre">Mardi 08 Nov.</h4></li>
+                                            <li>Matin : 7°C</li>
+                                            <li>Après-midi : 9°C</li>
+                                            <li>Temps pluvieux</li>
+                                        </ul>
+                                    </div>
+                                </div>
 
                             {% endblock %}
+                        </aside>
 
-                        </div>
-
-
+                    </div>
 
                     <hr class="hr-actu deux">
 

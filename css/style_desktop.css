@@ -6,7 +6,9 @@ main{
 
 body{
 }
-
+#conteneur{
+    display: flex;
+}
 .column{
     display: none;
     overflow: hidden;

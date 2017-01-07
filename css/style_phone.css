@@ -255,11 +255,34 @@ li:hover i{
 /* --------------------------------------- INDEX ---------------------------------------- */
 /* -------------------------------------------------------------------------------------- */
 
+#conteneur{
+    display: block;
+}
+
+.contenu{
+    width: 70%;
+    min-width: 440px;
+
+}
+.aside{
+    width: 20%;
+    min-width: 340px;
+    max-width: 540px;
+
+}
 
 /* ~~~~ Icone point d'exclamation urgents ~~~~ */
 .fa-exclamation-circle{
     color: #e62651;
     float: left;
+}
+
+/* ~~~~ Icone objets perdus ~~~~ */
+
+.fa-chain-broken, .fa-group, .fa-heartbeat{
+    color: #b6dede;
+    float: left;
+    margin-right: 20px;
 }
 
 /* ~~~~ Icone actualité ~~~~ */
@@ -269,9 +292,7 @@ li:hover i{
 }
 
 /* ~~~~ Icone ajout actualité ~~~~ */
-.contenu{
 
-}
 
 .fa-plus-circle{
     color: #e62651;
@@ -289,7 +310,7 @@ li:hover i{
 
 #urgent{
     color: #e62651;
-    padding-top: 20px;
+    padding-top: 2px;
     padding-left: 80px;
 }
 
@@ -301,7 +322,6 @@ li:hover i{
 
 #meteo{
     padding-left: 90px;
-    padding-top: 40px;
 }
 
 #jours{
@@ -347,24 +367,27 @@ h4{
 }
 
 /* ~~~~ Meteo ~~~~ */
-
-.aside h2{
+aside{
+    width: 260px;
+    padding-left: 20px;
 }
-.aside ul{
+aside h2{
+}
+aside ul{
     padding-left: 40px;
 }
 
-.aside ul li:first-child{
+aside ul li:first-child{
     border: none;
 }
 
-.aside li{
+aside li{
     list-style: none;
     padding-left: 20px;;
     border-left: 2px solid #b6dede;
 }
 
-.aside h4{
+aside h4{
     margin-bottom: 0;
 }
 
