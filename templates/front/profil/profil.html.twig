@@ -25,9 +25,12 @@
         <p/>
     </div>
     <div class="auteur-article">
+        {% if session.toto.id == liste.oui.id %}
         <hr class="hr-menu">
-        <a class="button connexion" href="index.php?page=profil_update&id={{ liste.oui.id }}">Modifier mon profil</a>
+        <a class="button connexion" href="index.php?page=profil_update">Modifier mon profil</a>
+
         <hr class="hr-menu">
+        {%  endif %}
         <ul class="rs">
             <li><a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a></li>
