@@ -13,8 +13,8 @@
 
             </div>
             <div class="article_content">
-
-                <p>Description : <textarea maxlength="245" rows="4" cols="50" name="description" placeholder="{{ liste.oui.contenu }}"></textarea></p>
+                <h3 class="titre">Description :</h3>
+                <textarea maxlength="245" rows="4" cols="50" name="description" placeholder="{{ liste.oui.contenu }}"></textarea>
                 <p><span class="titre">Publié par :</span><input type="text" name="responsables" placeholder="{{ liste.oui.responsables }}"/></p>
                 <p><span class="titre">Le : </span> {{ liste.oui.date | date("d/m/Y") }}</p>
 
