@@ -35,7 +35,23 @@ Violet     : #1b2e52 ;
 * { box-sizing: border-box; }
 .hide{display: none;}
 
+.desc_cadre{
+    display: block;
+    margin-top: 35px;
+    border: #b6dede 2px;
+    padding: 20px;
+    font-size: 0.7rem;
+    border-style: dashed solid dashed solid;
+    background: rgba(255,255,255,0.2);
+}
 
+.desc_article{
+    min-height: 80px;
+    border: #b6dede 1px;
+    padding: 20px;
+    font-size: 0.7rem;
+    border-style: dashed ;
+}
 /* ------------------------------------------------------------------------------------------------- */
 /* -------------------------------------- BALISAGE STANDARD ---------------------------------------- */
 /* ------------------------------------------------------------------------------------------------- */
@@ -167,10 +183,6 @@ nav{
     margin-top: 8px;
 }
 
-.icones-menu-profil .fa-power-off{
-    position: absolute;
-    right: 0;
-}
 
 /* ~~~~ Nom sous la photo ~~~~ */
 .name{
@@ -195,10 +207,15 @@ nav{
 
 /* ~~~~ Power off ~~~~ */
 .logout{
-    margin-top: 23px;
+    margin-top: 18px;
     color: #f2eee9;
     border-style: none;
     background-color: #e62651;
+    width: 20px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    right: 0;
 }
 
 /* ~~~~ Séparation du menu ~~~~ */
@@ -261,12 +278,6 @@ li:hover i{
 .contenu{
     width: 70%;
     min-width: 440px;
-
-}
-.aside{
-    width: 20%;
-    min-width: 340px;
-    max-width: 540px;
 
 }
 
@@ -333,9 +344,6 @@ h4{
     padding-top: 20px;
 }
 
-.actu_content{
-    text-align: center;
-}
 
 /* ~~~~ Effets sur les articles ~~~~ */
 .actu_content:hover, .event_content:hover{
@@ -367,8 +375,13 @@ h4{
 
 /* ~~~~ Meteo ~~~~ */
 aside{
-    width: 260px;
+    margin-top: 20px;
     padding-left: 20px;
+    width: 25%;
+    min-width: 400px;
+    max-width: 540px;
+
+}
 }
 aside h2{
 }
@@ -472,15 +485,25 @@ form{
     margin-bottom: 0;
 }
 
-input[type='text'], input[type='password'], input[type='email'], input[type='number'],textarea{
+input[type='text'], input[type='password'], input[type='email'], input[type='number']{
     border: 2px solid #b6dede;
     border-radius: 7px;
     width: 100%;
+    max-width: 600px;
     display: block;
-    margin: 0 auto;
-    max-width: 500px;
+    margin: 10px auto;
     padding: 5px;
     height: 50px;
+    color: #1b2e52;
+}
+textarea{
+    border: 2px solid #b6dede;
+    border-radius: 7px;
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
     color: #1b2e52;
 }
 
@@ -489,7 +512,6 @@ input[type='file']{
     background: url(../media/interface/plus-sign.png) no-repeat;
     background-size: contain;
     height: 80px;
-
     width: 80px;
 }
 
@@ -507,7 +529,7 @@ input[type='file']{
 
 form p{
     margin: 30px 0 10px 0;
-    max-width: 300px;
+    max-width: 90%;
 }
 
 .liste-img{
@@ -645,6 +667,7 @@ input[type="email"]:nth-child(10){
 
 .infos{
     border-left: solid 1px #f2eee9;
+    padding-left: 20px;
 }
 
 .infos p{

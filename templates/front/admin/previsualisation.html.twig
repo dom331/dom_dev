@@ -9,12 +9,12 @@
             <img src="media/interface/{{ liste.oui.image }}" alt="img">
 
             <div class="article_content">
-                <h3 class="titre">Publié par :</h3>
-                <p>{{ liste.oui.auteurNom }} {{ liste.oui.auteurPrenom }}</p>
+                <p><span class="titre">Publié par :</span> {{ liste.oui.auteurPrenom }} {{ liste.oui.auteurNom }} </p>
                 <h3 class="titre">Description :</h3>
-                <p>{{ liste.oui.contenu }}</p>
-                <p><span class="titre">Coûts de participation :</span> {{ liste.oui.prix }}</p>
+                <p class="desc_article">{{ liste.oui.contenu }}</p>
+                <p><span class="titre">Coûts de participation :</span> {{ liste.oui.prix }} €</p>
                 <p><span class="titre">Objets à prévoir :</span> {{ liste.oui.a_prevoir }}</p>
+                <p><span class="titre">Date de l'évènement :</span> {{ liste.oui.date | date("d/m/Y") }}</p>
             </div>
 
         </div>
@@ -23,6 +23,8 @@
 
 {% block aside %}
     <div class="auteur-article">
+        <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
+        <h2>Gestion</h2>
         <a href="index.php?page=404">
             <div class="photo"></div>
         </a>
@@ -30,12 +32,11 @@
         {% if session.toto.admin == 1 %}
             <hr class="hr-menu">
             <form method="post">
-                <input name="valider" class="button connexion" type="submit" value="approuvé">
-                <input name="suppr" class="button connexion" type="submit" value="supprimer l'article">
+                <input name="valider" class="button connexion" type="submit" value="Approuver">
+                <input name="suppr" class="button connexion" type="submit" value="Supprimer l'article">
             </form>
             <hr class="hr-menu">
         {% endif %}
-        <h4 class="titre">Date de publication :</h4>
-        <p>{{ liste.oui.date | date("d/m/Y") }}</p>
+
     </div>
 {% endblock %}

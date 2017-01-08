@@ -1,5 +1,8 @@
 <?php
 
+if(isset($_SESSION["toto"])) {
+    header('Location: index.php?page=actualites');
+}
 require_once 'dao/DaoUtilisateur.php';
 
 if (isset($_POST['soumettre'])){
@@ -8,8 +11,8 @@ if (isset($_POST['soumettre'])){
 
         $dao = new DaoUtilisateur();
 
-            $dao->bean->setNom($_POST['nom']);
-            $dao->bean->setPrenom($_POST['prenom']);
+            $dao->bean->setNom(ucwords($_POST['nom']));
+            $dao->bean->setPrenom(ucwords($_POST['prenom']));
             $dao->bean->setIdentifiant($_POST['identifiant']);
             $dao->bean->setPsw($_POST['mdp']);
             $dao->bean->setEmail($_POST['email']);

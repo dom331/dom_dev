@@ -58,3 +58,4 @@ $param = array("utilisateurs" => $utilisateurs,
     "liste" => $liste,
     "notifs" => $notifs);
 
+//var_dump($param) or die();

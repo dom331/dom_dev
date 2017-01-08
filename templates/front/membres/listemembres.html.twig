@@ -7,7 +7,10 @@
     <ul>
     {% for utilisateur in liste %}
         <a href="?page=profil&id={{ utilisateur.id }}">
-            <li>{{ utilisateur.prenom }} {{ utilisateur.nom }} | Accéder au profil</li>
+            <li>
+                <img src="media/uploads/avatars/{{ utilisateur.image }}" alt="avatar {{ utilisateur.prenom }} {{ utilisateur.nom }}">
+                {{ utilisateur.prenom }} {{ utilisateur.nom }} | Accéder au profil
+            </li>
         </a><br>
     {%  endfor %}
     </ul>

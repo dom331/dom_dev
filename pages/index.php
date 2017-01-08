@@ -1,5 +1,8 @@
 <?php
 
+if(isset($_SESSION["toto"])) {
+    header('Location: index.php?page=actualites');
+}
 
 require_once ("dao/DaoUtilisateur.php");
 
@@ -29,6 +32,7 @@ if(isset($_POST["connexion"])) {
             $_SESSION['toto']['mail'] = $daoUtilisateur->bean->getEmail();
             $_SESSION['toto']['admin'] = $daoUtilisateur->bean->getAdmin();
             $_SESSION['toto']['avatar'] = $daoUtilisateur->bean->getImage();
+            $_SESSION['toto']['convoque'] = $daoUtilisateur->bean->getConvoque();
             $_SESSION['toto']['description'] = $daoUtilisateur->bean->getDescription();
             
             

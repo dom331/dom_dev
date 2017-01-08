@@ -48,7 +48,7 @@ $param["session"] = $_SESSION;
 // Chargement du template
 $template = $twig->loadTemplate($template);
 
-
+require_once("pages/general.php");
 
 // Affichage de la page concern�e
 echo $template->render($param);
