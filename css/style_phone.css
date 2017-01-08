@@ -46,9 +46,11 @@ Violet     : #1b2e52 ;
 }
 
 .desc_article{
+    display: block;
     min-height: 80px;
     border: #b6dede 1px;
     padding: 20px;
+    margin-bottom: 20px;
     font-size: 0.7rem;
     border-style: dashed ;
 }

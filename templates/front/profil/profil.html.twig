@@ -17,8 +17,8 @@
     {% if liste !='' %}
         <div class="infos">
             <h3 class="titre">{{ liste.oui.prenom }} {{ liste.oui.nom }} :</h3>
-            <p>{{ liste.oui.contenu }}</p>
-            <p><span class="titre">Description :</span> {{ liste.oui.description }}</p><br>
+            <h3 class="titre">Description :</h3>
+            <span class="desc_article">{{ liste.oui.description }}</span>
             <p><span class="titre">Email :</span> {{ liste.oui.email }}</p>
             <p><span class="titre">Date de naissance :</span> {{ liste.oui.date_naissance | date("d/m/Y") }}</p>
             <br>
