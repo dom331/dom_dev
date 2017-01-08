@@ -17,6 +17,7 @@ $infos['oui']['email']=$daoUtilisateur->bean->getEmail();
 $infos['oui']['description']=$daoUtilisateur->bean->getDescription();
 $infos['oui']['date_inscription']=$daoUtilisateur->bean->getDate_inscription();
 $infos['oui']['avatar']=$daoUtilisateur->bean->getImage();
+$infos['oui']['naiss']=$daoUtilisateur->bean->getDate_naiss();
 //        $daoUtilisateur->setLeAvatar();
 //        $infos['oui']['avatar']=$daoUtilisateur->bean->getLeAvatar()->getNom();
 
