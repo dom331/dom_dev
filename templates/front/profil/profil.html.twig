@@ -7,7 +7,9 @@
                 {{ liste.oui.nom }}  {{ liste.oui.prenom }}
     {% endif %}</h2>
     {% if liste !='' %}
-        <img src="media/uploads/avatars/{{ liste.oui.avatar }}" alt="avatar {{ liste.oui.prenom }} {{ liste.oui.nom }}">
+        <div class="center">
+            <img class="img_cercle_big" src="media/uploads/avatars/{{ liste.oui.avatar }}" alt="avatar {{ liste.oui.prenom }} {{ liste.oui.nom }}">
+        </div>
 {% endif %}
 
         <div class="auteur-article">

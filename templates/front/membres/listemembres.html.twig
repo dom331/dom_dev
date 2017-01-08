@@ -8,7 +8,7 @@
     {% for utilisateur in liste %}
         <a href="?page=profil&id={{ utilisateur.id }}">
             <li>
-                <img src="media/uploads/avatars/{{ utilisateur.image }}" alt="avatar {{ utilisateur.prenom }} {{ utilisateur.nom }}">
+                <img class="img_cercle" src="media/uploads/avatars/{{ utilisateur.image }}" alt="avatar {{ utilisateur.prenom }} {{ utilisateur.nom }}">
                 {{ utilisateur.prenom }} {{ utilisateur.nom }} | Accéder au profil
             </li>
         </a><br>

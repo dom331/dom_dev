@@ -52,6 +52,39 @@ Violet     : #1b2e52 ;
     font-size: 0.7rem;
     border-style: dashed ;
 }
+.img_cercle{
+    height: 80px;
+    width: 80px;
+    border-radius: 500px;
+
+    -moz-box-shadow: 5px 5px 10px 0px #656565;
+    -webkit-box-shadow: 5px 5px 10px 0px #656565;
+    -o-box-shadow: 5px 5px 10px 0px #656565;
+    box-shadow: 5px 5px 10px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=10);
+    -moz-border-radius: 500px;
+    -webkit-border-radius: 500px;
+
+
+}
+.img_cercle_big{
+    height: 250px;
+    width: 250px;
+    border-radius: 500px;
+
+    -moz-box-shadow: 5px 5px 10px 0px #656565;
+    -webkit-box-shadow: 5px 5px 10px 0px #656565;
+    -o-box-shadow: 5px 5px 10px 0px #656565;
+    box-shadow: 5px 5px 10px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=10);
+    -moz-border-radius: 500px;
+    -webkit-border-radius: 500px;
+}
+
+.center {
+    text-align: center;
+}
+
 /* ------------------------------------------------------------------------------------------------- */
 /* -------------------------------------- BALISAGE STANDARD ---------------------------------------- */
 /* ------------------------------------------------------------------------------------------------- */
@@ -507,13 +540,7 @@ textarea{
     color: #1b2e52;
 }
 
-input[type='file']{
-    text-indent: -9999px;
-    background: url(../media/interface/plus-sign.png) no-repeat;
-    background-size: contain;
-    height: 80px;
-    width: 80px;
-}
+
 
 .nom-event{
     height: 40px;
@@ -647,7 +674,8 @@ input[type="email"]:nth-child(10){
 }
 
 .article img{
-    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 
 .st-content{
