@@ -22,7 +22,25 @@ $daoEvenement->setLeAuteur();
 $infos['oui']['auteurNom']=$daoEvenement->bean->getLeAuteur()->getNom();
 $infos['oui']['auteurPrenom']=$daoEvenement->bean->getLeAuteur()->getPrenom();
 
-$param=array("liste" =>$infos);
+
+require_once ('dao/DaoUtilisateur.php');
+$daoU = new DaoUtilisateur();
+
+$liste2 = $daoU->getNonApprouve();
+
+$users = count($liste2);
+
+$daoE = new DaoEvenements();
+
+$liste3 = $daoE->listeAprob();
+
+$events = count($liste3);
+
+$notifs['number'] = array();
+$notifs['number']['oui'] = $events + $users;
+$param = array(
+    "liste" => $infos,
+    "notifs" => $notifs);
 
 //var_dump($param) or die();
 

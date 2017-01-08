@@ -55,6 +55,4 @@ echo $template->render($param);
 //var_dump($param);
 
 
-
-
 ?>

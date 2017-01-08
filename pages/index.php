@@ -5,22 +5,20 @@ require_once ("dao/DaoUtilisateur.php");
 
 $daoUtilisateur = new DaoUtilisateur();
 
-if(isset($_POST["connexion"])){
 
-    $daoUtilisateur->cnx($_POST['identifiant'],$_POST['psw']);
-    $approuve=(int)$daoUtilisateur->bean->getApprouve();
+if(isset($_POST["connexion"])) {
 
-    if ($approuve == 0){
+    $daoUtilisateur->cnx($_POST['identifiant'], $_POST['psw']);
+    $approuve = (int)$daoUtilisateur->bean->getApprouve();
+
+    if ($approuve == 0) {
         session_destroy();
         echo "<h1 class='name'> Votre compte n'a pas encore été approuvé </h1>";
         header('Location: index.php');
-    }
-    else{
+    } else {
 
 
-
-    if ($daoUtilisateur->bean->getIdentifiant()!=null){
-
+        if ($daoUtilisateur->bean->getIdentifiant() != null) {
 
 
             $_SESSION['toto'] = array();
@@ -32,12 +30,19 @@ if(isset($_POST["connexion"])){
             $_SESSION['toto']['admin'] = $daoUtilisateur->bean->getAdmin();
             $_SESSION['toto']['avatar'] = $daoUtilisateur->bean->getImage();
             $_SESSION['toto']['description'] = $daoUtilisateur->bean->getDescription();
-
+            
+            
 
             header('Location: index.php?page=actualites');
 
         }
     }
+
 }
+
+//var_dump($notifs) or die();
+
+
+
 
 ?>
