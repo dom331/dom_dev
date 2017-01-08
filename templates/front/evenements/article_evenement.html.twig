@@ -19,6 +19,7 @@
                 {% if session.toto.admin == 1 %}
                     <form method="post" action="index.php?page=article_evenement_suppr&id={{ liste.oui.id }}">
                         <input name="suppr" class="button connexion" type="submit" value="Supprimer l'article">
+                        <a href="index.php?page=update_evenement&id={{ liste.oui.id }}" class="button connexion">Modifier l'événement</a>
                     </form>
                 {% endif %}
             </div>

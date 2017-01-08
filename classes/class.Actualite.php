@@ -5,7 +5,7 @@ class Actualite{
     private $id = 0;
     private $titre = null;
     private $contenu = null;
-    private $image = null;
+    private $image = "default.png";
     private $perdu = 0;
     private $urgent = 0;
     private $date = null;
@@ -14,7 +14,7 @@ class Actualite{
     private $leAuteur = null;
     private $lesImages = array();
 
-    public function Actualite($id=0, $titre=null,$contenu=null, $image=null, $perdu = 0, $urgent = 0, $date=null,$responsables=null){
+    public function Actualite($id=0, $titre=null,$contenu=null, $image="default.png", $perdu = 0, $urgent = 0, $date=null,$responsables=null){
         $this->id = $id;
         $this->titre = $titre;
         $this->contenu = $contenu;

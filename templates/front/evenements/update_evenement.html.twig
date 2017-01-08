@@ -1,0 +1,30 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+    {% if liste !='' %}
+        <form method="post" enctype="multipart/form-data" >
+        <div class="article">
+            <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
+
+            <h2><input type="text" name="titre" placeholder="{{ liste.oui.titre }}"></h2>
+            <img src="media/uploads/evenements/{{ liste.oui.image }}" alt="Image d'événement">
+            <div class="liste-img">
+                Changer l'image : <input type="file" name="fichier" title="Rechercher"/>
+
+            </div>
+            <div class="article_content">
+                <h3 class="titre">Description :</h3>
+                <p>Description : <textarea maxlength="245" rows="4" cols="50" name="description" placeholder="{{ liste.oui.contenu }}"></textarea></p>
+                <p><span class="titre">Coûts de participation :</span><input type="number" name="prix" placeholder="{{ liste.oui.prix }}"></p>
+                <p><span class="titre">Objets à prévoir :</span><input type="text" name="a_prevoir" placeholder="{{ liste.oui.a_prevoir }}"> </p>
+                <p><span class="titre">Publié par :</span> {{ liste.oui.auteurPrenom }} {{ liste.oui.auteurNom }}</p>
+                <p><span class="titre">Le : </span> {{ liste.oui.date | date("d/m/Y") }}</p>
+
+                {% if session.toto.admin == 1 %}
+                        <input name="soumettre" class="button connexion" type="submit" value="Modifications terminées">
+                {% endif %}
+            </div>
+        </div>
+</form>
+    {% endif %}
+{% endblock %}
