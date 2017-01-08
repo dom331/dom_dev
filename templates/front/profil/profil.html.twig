@@ -25,6 +25,16 @@
         <p/>
     </div>
     <div class="auteur-article">
+        {% if session.toto.admin == 1 and liste.oui.convoque == 0 %}
+        <form method="post">
+            <input name="convoque" type="submit" class="button submit" value="CONVOQUER">
+        </form>
+        {% endif %}
+        {% if session.toto.admin == 1 and liste.oui.convoque == 1 %}
+            <form method="post">
+                <input name="annuler_conv" type="submit" class="button submit" value="ANNULER CONVOCATION">
+            </form>
+        {% endif %}
         {% if session.toto.id == liste.oui.id %}
         <hr class="hr-menu">
         <a class="button connexion" href="index.php?page=profil_update">Modifier mon profil</a>

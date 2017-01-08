@@ -17,6 +17,7 @@ require_once ("dao/DaoUtilisateur.php");
         $infos['oui']['description']=$daoUtilisateur->bean->getDescription();
         $infos['oui']['date_inscription']=$daoUtilisateur->bean->getDate_inscription();
         $infos['oui']['avatar']=$daoUtilisateur->bean->getImage();
+        $infos['oui']['convoque']=$daoUtilisateur->bean->getConvoque();
         $infos['oui']['naiss']=$daoUtilisateur->bean->getDate_naiss();
 //        $daoUtilisateur->setLeAvatar();
 //        $infos['oui']['avatar']=$daoUtilisateur->bean->getLeAvatar()->getNom();
@@ -24,4 +25,18 @@ require_once ("dao/DaoUtilisateur.php");
         $param=array("liste" =>$infos);
 
 //var_dump($param) or die();
+
+if (isset($_POST['convoque'])){
+        $daoUtilisateur->bean->setConvoque(1);
+        $daoUtilisateur->updateConvoque();
+        header('Location: index.php?page=viescolaire');
+}
+
+if (isset($_POST['annuler_conv'])){
+        $daoUtilisateur->bean->setConvoque(0);
+        $daoUtilisateur->updateConvoque();
+        header('Location: #');
+}
+
+
 ?>
