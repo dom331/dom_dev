@@ -7,7 +7,7 @@
 
      <title>DÔM | Intra-MMI Montbéliard</title>
      <link rel="stylesheet" href="css/normalize.css"/>
-     <link rel="stylesheet" href="css/sidebar.css" media="all and (max-width: 1000px"/>
+     <link rel="stylesheet" href="css/sidebar.css" media="all and (max-width: 1000px)"/>
      <link rel="stylesheet" href="css/menu_desktop.css" media="all" />
 
      <link rel="stylesheet" href="css/style_phone.css" media="all"/>
@@ -32,9 +32,6 @@
     <!-- // CALENDAR INPUT -->
 
 
-</head>
-
-{% if session.toto !='' %}
     {% if session.toto.admin %}
         <style>
             .icones-menu-profil li:first-child::after{
@@ -44,7 +41,10 @@
             }
         </style>
     {% endif %}
+</head>
 
+
+{% if session.toto !='' %}
  <body>
     <div id="st-container" class="st-container">
         <nav class="st-menu st-effect-12" id="menu-12">
@@ -81,8 +81,12 @@
             <ul class="onglets">
                 {% if session.toto.convoque == 1%}
                     <li><a class="icon icon-data" href="index.php?page=viescolaire">Vous êtes convoqué(e) !</a></li>
+                </ul>
                     <hr class="hr-menu">
-                {% endif %}</h3>
+            <ul class="onglets">
+
+                {% endif %}
+
                 <li><a href="index.php?page=actualites">ACTUALITÉS</a></li>
                 <li><a href="index.php?page=evenements">ÉVÉNEMENTS</a></li>
                 <li><a href="index.php?page=viescolaire">VIE SCOLAIRE</a></li>
@@ -109,11 +113,9 @@
             </a>
 
             <div class="footer">
-                <span>
                     Site réalisé dans le cadre d’un projet au <a href="http://mmimontbeliard.com"><b>département MMI</b></a> de Montbéliard.
 
                         <p>Tous droits réservés - 2016/2017</p>
-                </span>
             </div>
         </nav>
 
