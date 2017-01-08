@@ -43,8 +43,52 @@ class DaoActualite extends Dao{
         $requete->execute();
     }
 
-    public function update(){
+    public function updateTitre(){
+        {
+            $sql ="UPDATE actualite
+               SET TITRE_ACTUALITE = ?
+               WHERE ID_ACTUALITE = ?";
+            $requete = $this->pdo->prepare($sql);
+            $requete->bindValue(1, $this->bean->getTitre());
+            $requete->bindValue(2, $this->bean->getId());
+            $requete->execute();
+        }
+    }
 
+    public function updateContenu(){
+        {
+            $sql ="UPDATE actualite
+               SET CONTENU_ACTUALITE = ?
+               WHERE ID_ACTUALITE = ?";
+            $requete = $this->pdo->prepare($sql);
+            $requete->bindValue(1, $this->bean->getContenu());
+            $requete->bindValue(2, $this->bean->getId());
+            $requete->execute();
+        }
+    }
+
+    public function updateImage(){
+        {
+            $sql ="UPDATE actualite
+               SET IMAGE = ?
+               WHERE ID_ACTUALITE = ?";
+            $requete = $this->pdo->prepare($sql);
+            $requete->bindValue(1, $this->bean->getImage());
+            $requete->bindValue(2, $this->bean->getId());
+            $requete->execute();
+        }
+    }
+
+    public function updateResponsables(){
+        {
+            $sql ="UPDATE actualite
+               SET RESPONSABLES_ACTUALITE = ?
+               WHERE ID_ACTUALITE = ?";
+            $requete = $this->pdo->prepare($sql);
+            $requete->bindValue(1, $this->bean->getResponsables());
+            $requete->bindValue(2, $this->bean->getId());
+            $requete->execute();
+        }
     }
 
     public function delete(){

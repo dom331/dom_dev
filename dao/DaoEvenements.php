@@ -53,6 +53,56 @@ class DaoEvenements extends Dao{
         $requete->execute();
     }
 
+    public function updateTitre(){
+        $sql ="UPDATE evenements
+               SET TITRE_EVENEMENT = ?
+               WHERE ID_EVENEMENT = ?";
+        $requete = $this->pdo->prepare($sql);
+        $requete->bindValue(1, $this->bean->getTitre());
+        $requete->bindValue(2, $this->bean->getId());
+        $requete->execute();
+    }
+
+    public function updateImage(){
+        $sql ="UPDATE evenements
+               SET IMAGE = ?
+               WHERE ID_EVENEMENT = ?";
+        $requete = $this->pdo->prepare($sql);
+        $requete->bindValue(1, $this->bean->getImage());
+        $requete->bindValue(2, $this->bean->getId());
+        $requete->execute();
+    }
+
+    public function updatePrix(){
+        $sql ="UPDATE evenements
+               SET PRIX_EVENEMENT = ?
+               WHERE ID_EVENEMENT = ?";
+        $requete = $this->pdo->prepare($sql);
+        $requete->bindValue(1, $this->bean->getPrix());
+        $requete->bindValue(2, $this->bean->getId());
+        $requete->execute();
+    }
+
+    public function updateContenu(){
+        $sql ="UPDATE evenements
+               SET CONTENU_EVENEMENT = ?
+               WHERE ID_EVENEMENT = ?";
+        $requete = $this->pdo->prepare($sql);
+        $requete->bindValue(1, $this->bean->getContenu());
+        $requete->bindValue(2, $this->bean->getId());
+        $requete->execute();
+    }
+
+    public function updateA_prevoir(){
+        $sql ="UPDATE evenements
+               SET A_PREVOIR_EVENEMENT = ?
+               WHERE ID_EVENEMENT = ?";
+        $requete = $this->pdo->prepare($sql);
+        $requete->bindValue(1, $this->bean->getA_prevoir());
+        $requete->bindValue(2, $this->bean->getId());
+        $requete->execute();
+    }
+
     public function delete(){
         $sql ="DELETE 
                FROM evenements
