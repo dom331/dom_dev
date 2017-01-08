@@ -18,11 +18,17 @@ if(isset($_POST["soumettre"])) {
         $dao->bean->setLeAuteur((int)$_SESSION['toto']['id']);
         $dao->bean->setPerdu($_POST['perdu']);
         $dao->bean->setUrgent($_POST['urgent']);
-        
-        $image = $_FILES['oui']['name'];
+
+        if ($_FILES['oui'] != null) {
+
+            $image = $_FILES['oui']['name'];
 //var_dump($image) or die();
-        if(move_uploaded_file($_FILES['oui']['tmp_name'], "media/uploads/actualites/".$image)){
-            $dao->bean->setImage($image);
+            if (move_uploaded_file($_FILES['oui']['tmp_name'], "media/uploads/actualites/" . $image)) {
+                $dao->bean->setImage($image);
+            }
+        }
+        else{
+            $dao->bean->setImage("default.png");
         }
 //        var_dump($dao) or die();
         $dao->create();
