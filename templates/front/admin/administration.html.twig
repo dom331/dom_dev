@@ -4,6 +4,10 @@
 
     <i class="fa fa-calendar-plus-o fa-4x" aria-hidden="true"></i>
     <h2 id="admin">Evénements à approuver</h2>
+    <p class="desc_cadre">
+        Les événements pouvant être proposés par n'importe quel utilisateur, <u>vous êtes responsable de l'approbation</u> de ceux-ci.
+        N'hésitez pas à consulter les dits "responsables" de l'évènement.
+    </p>
     {% if liste != null %}
 
     {% for evenement in liste %}
@@ -12,25 +16,29 @@
         {% endfor %}
 
      {% else %}
-         IL N'Y A AUCUN EVENEMENT PROPOSÉ
+         Il n'y a aucun évènement proposé pour le moment.
      {% endif %}
 
     <hr class="hr-actu">
 
     <i class="fa fa-user-plus fa-4x" aria-hidden="true"></i>
     <h2 id="admin">Utilisateur à approuver</h2>
+    <p class="desc_cadre">
+        Ces utilisateurs se sont inscrits sur le site, cependant <u>ils attendent votre approbation</u> afin de pouvoir utiliser leurs identifiants et utiliser le DOM.
+        Affichez d'abord le profil du candidat, vérifiez ses informations et levez tout doutes sur son identité. Il ne vous reste qu'à presser le bouton <i>Approuver</i> !
+    </p>
 
     {% if utilisateurs != null %}
 
         {% for user in utilisateurs %}
 
-            <a href="?page=previsualisation_user&id={{ user.id }} ">{{ user.id }} | {{ user.nom }}  {{ user.prenom }}</a><br><br>
+            <a href="?page=previsualisation_user&id={{ user.id }} "> {{ user.date_inscription }} | {{ user.nom }}  {{ user.prenom }} | {{ user.email }} </a><br><br>
         {% endfor %}
 
 
 
     {% else %}
-        IL N'Y A AUCUN UTILISATEUR A APPROUVER
+        Il n'y a aucun nouvel utilisateur inscrit pour le moment.
     {% endif %}
 
     <hr class="hr-actu">

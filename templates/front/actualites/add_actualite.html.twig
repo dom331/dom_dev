@@ -7,28 +7,36 @@
         <i class="fa fa-calendar-plus-o fa-4x" aria-hidden="true"></i>
         <h2>Poster une actualité</h2>
 
+        <p class="desc_cadre">
+            Les champs marqués par le symbole * doivent être obligatoirement renseignés.<br>
+            Le champ "Source de l'information" peut être une URL ou une personne/organisation.
+        </p>
+
         <form method="post" enctype="multipart/form-data">
-            <p>Nom de l'actualité :</p>
+            <p>Nom de l'actualité* :</p>
             <input class="nom-event" type="text" name="titre" required/>
-            <p>Description de l'actualité :</p>
+            <p>Description de l'actualité* :</p>
             <textarea rows="10" cols="20" class="description-event" name="contenu" required></textarea>
 
-            <div class="liste-img">
-                <p>Image</p>
-                <input name="oui" type="file" title="Rechercher" required/>
-            </div>
+            <p>Image d'actualite :
+            <input name="oui" type="file" title="Rechercher" /></p>
+
+
             <input type="hidden" name="perdu" value="0">
 
-            <p>Appliquer mention "Urgent" ?</p>
-            <input class="urgent" type="radio" name="urgent" value="0" required/><label for="urgent"> Non</label>
+            <p>Appliquer mention "Urgent" ?*</p>
+            <input class="urgent" type="radio" name="urgent" value="0" checked="checked" required/><label for="urgent"> Non</label>
             <input class="urgent" type="radio" name="urgent" value="1" required/><label for="urgent"> Oui</label>
 
-            <p>Auteur de l'actualité :</p>
+            <p>Source de l'information* :</p>
             <input class="nom-event" type="text" name="responsables" required/>
+
+
 
             <hr class="hr-actu">
             <input class="button submit connexion" type="submit" name="soumettre" value="soumettre" />
             <hr class="hr-actu">
+
         </form>
 
     </div>

@@ -9,21 +9,31 @@
         {% endif %}
     </h2>
 
-    {% for actualite in liste %}
-        {% if actualite.perdu == 1 %}
-            <a href="index.php?page=article&id={{ actualite.id }}">
+    {% if liste != null  %}
+        <div class="desc_cadre">
+            Les objets suivants ont été retrouvé près ou au sein du département.<br>
+            Si vous reconnaissez une de vos affaires, rendez-vous au secrétariat !
+        </div>
+        {%  for liste in liste %}
+            <a href="index.php?page=article_objetperdu&id={{ liste.id }}">
 
                 <div class="actu_content">
 
-                    <h4 class="titre">{{ actualite.date | date("d/m/Y") }} | {{ actualite.titre }}</h4>
-                    <img class="article_imgs" src="media/interface/{{ actualite.image }}" alt="image">
-                    <p><span>{{ actualite.contenu | slice(0, 200)  }}...</span></p>
-                    <p class="auteur">{{ actualite.responsables }}</p>
+                    <h4 class="titre">{{ liste.date | date("d/m/Y") }} | {{ liste.titre }}</h4>
+                    <img class="article_imgs" src="media/uploads/objetsperdus/{{ liste.image }}" alt="image">
+                    <p><span>{{ liste.contenu | slice(0, 200)  }}...</span></p>
+                    <p class="auteur">{{ liste.responsables }}</p>
                     <hr class="hr-auteur">
                 </div>
             </a>
-        {%  endif %}
-    {% endfor %}
+        {%  endfor %}
+
+     {% else %}
+         <div class="desc_cadre">
+            Aucun objet n'a été retrouvé au département.<br>
+            Si vous avez perdu quelque chose, contactez l'administration.
+         </div>
+    {%  endif %}
 
 
 

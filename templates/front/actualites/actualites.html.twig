@@ -15,7 +15,7 @@
                     <div class="actu_content">
 
                         <h4 class="titre">{{ actualite.date | date("d/m/Y") }} | {{ actualite.titre }}</h4>
-                        <img class="article_imgs" src="media/interface/{{ actualite.image }}" alt="image">
+                        <img class="article_imgs" src="media/uploads/actualites/{{ actualite.image }}" alt="Image d'actualité">
                         <p><span>{{ actualite.contenu | slice(0, 70)  }}...</span></p>
                         <p class="auteur">{{ actualite.responsables }}</p>
                         <hr class="hr-auteur">
@@ -41,7 +41,7 @@
                 <div class="actu_content">
 
                     <h4 class="titre">{{ actualite.date | date("d/m/Y") }} | {{ actualite.titre }}</h4>
-                    <img class="article_imgs" src="media/interface/{{ actualite.image }}" alt="image">
+                    <img class="article_imgs" src="media/uploads/actualites/{{ actualite.image }}" alt="Image d'actualité">
                     <p><span>{{ actualite.contenu | slice(0, 200)  }}...</span></p>
                     <p class="auteur">{{ actualite.responsables }}</p>
                     <hr class="hr-auteur">

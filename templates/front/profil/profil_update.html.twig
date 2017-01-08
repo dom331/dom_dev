@@ -5,24 +5,23 @@
         <div class="article">
 
             <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
-            <h2>{% if liste !='' %}
-                    {{ liste.oui.nom }}  {{ liste.oui.prenom }}
-                {% endif %}</h2>
-            {% if liste !='' %}
-                <img id="avatar" src="media/interface/{{ liste.oui.avatar }}" alt="avatar">
-                <div class="liste-img">
-                    <input type="file" name="fichier" title="Rechercher"/>
-                </div>
-            {% endif %}
+            <h2>{{ liste.oui.nom }}  {{ liste.oui.prenom }}</h2>
+                <img class="img_cercle_big" src="media/uploads/avatars/{{ session.toto.avatar }}" alt="avatar {{ liste.oui.prenom }} {{ liste.oui.nom }}">
+            <br> <br>
+            <div class="liste-img">
+                Changer avatar : <input type="file" name="fichier" title="Rechercher"/>
 
+            </div>
+            <br>
             <div class="auteur-article">
-
-                {% if liste !='' %}
                     <p class="nom">{{ liste.oui.nom }} {{ liste.oui.prenom }}</p>
-                    <p>Description : <input type="text" name="description" placeholder="{{ liste.oui.description }}" /></p>
+                    <p>Description : <textarea maxlength="245 rows="4" cols="50" name="description" placeholder="{{ liste.oui.description }}"></textarea></p>
                     <p>Mail :<input type="text" name="email" placeholder="{{ liste.oui.email }}" /></p>
-                {% endif %}
+
+
+
                     <p>Date de naissance : <input type="text" name="naiss" id="datepicker"/></p>
+                    <p><span class="titre">Date d'inscription :</span> {{ liste.oui.date_inscription | date("d/m/Y") }}</p>
             </div>
 
 

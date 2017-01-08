@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -40,13 +35,16 @@
 </head>
 
 {% if session.toto !='' %}
-    <style>
-        .icones-menu-profil li:first-child::after{
+    {% if session.toto.admin %}
+        <style>
+            .icones-menu-profil li:first-child::after{
 
-            content:"{{ notifs.number.oui }}";
+                content:"{{ notifs.number.oui }}";
 
-        }
-    </style>
+            }
+        </style>
+    {% endif %}
+
  <body>
     <div id="st-container" class="st-container">
         <nav class="st-menu st-effect-12" id="menu-12">
@@ -64,30 +62,31 @@
                         </a>
                     </li>
                 {% endif %}
-                <li><button type="submit" class="logout" name="logout"><i class="fa fa-power-off" aria-hidden="true"></i></button></li>
+                <li><button type="submit" class="logout" name="logout"><i  class="fa fa-power-off" aria-hidden="true"></i></button></li>
             </ul>
             </form>
-            {% if session.toto !='' %}
-            <a href="index.php?page=profil&id={{ session.toto.id }}"><div class="photo">
-                        <img src="media/interface/{{ session.toto.avatar }}" alt="">
-                    </div></a>{% else %} Erreur {% endif %}
 
+            <a href="index.php?page=profil&id={{ session.toto.id }}">
+                <div class="photo">
+                        <img src="media/uploads/avatars/{{ session.toto.avatar }}" alt="avatar {{ session.toto.prenom }} {{ session.toto.nom }}">
+                </div>
 
-
-            <h3 class="name">
-                {% if session.toto !='' %}
-                    {{ session.toto.prenom }}
-                {% else %}
-                    Prénom non récupéré
-                {% endif %}</h3>
+                <h3 class="name">
+                        {{ session.toto.prenom }}
+                </h3>
+            </a>
 
             <hr class="hr-menu">
 
             <ul class="onglets">
-                <li><a class="icon icon-data" href="index.php?page=actualites">ACTUALITES</a></li>
-                <li><a class="icon icon-study" href="index.php?page=evenements">ÉVÉNEMENTS</a></li>
-                <li><a class="icon icon-photo" href="index.php?page=viescolaire">VIE SCOLAIRE</a></li>
-                <li><a class="icon icon-location" href="index.php?page=listemembres">MEMBRES</a></li>
+                {% if session.toto.convoque == 1%}
+                    <li><a class="icon icon-data" href="index.php?page=viescolaire">Vous êtes convoqué(e) !</a></li>
+                    <hr class="hr-menu">
+                {% endif %}</h3>
+                <li><a href="index.php?page=actualites">ACTUALITÉS</a></li>
+                <li><a href="index.php?page=evenements">ÉVÉNEMENTS</a></li>
+                <li><a href="index.php?page=viescolaire">VIE SCOLAIRE</a></li>
+                <li><a href="index.php?page=listemembres">MEMBRES</a></li>
             </ul>
 
             {% if session.toto.admin %}
@@ -112,6 +111,8 @@
             <div class="footer">
                 <span>
                     Site réalisé dans le cadre d’un projet au <a href="http://mmimontbeliard.com"><b>département MMI</b></a> de Montbéliard.
+
+                        <p>Tous droits réservés - 2016/2017</p>
                 </span>
             </div>
         </nav>
@@ -172,11 +173,6 @@
 
                     </div>
 
-                    <hr class="hr-actu deux">
-
-                    <footer>
-                        <p>Tous droits réservés - 2016/2017</p>
-                    </footer>
                     </main>
                 </div>
             </div>
@@ -190,19 +186,10 @@
 
 {%  else %}
     <body>
-        <header>
-
-            <a href="index.php?page=actualites">
-                <img src="media/interface/DOM_Logo_Final.png" id="logo-dom" alt="Logo-DOM">
-            </a>
-
-        </header>
-
-        <hr class="hr-actu">
         <main>
             <div class="contenu">
                 <h3>Vous devez être connecté pour accéder à cette page.</h3>
-                <a href="index.php">Connexion</a> | <a href="index.php?page=inscription">Inscription</a>
+                <center><a href="index.php">Connexion</a> | <a href="index.php?page=inscription">Inscription</a></center>
             </div>
         </main>
 
