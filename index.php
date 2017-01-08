@@ -37,6 +37,8 @@ $template = $routes[$uriDemandee]["template"];
 // Tableau de paramètres
 $param = array();
 
+require_once("pages/general.php");
+
 if (!EMPTY($page = $routes[$uriDemandee]["page"])){
     echo "<span style='display: none;'>";
     $page = $routes[$uriDemandee]["page"];
@@ -48,7 +50,7 @@ $param["session"] = $_SESSION;
 // Chargement du template
 $template = $twig->loadTemplate($template);
 
-require_once("pages/general.php");
+
 
 // Affichage de la page concern�e
 echo $template->render($param);
