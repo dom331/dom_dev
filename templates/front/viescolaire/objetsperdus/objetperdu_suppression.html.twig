@@ -1,0 +1,43 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+    {% if liste !='' %}
+        <div class="article">
+            <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
+
+            <h2>{{ liste.oui.titre }}</h2>
+            <img src="media/uploads/objetsperdus/{{ liste.oui.image }}" alt="Image d'objet perdu">
+
+            <div class="article_content">
+                <p>
+                <h4 class="titre">Rappels !</h4>
+                {{ liste.oui.contenu }}
+                <h4 class="titre">Publié par</h4>
+                {{ liste.oui.responsables }}
+                </p>
+                <br>
+                {% if session.toto.admin == 1 %}
+
+                    <div>
+                        <p>Ëtes-vous sûr de vouloir supprimer cette entrée ?</p>
+                        <form method="post">
+                            <input type="submit" class="button connexion" name="oui" value="oui">
+                            <input type="submit" class="button connexion" name="non" value="non">
+                        </form>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block aside %}
+    <div class="auteur-article">
+        <a href="index.php?page=404">
+            <div class="photo"></div>
+        </a>
+        <h2>{{ liste.oui.responsables }}</h2>
+        <h4 class="titre">Date de publication :</h4>
+        <p>{{ liste.oui.date | date("d/m/Y") }}</p>
+    </div>
+{% endblock %}

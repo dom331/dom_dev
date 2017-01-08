@@ -22,13 +22,17 @@ if (isset($_POST["oui"])){
 //    var_dump($daoActualite) or die();
     $daoActualite->delete();
 
-    header('Location: index.php?page=actualites');
+    header('Location: index.php?page=objetsperdus');
 }
 
 if (isset($_POST["non"])){
-    header('Location: index.php?page=actualites');
+    header('Location: index.php?page=objetsperdus');
 }
 
+
+
+
+//NOTIFS
 
 require_once ('dao/DaoUtilisateur.php');
 require_once ('dao/DaoEvenements.php');
@@ -46,6 +50,7 @@ $events = count($liste3);
 
 $notifs['number'] = array();
 $notifs['number']['oui'] = $events + $users;
+
 $param = array(
     "liste" => $infos,
     "notifs" => $notifs);

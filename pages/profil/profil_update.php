@@ -55,6 +55,8 @@ if(isset($_POST['soumettre'])) {
     if (move_uploaded_file($_FILES['fichier']['tmp_name'], "media/uploads/avatars/" . $image)) {
         $daoUtilisateur->bean->setImage($image);
         $daoUtilisateur->updateImage();
+        $_SESSION['toto']['avatar'] = $daoUtilisateur->bean->getImage();
+
         header('Location: index.php?page=profil&id='.$daoUtilisateur->bean->getId());
     }
 }
