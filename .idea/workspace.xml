@@ -34,7 +34,7 @@
       <file leaf-file-name="add_actualite.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/front/actualites/add_actualite.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="850">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="136" max-vertical-offset="850">
               <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="12" selection-end-column="12" />
               <folding />
             </state>
@@ -45,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/templates/front/actualites/article.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.2122588" vertical-offset="0" max-vertical-offset="881">
-              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,7 +54,7 @@
       <file leaf-file-name="poster_evenement.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/front/evenements/poster_evenement.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="867">
+            <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="867">
               <caret line="33" column="49" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="49" />
               <folding />
             </state>
@@ -64,7 +64,7 @@
       <file leaf-file-name="style_phone.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style_phone.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.24138" vertical-offset="11183" max-vertical-offset="12257">
+            <state vertical-scroll-proportion="0.0" vertical-offset="11183" max-vertical-offset="12257">
               <caret line="677" column="24" selection-start-line="677" selection-start-column="24" selection-end-line="677" selection-end-column="24" />
               <folding />
             </state>
@@ -74,7 +74,7 @@
       <file leaf-file-name="profil.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/front/profil/profil.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1088">
+            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1088">
               <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding />
             </state>
@@ -84,7 +84,7 @@
       <file leaf-file-name="profil_update.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/front/profil/profil_update.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="850">
+            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="850">
               <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
               <folding />
             </state>
@@ -94,7 +94,7 @@
       <file leaf-file-name="actualites.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/front/actualites/actualites.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.423077" vertical-offset="113" max-vertical-offset="1020">
+            <state vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="1020">
               <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
               <folding />
             </state>
@@ -104,7 +104,7 @@
       <file leaf-file-name="viescolaire.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/front/viescolaire/viescolaire.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="697">
+            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="697">
               <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
               <folding />
             </state>
@@ -114,7 +114,7 @@
       <file leaf-file-name="listemembres.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/front/membres/listemembres.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="425">
+            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="425">
               <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
               <folding />
             </state>
@@ -189,7 +189,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1932" />
+    <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -215,6 +215,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -639,27 +640,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="s3_dom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dom_dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -671,11 +657,11 @@
       <recent name="C:\wamp\www\dom_dev\pages\viescolaire" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\dom_dev\pages\viescolaire\objetsperdus" />
+      <recent name="C:\wamp\www\dom_dev\media\uploads\evenements" />
       <recent name="C:\wamp\www\dom_dev\media\uploads\objetsperdus" />
+      <recent name="C:\wamp\www\dom_dev\media\uploads\actualites" />
+      <recent name="C:\wamp\www\dom_dev\pages\viescolaire\objetsperdus" />
       <recent name="C:\wamp\www\dom_dev\media\uploads\avatars" />
-      <recent name="C:\wamp\www\dom_dev\pages\profil" />
-      <recent name="C:\wamp\www\dom_dev\pages\inscription" />
     </key>
   </component>
   <component name="RunManager">
@@ -693,9 +679,6 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -703,6 +686,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -721,8 +707,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1066" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -731,7 +717,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26068377" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26279318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -767,19 +753,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/actualites/actualites.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5402951" vertical-offset="0" max-vertical-offset="884">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/evenements/poster_evenement.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="1071">
           <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -787,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="907">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="1071">
           <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="20" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="816">
           <caret line="8" column="92" selection-start-line="8" selection-start-column="92" selection-end-line="8" selection-end-column="92" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,7 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="714">
           <caret line="21" column="121" selection-start-line="21" selection-start-column="121" selection-end-line="21" selection-end-column="121" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,7 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="136">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,7 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="561">
           <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="92" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,7 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="799">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,7 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="731">
           <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="799">
           <caret line="8" column="46" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.28944382" vertical-offset="255" max-vertical-offset="1156">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,7 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.20544836" vertical-offset="181" max-vertical-offset="1088">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,10 +889,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.538462" vertical-offset="164" max-vertical-offset="1156">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="41" selection-end-column="15" />
-          <folding>
-            <marker date="1483885046678" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1483885046678" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -964,15 +926,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.307693" vertical-offset="2111" max-vertical-offset="2992">
           <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="166" selection-end-column="5" />
-          <folding>
-            <marker date="1483871374550" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1483871374550" expanded="true" signature="-1:-1" placeholder="UPDATE evene..." />
-            <marker date="1483871374550" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1483871374550" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..evenements..." />
-            <marker date="1483871374550" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..evenements..." />
-            <marker date="1483871374550" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1483871374550" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..evenements..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -980,13 +934,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.5" vertical-offset="1091" max-vertical-offset="2652">
           <caret line="94" column="39" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
-          <folding>
-            <marker date="1483885694610" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1483885694610" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1483885694610" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..actualite..." />
-            <marker date="1483885694610" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..actualite..." />
-            <marker date="1483885694610" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..actualite..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -999,7 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="884">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,7 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11577752" vertical-offset="0" max-vertical-offset="881">
           <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1047,7 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="907">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1101,7 +1046,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/evenements/poster_evenement.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="867">
+        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="867">
           <caret line="33" column="49" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="49" />
           <folding />
         </state>
@@ -1109,7 +1054,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/viescolaire/viescolaire.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="697">
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="697">
           <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
           <folding />
         </state>
@@ -1117,7 +1062,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/membres/listemembres.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="425">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="425">
           <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
           <folding />
         </state>
@@ -1125,7 +1070,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style_phone.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.24138" vertical-offset="11183" max-vertical-offset="12257">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11183" max-vertical-offset="12257">
           <caret line="677" column="24" selection-start-line="677" selection-start-column="24" selection-end-line="677" selection-end-column="24" />
           <folding />
         </state>
@@ -1133,7 +1078,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/profil/profil.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1088">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1088">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
@@ -1141,7 +1086,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/profil/profil_update.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="850">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="850">
           <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
           <folding />
         </state>
@@ -1149,7 +1094,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/actualites/actualites.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.423077" vertical-offset="113" max-vertical-offset="1020">
+        <state vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="1020">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding />
         </state>
@@ -1157,16 +1102,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/actualites/add_actualite.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="850">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="850">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="12" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/media/uploads/actualites/default.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/actualites/article.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2122588" vertical-offset="0" max-vertical-offset="881">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
