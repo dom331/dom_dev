@@ -42,9 +42,9 @@
 {% if session.toto !='' %}
     <style>
         .icones-menu-profil li:first-child::after{
-
+        {% if session.toto.admin %}
             content:"{{ notifs.number.oui }}";
-
+        {% endif %}
         }
     </style>
  <body>
