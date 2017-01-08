@@ -6,11 +6,13 @@
 
             <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
             <h2>{{ liste.oui.nom }}  {{ liste.oui.prenom }}</h2>
+            <div class="center">
                 <img class="img_cercle_big" src="media/uploads/avatars/{{ session.toto.avatar }}" alt="avatar {{ liste.oui.prenom }} {{ liste.oui.nom }}">
+            </div>
             <br> <br>
             <div class="liste-img">
-                Changer avatar : <input type="file" name="fichier" title="Rechercher"/>
-                *Privilégiez une image à dimensions carrées, min 250x250. [Work In Progress]
+                Changer avatar : <input type="file" name="fichier" title="Rechercher"/><br>
+                *Privilégiez une image à dimensions carrées, min 250x250. <br>[Work In Progress]
             </div>
             <br>
             <div class="auteur-article">
@@ -20,7 +22,7 @@
 
 
 
-                    <p>Date de naissance : <input type="text" name="naiss" id="datepicker"/></p>
+                    <p>Date de naissance : <input type="text" name="naiss" id="datepicker"  placeholder="{{ liste.oui.naiss | date("m/d/Y") }}"/></p>
                     <p><span class="titre">Date d'inscription :</span> {{ liste.oui.date_inscription | date("d/m/Y") }}</p>
             </div>
 
