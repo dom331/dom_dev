@@ -26,16 +26,13 @@
     <script>
 
         $( function() {
-            $( "#datepicker" ).datepicker();
-            $( "#format" ).on( "change", function() {
-                $( "#datepicker" ).datepicker( "option", "dateFormat", dd/mm/yyyy );
+
+            $( "#datepicker" ).datepicker({
+                dateFormat: "dd/mm/yy"
             });
         } );
 
 
-        $( function() {
-            $( "#datepicker" ).datepicker();
-        } );
     </script>
 
     <!-- // CALENDAR INPUT -->
