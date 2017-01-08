@@ -337,4 +337,11 @@ class DaoUtilisateur extends Dao
             $requete->execute();
         }
     }
+
+//    public function countNonApprouv() {
+//        $sql = "SELECT COUNT(*) FROM utilisateur WHERE UTILISATEUR_APPROUVE = 0";
+//        $requete = $this->pdo->prepare($sql);
+//        $requete->execute();
+//        return $requete;
+//    }
 }
