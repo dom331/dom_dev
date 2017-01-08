@@ -37,7 +37,11 @@ $template = $routes[$uriDemandee]["template"];
 // Tableau de paramètres
 $param = array();
 
-if (!EMPTY($page = $routes[$uriDemandee]["page"])){
+echo "<span style='display: none;'>";
+require_once("pages/general.php");
+echo "</span>";
+
+if (!EMPTY($page)){
     echo "<span style='display: none;'>";
     $page = $routes[$uriDemandee]["page"];
     require_once($page);
