@@ -88,6 +88,32 @@ class DaoActualite extends Dao{
         return $liste;
     }
 
+    public function getListePerdu(){
+        $sql = "SELECT *
+                FROM actualite
+                WHERE actualite.PERDU = 1
+                ORDER BY DATE_ACTUALITE DESC";
+        $requete = $this->pdo->prepare($sql);
+        $liste = array();
+        if($requete->execute()){
+            while($donnees = $requete->fetch()){
+                $actualite = new Actualite(
+                    $donnees['ID_ACTUALITE'],
+                    $donnees['TITRE_ACTUALITE'],
+                    $donnees['CONTENU_ACTUALITE'],
+                    $donnees['IMAGE'],
+                    $donnees['PERDU'],
+                    $donnees['URGENT'],
+                    $donnees['DATE_ACTUALITE'],
+                    $donnees['RESPONSABLES_ACTUALITE']
+                );
+                $liste[] = $actualite;
+            }
+        }
+        return $liste;
+    }
+
+
     public function setLeAuteur(){
 
     }

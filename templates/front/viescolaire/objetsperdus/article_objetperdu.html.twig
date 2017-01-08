@@ -1,0 +1,27 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+    {% if liste !='' %}
+        <div class="article">
+            <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
+
+            <h2>{{ liste.oui.titre }}</h2>
+            <img src="media/uploads/objetsperdus/{{ liste.oui.image }}" alt="Image d'objet perdu">
+
+            <div class="article_content">
+
+                <p>
+                    {{ liste.oui.contenu }}
+                <p><span class="titre">Publié par :</span> {{ liste.oui.responsables }}</p>
+                <p><span class="titre">Le : </span> {{ liste.oui.date | date("d/m/Y") }}</p>
+
+                {% if session.toto.admin == 1 %}
+                    <form method="post" action="index.php?page=objetperdu_suppression&id={{ liste.oui.id }}">
+                        <input name="suppr" class="button connexion" type="submit" value="supprimer l'article">
+                    </form>
+                {% endif %}
+
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

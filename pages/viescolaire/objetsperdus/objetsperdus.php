@@ -4,7 +4,7 @@ require_once 'dao/DaoActualite.php';
 //var_dump($_SESSION) or die();
 $dao = new DaoActualite();
 
-$liste = $dao->getListe();
+$liste = $dao->getListePerdu();
 
 for($i=0;$i<count($liste); $i++){
 

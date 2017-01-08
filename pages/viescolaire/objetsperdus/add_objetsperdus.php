@@ -21,7 +21,7 @@ if(isset($_POST["soumettre"])) {
 
         $image = $_FILES['oui']['name'];
 //var_dump($image) or die();
-        if(move_uploaded_file($_FILES['oui']['tmp_name'], "media/interface/".$image)){
+        if(move_uploaded_file($_FILES['oui']['tmp_name'], "media/uploads/objetsperdus/".$image)){
             $dao->bean->setImage($image);
         }
 //        var_dump($dao) or die();

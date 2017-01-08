@@ -7,18 +7,22 @@
                 {{ liste.oui.nom }}  {{ liste.oui.prenom }}
     {% endif %}</h2>
     {% if liste !='' %}
-        <img id="avatar" src="media/interface/{{ liste.oui.avatar }}" alt="avatar">
+        <div class="center">
+            <img class="img_cercle_big" src="media/uploads/avatars/{{ liste.oui.avatar }}" alt="avatar {{ liste.oui.prenom }} {{ liste.oui.nom }}">
+        </div>
 {% endif %}
 
         <div class="auteur-article">
 
     {% if liste !='' %}
         <div class="infos">
-        <p class="nom">{{ liste.oui.nom }} {{ liste.oui.prenom }}</p>
-        <p>Description : {{ liste.oui.description }}</p>
-        <p>Mail : {{ liste.oui.email }}</p>
-        <p>Date de naissance :  {% if liste.oui.naiss == null %} inconnu {% else %} {{ liste.oui.naiss | date("d/m/Y") }} {% endif %}</p>
-        <p>Date d'inscription : {{ liste.oui.date_inscription | date("d/m/Y") }}</p>
+            <h3 class="titre">{{ liste.oui.prenom }} {{ liste.oui.nom }} :</h3>
+            <p>{{ liste.oui.contenu }}</p>
+            <p><span class="titre">Description :</span> {{ liste.oui.description }}</p><br>
+            <p><span class="titre">Email :</span> {{ liste.oui.email }}</p>
+            <p><span class="titre">Date de naissance :</span> {{ liste.oui.date_naissance | date("d/m/Y") }}</p>
+            <br>
+            <p><span class="titre">Date d'inscription :</span> {{ liste.oui.date_inscription | date("d/m/Y") }}</p>
         </div>
         {% endif %}
         </div>
