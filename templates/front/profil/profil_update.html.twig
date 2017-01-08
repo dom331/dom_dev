@@ -1,44 +1,45 @@
 {% extends 'front/general.html.twig' %}
 
 {% block contenu %}
-    <div class="article">
         <form method="post" enctype="multipart/form-data" >
-        <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
-        <h2>{% if liste !='' %}
-                {{ liste.oui.nom }}  {{ liste.oui.prenom }}
-            {% endif %}</h2>
-        {% if liste !='' %}
-            <img id="avatar" src="media/interface/{{ liste.oui.avatar }}" alt="avatar">
-            <div class="liste-img">
-                <input type="file" name="fichier" title="Rechercher" required/>
-            </div>
-        {% endif %}
+        <div class="article">
 
-        <div class="auteur-article">
-
+            <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
+            <h2>{% if liste !='' %}
+                    {{ liste.oui.nom }}  {{ liste.oui.prenom }}
+                {% endif %}</h2>
             {% if liste !='' %}
-                <p class="nom">{{ liste.oui.nom }} {{ liste.oui.prenom }}</p>
-                <p>Description : <input type="text" name="description" placeholder="{{ liste.oui.description }}" /></p>
-                <p>Mail :<input type="text" name="email" placeholder="{{ liste.oui.email }}" /></p>
+                <img id="avatar" src="media/interface/{{ liste.oui.avatar }}" alt="avatar">
+                <div class="liste-img">
+                    <input type="file" name="fichier" title="Rechercher"/>
+                </div>
             {% endif %}
-                <p>Date de naissance : <input type="text" name="naiss" id="datepicker"/></p>
+
+            <div class="auteur-article">
+
+                {% if liste !='' %}
+                    <p class="nom">{{ liste.oui.nom }} {{ liste.oui.prenom }}</p>
+                    <p>Description : <input type="text" name="description" placeholder="{{ liste.oui.description }}" /></p>
+                    <p>Mail :<input type="text" name="email" placeholder="{{ liste.oui.email }}" /></p>
+                {% endif %}
+                    <p>Date de naissance : <input type="text" name="naiss" id="datepicker"/></p>
+            </div>
+
+
+
         </div>
- <p/>
-        </form>
-
-    </div>
-    <div class="auteur-article">
-        <hr class="hr-menu">
+        <div class="auteur-article">
+            <hr class="hr-menu">
             <input class="button submit" type="submit" name="soumettre" value="Modifications terminées" />
-        <hr class="hr-menu">
-        <ul class="rs">
-            <li><a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></li>
-        </ul>
-    </div>
 
-
+            <hr class="hr-menu">
+            <ul class="rs">
+                <li><a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        </form>
 {% endblock %}
 
 

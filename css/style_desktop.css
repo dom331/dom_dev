@@ -1,11 +1,14 @@
 main{
     padding-left: 30%;
     padding-right: 15%;
+    min-height: 1000px;
 }
 
 body{
 }
-
+#conteneur{
+    display: flex;
+}
 .column{
     display: none;
     overflow: hidden;
@@ -22,6 +25,3 @@ header{
     position: relative;
 }
 
-.st-menu{
-
-}

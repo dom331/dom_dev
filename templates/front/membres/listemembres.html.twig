@@ -1,0 +1,16 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+
+    <i class="fa fa-group fa-4x" aria-hidden="true"></i>
+    <h2>Liste des membres</h2>
+    <ul>
+    {% for utilisateur in liste %}
+        <a href="?page=profil&id={{ utilisateur.id }}">
+            <li>{{ utilisateur.prenom }} {{ utilisateur.nom }} | Accéder au profil</li>
+        </a><br>
+    {%  endfor %}
+    </ul>
+{% endblock %}
+
+

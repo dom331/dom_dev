@@ -16,29 +16,29 @@
                 {{ liste.oui.responsables }}
                 </p>
                 <br>
+                {% if session.toto.admin == 1 %}
+
+                    <input name="suppr" class="button connexion" type="submit" value="supprimer l'article">
+
+                    <div>
+                        <p>Ëtes-vous sûr de vouloir supprimer cette entrée ?</p>
+                        <form method="post">
+                            <input type="submit" class="button connexion" name="oui" value="oui">
+                            <input type="submit" class="button connexion" name="non" value="non">
+                        </form>
+                    </div>
+                {% endif %}
             </div>
         </div>
     {% endif %}
 {% endblock %}
 
-{% block meteo %}
+{% block aside %}
     <div class="auteur-article">
         <a href="index.php?page=404">
             <div class="photo"></div>
         </a>
         <h2>{{ liste.oui.responsables }}</h2>
-        {% if session.toto.admin == 1 %}
-            <form method="post">
-                <input name="suppr" class="button connexion" type="submit" value="supprimer l'article">
-            </form>
-            <div>
-                <p>Ëtes-vous sûr de vouloir supprimer cette entrée ?</p>
-                <form method="post">
-                    <input type="submit" class="button connexion" name="oui" value="oui">
-                    <input type="submit" class="button connexion" name="non" value="non">
-                </form>
-            </div>
-        {% endif %}
         <h4 class="titre">Date de publication :</h4>
         <p>{{ liste.oui.date | date("d/m/Y") }}</p>
     </div>

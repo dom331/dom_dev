@@ -17,16 +17,30 @@
         <p class="nom">{{ liste.oui.nom }} {{ liste.oui.prenom }}</p>
         <p>Description : {{ liste.oui.description }}</p>
         <p>Mail : {{ liste.oui.email }}</p>
-        <p>Date d'inscription : {{ liste.oui.date_inscription }}</p>
+        <p>Date de naissance :  {% if liste.oui.naiss == null %} inconnu {% else %} {{ liste.oui.naiss | date("d/m/Y") }} {% endif %}</p>
+        <p>Date d'inscription : {{ liste.oui.date_inscription | date("d/m/Y") }}</p>
         </div>
         {% endif %}
         </div>
         <p/>
     </div>
     <div class="auteur-article">
+        {% if session.toto.admin == 1 and liste.oui.convoque == 0 %}
+        <form method="post">
+            <input name="convoque" type="submit" class="button submit" value="CONVOQUER">
+        </form>
+        {% endif %}
+        {% if session.toto.admin == 1 and liste.oui.convoque == 1 %}
+            <form method="post">
+                <input name="annuler_conv" type="submit" class="button submit" value="ANNULER CONVOCATION">
+            </form>
+        {% endif %}
+        {% if session.toto.id == liste.oui.id %}
         <hr class="hr-menu">
-        <a class="button connexion" href="index.php?page=profil_update&id={{ liste.oui.id }}">Modifier mon profil</a>
+        <a class="button connexion" href="index.php?page=profil_update">Modifier mon profil</a>
+
         <hr class="hr-menu">
+        {%  endif %}
         <ul class="rs">
             <li><a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a></li>

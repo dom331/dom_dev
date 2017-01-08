@@ -40,14 +40,30 @@
 </head>
 
 {% if session.toto !='' %}
+    <style>
+        .icones-menu-profil li:first-child::after{
 
+            content:"{{ notifs.number.oui }}";
+
+        }
+    </style>
  <body>
     <div id="st-container" class="st-container">
         <nav class="st-menu st-effect-12" id="menu-12">
 
             <form method="post">
             <ul class="icones-menu-profil">
-                <li><a href="index.php?page=404"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
+                {% if session.toto.admin %}
+
+
+                    <li>
+                        <a href="index.php?page=administration">
+                            <i class="fa fa-bell" aria-hidden="true">
+
+                            </i>
+                        </a>
+                    </li>
+                {% endif %}
                 <li><button type="submit" class="logout" name="logout"><i class="fa fa-power-off" aria-hidden="true"></i></button></li>
             </ul>
             </form>
@@ -69,16 +85,17 @@
 
             <ul class="onglets">
                 <li><a class="icon icon-data" href="index.php?page=actualites">ACTUALITES</a></li>
-                <li><a class="icon icon-location" href="index.php?page=404">FORUM</a></li>
                 <li><a class="icon icon-study" href="index.php?page=evenements">ÉVÉNEMENTS</a></li>
-                <li><a class="icon icon-photo" href="index.php?page=404">VIE SCOLAIRE</a></li>
+                <li><a class="icon icon-photo" href="index.php?page=viescolaire">VIE SCOLAIRE</a></li>
+                <li><a class="icon icon-location" href="index.php?page=listemembres">MEMBRES</a></li>
             </ul>
-                                            {% if session.toto.admin %}
+
+            {% if session.toto.admin %}
             <hr class="hr-menu">
             <ul class="onglets">
                 <li><a class="icon icon-data" href="index.php?page=administration">Administration</a></li>
             </ul>
-                                            {% endif %}
+            {% endif %}
 
             <hr class="hr-menu">
 
@@ -116,8 +133,8 @@
 
                     </header>
 
-                    <hr class="hr-actu un">
-
+                    <hr class="hr-actu un" />
+                    <div id="conteneur">
 
 
                         <div class="contenu">
@@ -126,17 +143,34 @@
 
                             {% endblock %}
                         </div>
+                        <aside>
+                            {% block aside %}
+                                <i class="fa fa-sun-o fa-4x" aria-hidden="true"></i>
+                                <h2 id="meteo">Météo campus</h2>
+                                <div id="jours">
+                                    <div class="jours">
+                                        <ul>
+                                            <li><h4 class="titre">Lundi 07 Nov.</h4></li>
+                                            <li>Matin : 8°C</li>
+                                            <li>Après-midi : 11°C</li>
+                                            <li>Temps nuageux</li>
+                                        </ul>
+                                    </div>
 
-                        <div class="aside">
-
-                            {% block meteo %}
-
+                                    <div class="jours">
+                                        <ul>
+                                            <li><h4 class="titre">Mardi 08 Nov.</h4></li>
+                                            <li>Matin : 7°C</li>
+                                            <li>Après-midi : 9°C</li>
+                                            <li>Temps pluvieux</li>
+                                        </ul>
+                                    </div>
+                                </div>
 
                             {% endblock %}
+                        </aside>
 
-                        </div>
-
-
+                    </div>
 
                     <hr class="hr-actu deux">
 

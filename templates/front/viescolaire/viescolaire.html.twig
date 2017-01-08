@@ -1,0 +1,30 @@
+{% extends 'front/general.html.twig' %}
+
+{% block contenu %}
+
+    <i class="fa fa-group fa-4x" aria-hidden="true"></i>
+    <h2>Vie scolaire</h2>
+    {% for utilisateur in liste %}
+        {% if utilisateur.convoque == 1 %}
+
+
+                    <li><a href="?page=profil&id={{ utilisateur.id }}">
+                            {{ utilisateur.prenom }} {{ utilisateur.nom }} </a>
+                        est convoqué(e) à boire le café !</li>
+                <br>
+
+        {% endif %}
+    {%  endfor %}
+
+{% endblock %}
+
+{% block aside %}
+    <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
+    <h2>Outils</h2>
+    <ul>
+        <a href="?page=viescolaire">Vie Scolaire</a>
+        <a href="?page=edt"><li>Emploi du temps</li></a>
+        <a href="?page=absences"><li>Absences</li></a>
+        <a href="?page=objetsperdus"><li>Objets perdus</li></a>
+    </ul>
+{% endblock %}
