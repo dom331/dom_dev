@@ -18,7 +18,7 @@
         <div class="infos">
             <h3 class="titre">{{ liste.oui.prenom }} {{ liste.oui.nom }} :</h3>
             <h3 class="titre">Description :</h3>
-            <span class="desc_article">{{ liste.oui.description }}</span>
+            <div class="desc_article">{{ liste.oui.description|raw }}</div>
             <p><span class="titre">Email :</span> {{ liste.oui.email }}</p>
             <p><span class="titre">Date de naissance :</span> {{ liste.oui.naiss | date("d/m/Y") }}</p>
             <br>
