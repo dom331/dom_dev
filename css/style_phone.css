@@ -9,6 +9,9 @@ Blanc      : #f2eee9 ;
 Violet     : #1b2e52 ;
 */
 
+.mce-panel {
+    margin-top: 20px;
+}
 
 /* ------------------------------------------------------------------------------------------- */
 /* -------------------------------------------- FONTS ---------------------------------------- */
@@ -502,7 +505,10 @@ aside h4{
 }
 
 .article_imgs{
-    width:250px;
+    max-width: 90%;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
 }
 
 .article_content{
@@ -678,6 +684,9 @@ input[type="email"]:nth-child(10){
 .article img{
     max-width: 100%;
     margin-bottom: 20px;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
 }
 
 .st-content{
