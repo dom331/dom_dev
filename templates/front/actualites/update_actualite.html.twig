@@ -15,10 +15,10 @@
             </div>
             <div class="article_content">
                 <span class="titre"> Description :</span>
-                <textarea maxlength="245" rows="4" cols="50" name="description" placeholder="{{ liste.oui.contenu }}"></textarea>
+                <textarea maxlength="245" rows="8"  name="description">{{ liste.oui.contenu }}</textarea>
                 <p>
 
-                <p><span class="titre">Publié par :</span> <input type="text" name="responsables" placeholder="{{ liste.oui.responsables }}"/></p>
+                <p><span class="titre">Publié par :</span> <input type="text" name="responsables" placeholder="{{ liste.oui.responsables }}" /></p>
                 <p><span class="titre">Le : </span> {{ liste.oui.date | date("d/m/Y") }}</p>
 
                 {% if session.toto.admin == 1 %}

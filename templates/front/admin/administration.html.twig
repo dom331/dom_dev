@@ -11,7 +11,7 @@
     {% if liste != null %}
 
     {% for evenement in liste %}
-        <a href="?page=previsualisation&id={{ evenement.id }} ">{{ evenement.id }} | {{ evenement.titre }} </a><br><br>
+        <a href="?page=previsualisation&id={{ evenement.id }}">{{ evenement.titre }} | {{ evenement.date }} </a><br><br>
 
         {% endfor %}
 

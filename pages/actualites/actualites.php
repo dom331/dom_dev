@@ -1,6 +1,5 @@
 <?php
 
-echo ' <meta http-equiv="refresh" content="0;url=https://mmi-projet.pu-pm.univ-fcomte.fr/projets-co1617/projet1617_15/wordpress/" />';
 require_once 'dao/DaoActualite.php';
 
 //var_dump($_SESSION) or die();
