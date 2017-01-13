@@ -11,7 +11,7 @@ $daoUtilisateur = new DaoUtilisateur();
 
 if(isset($_POST["connexion"])) {
 
-    $daoUtilisateur->cnx($_POST['identifiant'], $_POST['psw']);
+    $daoUtilisateur->cnx($_POST['identifiant'], sha1($_POST['psw']));
     $approuve = (int)$daoUtilisateur->bean->getApprouve();
 
     if ($approuve == 0) {
