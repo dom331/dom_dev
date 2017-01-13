@@ -31,11 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="inscription.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="inscription.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/front/inscriptions/inscription.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57888764" vertical-offset="0" max-vertical-offset="1003">
+            <state vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="1003">
               <caret line="30" column="85" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inscription_mmi.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/front/inscriptions/inscription_mmi.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.73325765" vertical-offset="0" max-vertical-offset="1275">
+              <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -57,7 +67,6 @@
         <option value="$PROJECT_DIR$/pages/404.php" />
         <option value="$PROJECT_DIR$/pages/admin/administration.php" />
         <option value="$PROJECT_DIR$/templates/front/inscriptions/inscription_ancien.html.twig" />
-        <option value="$PROJECT_DIR$/templates/front/inscriptions/inscription_mmi.html.twig" />
         <option value="$PROJECT_DIR$/templates/front/inscriptions/inscription_pedagogique.html.twig" />
         <option value="$PROJECT_DIR$/pages/actualites/add_actualite.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -100,6 +109,7 @@
         <option value="$PROJECT_DIR$/templates/front/actualites/article.html.twig" />
         <option value="$PROJECT_DIR$/templates/front/viescolaire/objetsperdus/objetsperdus.html.twig" />
         <option value="$PROJECT_DIR$/templates/front/inscriptions/inscription.html.twig" />
+        <option value="$PROJECT_DIR$/templates/front/inscriptions/inscription_mmi.html.twig" />
       </list>
     </option>
   </component>
@@ -644,14 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/front/inscriptions/inscription_mmi.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/evenements/update_evenement.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="629">
@@ -774,8 +776,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/inscriptions/inscription.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57888764" vertical-offset="0" max-vertical-offset="1003">
+        <state vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="1003">
           <caret line="30" column="85" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/front/inscriptions/inscription_mmi.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73325765" vertical-offset="0" max-vertical-offset="1275">
+          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
           <folding />
         </state>
       </provider>
