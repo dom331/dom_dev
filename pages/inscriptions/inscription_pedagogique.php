@@ -14,7 +14,7 @@ if (isset($_POST['soumettre'])){
         $dao->bean->setNom(ucwords($_POST['nom']));
         $dao->bean->setPrenom(ucwords($_POST['prenom']));
         $dao->bean->setIdentifiant($_POST['identifiant']);
-        $dao->bean->setPsw($_POST['mdp']);
+        $dao->bean->setPsw(sha1($_POST['mdp']));
         $dao->bean->setEmail($_POST['email']);
         $dao->bean->setDate_inscription(date("Y-m-d"));
         $dao->bean->setImage("default.png");
