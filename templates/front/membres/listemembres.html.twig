@@ -3,12 +3,12 @@
 {% block contenu %}
 
     <i class="fa fa-group fa-4x" aria-hidden="true"></i>
-    <h2>Liste des membres</h2>
+    <h2 class="liste-membres">Liste des membres</h2>
     {% for utilisateur in liste %}
         <a href="?page=profil&id={{ utilisateur.id }}">
 
             <img class="img_cercle" src="media/uploads/avatars/{{ utilisateur.image }}" alt="avatar {{ utilisateur.prenom }} {{ utilisateur.nom }}">
-            {{ utilisateur.prenom }} {{ utilisateur.nom }} | Accéder au profil
+            {{ utilisateur.nom }} {{ utilisateur.prenom }} | Accéder au profil
 
         </a><br>
     {%  endfor %}

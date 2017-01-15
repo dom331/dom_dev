@@ -7,9 +7,24 @@ main{
 nav{
     overflow: hidden;
 }
+
+.contenu{
+    width: 70%;
+}
+
+
+aside ul{
+    padding-left: 40px;
+}
+
+#jours{
+    flex-direction: column;
+}
+
 #conteneur{
     display: flex;
 }
+
 .column{
     display: none;
     overflow: hidden;

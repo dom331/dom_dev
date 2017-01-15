@@ -314,8 +314,8 @@ li:hover i{
 }
 
 .contenu{
-    width: 70%;
-    min-width: 440px;
+    width: 100%;
+    min-width: 320px;
 
 }
 
@@ -340,7 +340,6 @@ li:hover i{
 }
 
 /* ~~~~ Icone ajout actualité ~~~~ */
-
 
 .fa-plus-circle{
     color: #e62651;
@@ -415,16 +414,15 @@ h4{
 aside{
     margin-top: 20px;
     padding-left: 20px;
-    width: 25%;
     min-width: 400px;
     max-width: 540px;
+}
 
-}
-}
 aside h2{
 }
+
 aside ul{
-    padding-left: 40px;
+    padding-left: 0;
 }
 
 aside ul li:first-child{
@@ -719,9 +717,15 @@ input[type="email"]:nth-child(10){
 }
 
 
-
-
 #admin{
     padding-left: 100px;
     position: relative;
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------- MEMBRES  -------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+.liste-membres{
+    margin-bottom: 60px;
 }
