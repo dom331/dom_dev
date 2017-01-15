@@ -2,34 +2,29 @@
 
 {% block contenu %}
     {% if liste !='' %}
-        <form method="post" enctype="multipart/form-data" >
+<form method="post" enctype="multipart/form-data" >
         <div class="article">
             <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
 
-            <h2><input name="titre" type="text" placeholder="{{ liste.oui.titre }}"></h2>
-
-            <img src="media/uploads/actualites/{{ liste.oui.image }}" alt="Image d'actualité">
+            <h2><input type="text" name="titre" placeholder="{{ liste.oui.titre }}"></h2>
+            <img src="media/uploads/objetsperdus/{{ liste.oui.image }}" alt="Image d'objet perdu">
             <div class="liste-img">
                 Changer l'image : <input type="file" name="fichier" title="Rechercher"/>
 
             </div>
             <div class="article_content">
-                <span class="titre"> Description :</span>
-                <textarea maxlength="245" rows="8"  name="description">{{ liste.oui.contenu }}</textarea>
-                <p>
-
-                <p><span class="titre">Publié par :</span> <input type="text" name="responsables" placeholder="{{ liste.oui.responsables }}" /></p>
+                <h3 class="titre">Description :</h3>
+                <textarea maxlength="245" rows="4" cols="50" name="description">{{ liste.oui.contenu }}</textarea>
+                <p><span class="titre">Publié par :</span><input type="text" name="responsables" placeholder="{{ liste.oui.responsables }}"/></p>
                 <p><span class="titre">Le : </span> {{ liste.oui.date | date("d/m/Y") }}</p>
 
                 {% if session.toto.admin == 1 %}
-
                         <input name="soumettre" class="button connexion" type="submit" value="Modifications terminées">
-                    <a href="index.php?page=article&id={{ liste.oui.id }}" class="button connexion">Annuler</a>
-
+                    <a href="index.php?page=article_objetperdu&id={{ liste.oui.id }}" class="button connexion">Annuler</a>
                 {% endif %}
 
             </div>
         </div>
-        </form>
+</form>
     {% endif %}
 {% endblock %}

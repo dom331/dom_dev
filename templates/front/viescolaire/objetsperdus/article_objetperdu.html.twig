@@ -10,15 +10,17 @@
 
             <div class="article_content">
 
-                <p>
-                    {{ liste.oui.contenu }}
+                <h3 class="titre">Description :</h3>
+                <div class="desc_article">{{ liste.oui.contenu|raw }}</div>
                 <p><span class="titre">Publié par :</span> {{ liste.oui.responsables }}</p>
                 <p><span class="titre">Le : </span> {{ liste.oui.date | date("d/m/Y") }}</p>
 
                 {% if session.toto.admin == 1 %}
                     <form method="post" action="index.php?page=objetperdu_suppression&id={{ liste.oui.id }}">
                         <input name="suppr" class="button connexion" type="submit" value="supprimer l'article">
+                        <a href="index.php?page=update_objetperdu&id={{ liste.oui.id }}" class="button connexion">Modifier l'article</a>
                     </form>
+
                 {% endif %}
 
             </div>

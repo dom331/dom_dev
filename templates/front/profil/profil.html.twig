@@ -4,7 +4,7 @@
     <div class="article">
         <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
         <h2>{% if liste !='' %}
-                {{ liste.oui.nom }}  {{ liste.oui.prenom }}
+                {{ liste.oui.prenom }} {{ liste.oui.nom }}
     {% endif %}</h2>
     {% if liste !='' %}
         <div class="center">
@@ -17,10 +17,10 @@
     {% if liste !='' %}
         <div class="infos">
             <h3 class="titre">{{ liste.oui.prenom }} {{ liste.oui.nom }} :</h3>
-            <p>{{ liste.oui.contenu }}</p>
-            <p><span class="titre">Description :</span> {{ liste.oui.description }}</p><br>
+            <h3 class="titre">Description :</h3>
+            <div class="desc_article">{{ liste.oui.description|raw }}</div>
             <p><span class="titre">Email :</span> {{ liste.oui.email }}</p>
-            <p><span class="titre">Date de naissance :</span> {{ liste.oui.date_naissance | date("d/m/Y") }}</p>
+            <p><span class="titre">Date de naissance :</span> {{ liste.oui.naiss | date("d/m/Y") }}</p>
             <br>
             <p><span class="titre">Date d'inscription :</span> {{ liste.oui.date_inscription | date("d/m/Y") }}</p>
         </div>

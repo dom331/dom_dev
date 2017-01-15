@@ -17,6 +17,7 @@ $infos['oui']['email']=$daoUtilisateur->bean->getEmail();
 $infos['oui']['description']=$daoUtilisateur->bean->getDescription();
 $infos['oui']['date_inscription']=$daoUtilisateur->bean->getDate_inscription();
 $infos['oui']['avatar']=$daoUtilisateur->bean->getImage();
+$infos['oui']['naiss']=$daoUtilisateur->bean->getDate_naiss();
 //        $daoUtilisateur->setLeAvatar();
 //        $infos['oui']['avatar']=$daoUtilisateur->bean->getLeAvatar()->getNom();
 
@@ -76,7 +77,7 @@ if(isset($_POST['soumettre'])) {
 
     if (!empty($_POST['naiss'])){
         $date = explode("/", $_POST["naiss"]);
-        $daoUtilisateur->bean->setDate_naiss($date[2]."-".$date[0]."-".$date[1]);
+        $daoUtilisateur->bean->setDate_naiss($date[2]."-".$date[1]."-".$date[0]);
         $daoUtilisateur->updateDate_Naiss();
         header('Location: index.php?page=profil&id='.$daoUtilisateur->bean->getId());
     }

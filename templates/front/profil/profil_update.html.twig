@@ -5,22 +5,22 @@
         <div class="article">
 
             <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
-            <h2>{{ liste.oui.nom }}  {{ liste.oui.prenom }}</h2>
+            <h2>{{ liste.oui.prenom }} {{ liste.oui.nom }}</h2>
+            <div class="center">
                 <img class="img_cercle_big" src="media/uploads/avatars/{{ session.toto.avatar }}" alt="avatar {{ liste.oui.prenom }} {{ liste.oui.nom }}">
+            </div>
             <br> <br>
             <div class="liste-img">
-                Changer avatar : <input type="file" name="fichier" title="Rechercher"/>
-
+                Changer avatar : <input type="file" name="fichier" title="Rechercher"/><br>
+                *Privilégiez une image à dimensions carrées, min 250x250. <br>[Work In Progress]
             </div>
             <br>
             <div class="auteur-article">
                     <p class="nom">{{ liste.oui.nom }} {{ liste.oui.prenom }}</p>
-                    <p>Description : <textarea maxlength="245" rows="4" cols="50" name="description" placeholder="{{ liste.oui.description }}"></textarea></p>
+                    <p>Description : <textarea maxlength="245" rows="4" cols="50" name="description">{{ liste.oui.description }}</textarea></p>
                     <p>Mail :<input type="text" name="email" placeholder="{{ liste.oui.email }}" /></p>
 
-
-
-                    <p>Date de naissance : <input type="text" name="naiss" id="datepicker"/></p>
+                    <p>Date de naissance : <input type="text" name="naiss" id="datepicker"  placeholder="{{ liste.oui.naiss | date("d/m/Y") }}"/></p>
                     <p><span class="titre">Date d'inscription :</span> {{ liste.oui.date_inscription | date("d/m/Y") }}</p>
             </div>
 

@@ -9,12 +9,10 @@
             <img src="media/uploads/actualites/{{ liste.oui.image }}" alt="Image d'actualité">
 
             <div class="article_content">
-                <p>
-                <h4 class="titre">Rappels !</h4>
-                {{ liste.oui.contenu }}
+                <h3 class="titre">Description :</h3>
+                <div class="desc_article">{{ liste.oui.contenu|raw }}</div>
                 <h4 class="titre">Publié par</h4>
                 {{ liste.oui.responsables }}
-                </p>
                 <br>
                 {% if session.toto.admin == 1 %}
 

@@ -21,7 +21,7 @@
 
                     <h4 class="titre">{{ liste.date | date("d/m/Y") }} | {{ liste.titre }}</h4>
                     <img class="article_imgs" src="media/uploads/objetsperdus/{{ liste.image }}" alt="image">
-                    <p><span>{{ liste.contenu | slice(0, 200)  }}...</span></p>
+                    <p><span>{{ liste.contenu|slice(0, 170)|striptags|raw  }}...</span></p>
                     <p class="auteur">{{ liste.responsables }}</p>
                     <hr class="hr-auteur">
                 </div>

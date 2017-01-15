@@ -16,7 +16,7 @@ if(isset($_POST["soumettre"])) {
         $dao->bean->setContenu($_POST["contenu"]);
 
         $date = explode("/", $_POST["date"]); //Explode les / afin de mettre format y-m-j
-        $dao->bean->setDate($date[2]."-".$date[0]."-".$date[1]);
+        $dao->bean->setDate($date[2]."-".$date[1]."-".$date[0]);
 
         $dao->bean->setPrix($_POST["prix"]);
         $dao->bean->setA_prevoir($_POST['a_prevoir']);

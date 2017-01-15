@@ -9,9 +9,8 @@
         <img src="media/uploads/actualites/{{ liste.oui.image }}" alt="Image d'actualité">
 
         <div class="article_content">
-           <span class="titre"> Description :</span>
-            <p>
-            {{ liste.oui.contenu }}
+            <h3 class="titre">Description :</h3>
+            <div class="desc_article">{{ liste.oui.contenu |raw}}</div>
             <p><span class="titre">Publié par :</span> {{ liste.oui.responsables }}</p>
             <p><span class="titre">Le : </span> {{ liste.oui.date | date("d/m/Y") }}</p>
 

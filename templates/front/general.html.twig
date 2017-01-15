@@ -7,7 +7,7 @@
 
      <title>DÔM | Intra-MMI Montbéliard</title>
      <link rel="stylesheet" href="css/normalize.css"/>
-     <link rel="stylesheet" href="css/sidebar.css" media="all and (max-width: 1000px"/>
+     <link rel="stylesheet" href="css/sidebar.css" media="all and (max-width: 1000px)"/>
      <link rel="stylesheet" href="css/menu_desktop.css" media="all" />
 
      <link rel="stylesheet" href="css/style_phone.css" media="all"/>
@@ -23,18 +23,45 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
     <script>
+        tinymce.init({
+            selector: 'textarea',
+            height: 250,
+            theme: 'modern',
+            plugins: [
+                'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code',
+                'insertdatetime media nonbreaking save table contextmenu directionality',
+                'emoticons  paste textcolor colorpicker textpattern imagetools codesample toc'
+            ],
+            toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            toolbar2: 'print preview media | forecolor backcolor emoticons | codesample',
+            image_advtab: true,
+            content_css: [
+                '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+                '//www.tinymce.com/css/codepen.min.css'
+            ]
+        });
+
+    </script>
+
+    <script>
+
         $( function() {
-            $( "#datepicker" ).datepicker();
+
+            $( "#datepicker" ).datepicker({
+                dateFormat: "dd/mm/yy"
+            });
         } );
+
+
     </script>
 
     <!-- // CALENDAR INPUT -->
 
 
-</head>
-
-{% if session.toto !='' %}
     {% if session.toto.admin %}
         <style>
             .icones-menu-profil li:first-child::after{
@@ -44,7 +71,10 @@
             }
         </style>
     {% endif %}
+</head>
 
+
+{% if session.toto !='' %}
  <body>
     <div id="st-container" class="st-container">
         <nav class="st-menu st-effect-12" id="menu-12">
@@ -81,8 +111,12 @@
             <ul class="onglets">
                 {% if session.toto.convoque == 1%}
                     <li><a class="icon icon-data" href="index.php?page=viescolaire">Vous êtes convoqué(e) !</a></li>
+                </ul>
                     <hr class="hr-menu">
-                {% endif %}</h3>
+            <ul class="onglets">
+
+                {% endif %}
+
                 <li><a href="index.php?page=actualites">ACTUALITÉS</a></li>
                 <li><a href="index.php?page=evenements">ÉVÉNEMENTS</a></li>
                 <li><a href="index.php?page=viescolaire">VIE SCOLAIRE</a></li>
@@ -109,11 +143,9 @@
             </a>
 
             <div class="footer">
-                <span>
                     Site réalisé dans le cadre d’un projet au <a href="http://mmimontbeliard.com"><b>département MMI</b></a> de Montbéliard.
 
                         <p>Tous droits réservés - 2016/2017</p>
-                </span>
             </div>
         </nav>
 
@@ -151,19 +183,19 @@
                                 <div id="jours">
                                     <div class="jours">
                                         <ul>
-                                            <li><h4 class="titre">Lundi 07 Nov.</h4></li>
-                                            <li>Matin : 8°C</li>
-                                            <li>Après-midi : 11°C</li>
-                                            <li>Temps nuageux</li>
+                                            <li><h4 class="titre">Lundi 09 Jan.</h4></li>
+                                            <li>Matin : -12°C</li>
+                                            <li>Après-midi : -16°C</li>
+                                            <li>Tempête de neige</li>
                                         </ul>
                                     </div>
 
                                     <div class="jours">
                                         <ul>
-                                            <li><h4 class="titre">Mardi 08 Nov.</h4></li>
-                                            <li>Matin : 7°C</li>
-                                            <li>Après-midi : 9°C</li>
-                                            <li>Temps pluvieux</li>
+                                            <li><h4 class="titre">Mardi 10 Jan.</h4></li>
+                                            <li>Matin : 23°C</li>
+                                            <li>Après-midi : 34°C</li>
+                                            <li>Tempête de sable</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -181,6 +213,7 @@
 
     <script src="js/classie.js"></script>
     <script src="js/sidebarEffects.js"></script>
+
  </body>
 
 
